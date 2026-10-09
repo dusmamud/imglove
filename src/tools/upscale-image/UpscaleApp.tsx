@@ -48,14 +48,13 @@ export default function UpscaleApp({ t, common }: Props) {
         ctx.drawImage(f.img, 0, 0, w, h);
         if (enhance) sharpen(ctx, w, h, 0.5);
         const blob = await canvasToBlob(c, 'png');
-        // Never-bigger guarantee
-        const finalBlob = blob.size >= f.size ? f.blob : blob;
-        const grew = finalBlob === f.blob;
+        // NOTE: no never-bigger fallback here — an upscaled image is SUPPOSED
+        // to be larger in bytes than the original. That is the point of the tool.
         return {
-          blob: finalBlob,
-          name: grew ? f.name : withExtension(f.name, 'png', `-${scale}x`),
-          width: grew ? f.width : w,
-          height: grew ? f.height : h,
+          blob,
+          name: withExtension(f.name, 'png', `-${scale}x`),
+          width: w,
+          height: h,
           originalSize: f.size,
         };
       }),

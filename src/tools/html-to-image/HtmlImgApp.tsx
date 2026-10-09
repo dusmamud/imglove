@@ -14,6 +14,7 @@ export default function HtmlImgApp({ t, common }: Props) {
   const [working, setWorking] = useState(false);
   const [error, setError] = useState('');
   const renderRef = useRef<HTMLDivElement>(null);
+  const blobRef = useRef<Blob | null>(null);
 
   const render = async () => {
     if (!html.trim()) return;
@@ -36,8 +37,8 @@ export default function HtmlImgApp({ t, common }: Props) {
       });
       const blob = await new Promise<Blob | null>((res) => canvas.toBlob(res, 'image/png'));
       if (!blob) throw new Error('render failed');
+      blobRef.current = blob;
       setImgUrl(URL.createObjectURL(blob));
-      (render as any)._blob = blob;
     } catch {
       setError(common.errorGeneric);
     } finally {
@@ -45,9 +46,8 @@ export default function HtmlImgApp({ t, common }: Props) {
     }
   };
 
-  const download = async () => {
-    const blob = (render as any)._blob as Blob | undefined;
-    if (blob) downloadBlob(blob, 'imglove-html.png');
+  const download = () => {
+    if (blobRef.current) downloadBlob(blobRef.current, 'imglove-html.png');
   };
 
   return (
