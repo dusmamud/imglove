@@ -12,6 +12,17 @@ import RotateApp from '../../tools/rotate-image/RotateApp';
 import WatermarkApp from '../../tools/watermark-image/WatermarkApp';
 import MemeApp from '../../tools/meme-generator/MemeApp';
 import PhotoEditorApp from '../../tools/photo-editor/PhotoEditorApp';
+import UpscaleApp from '../../tools/upscale-image/UpscaleApp';
+import BlurApp from '../../tools/blur-image/BlurApp';
+import CornersApp from '../../tools/round-corners/CornersApp';
+import BorderApp from '../../tools/add-border/BorderApp';
+import SplitApp from '../../tools/split-image/SplitApp';
+import BgRemoveApp from '../../tools/background-remover/BgRemoveApp';
+import PdfApp from '../../tools/image-to-pdf/PdfApp';
+import FaviconApp from '../../tools/favicon-generator/FaviconApp';
+import OcrApp from '../../tools/image-to-text/OcrApp';
+import GifApp from '../../tools/gif-maker/GifApp';
+import HtmlImgApp from '../../tools/html-to-image/HtmlImgApp';
 
 export function getStaticPaths() {
   return locales.flatMap((locale) =>
@@ -33,6 +44,17 @@ const toolDict = {
   'watermark-image': dict.watermark,
   'meme-generator': dict.meme,
   'photo-editor': dict.editor,
+  'upscale-image': dict.upscale,
+  'blur-image': dict.blur,
+  'round-corners': dict.corners,
+  'add-border': dict.border,
+  'split-image': dict.split,
+  'background-remover': dict.bgremove,
+  'image-to-pdf': dict.pdf,
+  'favicon-generator': dict.favicon,
+  'image-to-text': dict.ocr,
+  'gif-maker': dict.gif,
+  'html-to-image': dict.htmlimg,
 }[tool] as Dict['compress'];
 
 const names = dict.tools as Record<string, { name: string; desc: string }>;
@@ -72,6 +94,17 @@ const pageTitle = `${names[tool].name} — ${dict.meta.siteName}`;
       {tool === 'watermark-image' && <WatermarkApp t={dict.watermark} common={dict.common} client:only="react" />}
       {tool === 'meme-generator' && <MemeApp t={dict.meme} common={dict.common} client:only="react" />}
       {tool === 'photo-editor' && <PhotoEditorApp t={dict.editor} common={dict.common} client:only="react" />}
+      {tool === 'upscale-image' && <UpscaleApp t={dict.upscale} common={dict.common} client:only="react" />}
+      {tool === 'blur-image' && <BlurApp t={dict.blur} common={dict.common} client:only="react" />}
+      {tool === 'round-corners' && <CornersApp t={dict.corners} common={dict.common} client:only="react" />}
+      {tool === 'add-border' && <BorderApp t={dict.border} common={dict.common} client:only="react" />}
+      {tool === 'split-image' && <SplitApp t={dict.split} common={dict.common} client:only="react" />}
+      {tool === 'background-remover' && <BgRemoveApp t={dict.bgremove} common={dict.common} client:only="react" />}
+      {tool === 'image-to-pdf' && <PdfApp t={dict.pdf} common={dict.common} client:only="react" />}
+      {tool === 'favicon-generator' && <FaviconApp t={dict.favicon} common={dict.common} client:only="react" />}
+      {tool === 'image-to-text' && <OcrApp t={dict.ocr} common={dict.common} client:only="react" />}
+      {tool === 'gif-maker' && <GifApp t={dict.gif} common={dict.common} client:only="react" />}
+      {tool === 'html-to-image' && <HtmlImgApp t={dict.htmlimg} common={dict.common} client:only="react" />}
     </div>
   </section>
   <script>
