@@ -1,0 +1,297 @@
+const en = {
+  meta: {
+    siteName: 'ImgLove',
+    homeTitle: 'ImgLove — Free Online Image Tools',
+    homeDesc:
+      'Compress, resize, crop, convert and edit images online for free. Fast, private and easy — your files never leave your device.',
+  },
+  nav: {
+    home: 'Home',
+    tools: 'Tools',
+    features: 'Features',
+    faq: 'FAQ',
+    login: 'Log in',
+    signup: 'Sign up',
+    menu: 'Menu',
+    close: 'Close',
+  },
+  account: {
+    title: 'No account needed',
+    desc: 'Every tool on ImgLove is free and works right in your browser — no sign-up, no login, ever.',
+    ok: 'Got it',
+  },
+  hero: {
+    title: 'Every tool you need to work with images',
+    subtitle:
+      'Compress, resize, crop, convert and edit your images online. Free, fast and secure — right in your browser.',
+  },
+  toolsSection: {
+    title: 'All image tools in one place',
+    subtitle: 'Pick a tool to get started. No sign-up needed.',
+  },
+  filters: {
+    all: 'All',
+    optimize: 'Optimize',
+    create: 'Create',
+    edit: 'Edit',
+    convert: 'Convert',
+    security: 'Security',
+  },
+  tools: {
+    'compress-image': {
+      name: 'Compress IMAGE',
+      desc: 'Reduce the file size of your images while keeping quality.',
+    },
+    'resize-image': {
+      name: 'Resize IMAGE',
+      desc: 'Change the dimensions of your images in pixels or percent.',
+    },
+    'crop-image': {
+      name: 'Crop IMAGE',
+      desc: 'Cut out the perfect frame from your images.',
+    },
+    'convert-image': {
+      name: 'Convert IMAGE',
+      desc: 'Convert images between JPG, PNG, WEBP and more.',
+    },
+    'rotate-image': {
+      name: 'Rotate IMAGE',
+      desc: 'Rotate your images left, right or flip them.',
+    },
+    'watermark-image': {
+      name: 'Watermark IMAGE',
+      desc: 'Add a text watermark to protect your images.',
+    },
+    'meme-generator': {
+      name: 'Meme generator',
+      desc: 'Add top and bottom captions to create memes in seconds.',
+    },
+    'photo-editor': {
+      name: 'Photo editor',
+      desc: 'Apply filters and adjust brightness, contrast and more.',
+    },
+  },
+  features: {
+    title: 'Why people love ImgLove',
+    items: [
+      {
+        title: '100% free',
+        desc: 'Every tool is free to use, with no watermarks and no sign-up required.',
+      },
+      {
+        title: 'Private by design',
+        desc: 'Your images are processed right in your browser. Nothing is ever uploaded to a server.',
+      },
+      {
+        title: 'Works everywhere',
+        desc: 'No software to install. Works on your phone, tablet or computer.',
+      },
+    ],
+  },
+  faq: {
+    title: 'Frequently asked questions',    items: [
+      {
+        q: 'Are these image tools really free?',
+        a: 'Yes. All tools on ImgLove are completely free with no hidden limits and no watermarks on your images.',
+      },
+      {
+        q: 'Are my images uploaded to a server?',
+        a: 'No. Every tool runs entirely in your browser using modern web technology. Your files never leave your device.',
+      },
+      {
+        q: 'Which image formats are supported?',
+        a: 'JPG, PNG, WEBP, GIF, AVIF and HEIC (iPhone photos) for input. You can export to JPG, PNG or WEBP.',
+      },
+      {
+        q: 'Is there a file size limit?',
+        a: 'There is no server-side limit since nothing is uploaded. Very large images may take longer to process on slower devices.',
+      },
+    ],
+  },
+  work: {
+    title: 'Work your way',
+    cards: [
+      {
+        title: 'Batch processing',
+        desc: 'Process multiple images at once and download everything together as a ZIP.',
+        link: 'convert-image',
+      },
+      {
+        title: 'Works on any device',
+        desc: 'No installs, no setup. Open ImgLove on your phone, tablet or computer.',
+        link: '',
+      },
+      {
+        title: 'Free forever',
+        desc: 'Every tool is free with no watermarks and no hidden limits.',
+        link: '',
+      },
+    ],
+  },
+  trust: {
+    title: 'Your trusted online image editor',
+    desc: 'ImgLove is the simple solution for editing images online. Access every tool straight from the web — with your privacy guaranteed, because files never leave your device.',
+    badge1: '100% CLIENT-SIDE',
+    badge2: 'NO UPLOAD · NO SIGN-UP',
+  },
+  footer: {
+    tagline: 'Free online tools to compress, resize, crop, convert and edit images.',
+    colProduct: 'Product',
+    colTools: 'Image tools',
+    colCompany: 'Company',
+    colLegal: 'Legal',
+    about: 'About us',
+    contact: 'Contact',
+    privacy: 'Privacy Policy',
+    terms: 'Terms of Service',
+    language: 'Language',
+    rights: 'All rights reserved.',
+  },
+  common: {
+    selectImages: 'Select images',
+    dropTitle: 'Drop your images here',
+    dropSub: 'or',
+    supported: 'Supports JPG, PNG, WEBP, GIF, AVIF, HEIC',
+    processing: 'Processing…',
+    download: 'Download',
+    downloadAll: 'Download all',
+    startOver: 'Start over',
+    addMore: 'Add more images',
+    original: 'Original',
+    result: 'Result',
+    images: 'images',
+    image: 'image',
+    errorGeneric: 'Something went wrong. Please try another image.',
+    errorType: 'Please select a valid image file.',
+    back: 'Back',
+    apply: 'Apply',
+    reset: 'Reset',
+    quality: 'Quality',
+    width: 'Width',
+    height: 'Height',
+    pixels: 'px',
+  },
+  toolPage: {
+    howItWorks: 'How it works',
+    steps: ['Select your images', 'Adjust the settings', 'Download the result'],
+  },
+  compress: {
+    title: 'Compress IMAGE',
+    desc: 'Reduce image file size without losing visible quality.',
+    qualityLabel: 'Compression level',
+    saved: 'saved',
+    compressMore: 'Compress',
+  },
+  resize: {
+    title: 'Resize IMAGE',
+    desc: 'Resize images by pixels or by percentage.',
+    mode: 'Resize by',
+    byPixels: 'Pixels',
+    byPercent: 'Percent',
+    percent: 'Percent',
+    lockAspect: 'Lock aspect ratio',
+    resizeBtn: 'Resize images',
+  },
+  crop: {
+    title: 'Crop IMAGE',
+    desc: 'Drag on the image to select the area to keep.',
+    aspect: 'Aspect ratio',
+    free: 'Free',
+    square: 'Square 1:1',
+    wide: 'Wide 16:9',
+    classic: 'Classic 4:3',
+    portrait: 'Portrait 3:4',
+    cropBtn: 'Crop image',
+    hint: 'Drag on the image to draw your crop area',
+  },
+  convert: {
+    title: 'Convert IMAGE',
+    desc: 'Convert your images to JPG, PNG or WEBP.',
+    format: 'Convert to',
+    convertBtn: 'Convert images',
+  },
+  rotate: {
+    title: 'Rotate IMAGE',
+    desc: 'Rotate or flip your images.',
+    left: 'Rotate left',
+    right: 'Rotate right',
+    flipH: 'Flip horizontal',
+    flipV: 'Flip vertical',
+    applyBtn: 'Apply',
+  },
+  watermark: {
+    title: 'Watermark IMAGE',
+    desc: 'Add a custom text watermark to your images.',
+    text: 'Watermark text',
+    textPh: '© Your name',
+    position: 'Position',
+    opacity: 'Opacity',
+    size: 'Text size',
+    color: 'Color',
+    white: 'White',
+    black: 'Black',
+    posTL: 'Top left',
+    posTC: 'Top center',
+    posTR: 'Top right',
+    posBL: 'Bottom left',
+    posBC: 'Bottom center',
+    posBR: 'Bottom right',
+    applyBtn: 'Add watermark',
+  },
+  meme: {
+    title: 'Meme generator',
+    desc: 'Add captions to your images and create memes.',
+    top: 'Top text',
+    bottom: 'Bottom text',
+    topPh: 'TOP TEXT',
+    bottomPh: 'BOTTOM TEXT',
+    applyBtn: 'Create meme',
+  },
+  editor: {
+    title: 'Photo editor',
+    desc: 'Apply filters and fine-tune your photos.',
+    filters: 'Filters',
+    none: 'None',
+    grayscale: 'B&W',
+    sepia: 'Sepia',
+    invert: 'Invert',
+    vintage: 'Vintage',
+    cool: 'Cool',
+    warm: 'Warm',
+    adjust: 'Adjustments',
+    brightness: 'Brightness',
+    contrast: 'Contrast',
+    saturate: 'Saturation',
+    blur: 'Blur',
+    applyBtn: 'Apply edits',
+  },
+  about: {
+    title: 'About us',
+    body1:
+      'ImgLove is a free collection of online image tools. Our mission is simple: make everyday image tasks — compressing, resizing, cropping, converting and light editing — fast and accessible to everyone.',
+    body2:
+      'Unlike most online tools, everything on ImgLove runs directly in your browser. Your images are never uploaded to our servers, which means your files stay private and the tools work even faster.',
+  },
+  privacy: {
+    title: 'Privacy Policy',
+    body1:
+      'ImgLove processes your images entirely in your web browser. We do not upload, store or transmit your image files to any server.',
+    body2:
+      'We may collect anonymous, aggregate usage statistics to improve the website. We do not sell personal data. If you contact us by email, we will only use your address to reply.',
+  },
+  terms: {
+    title: 'Terms of Service',
+    body1:
+      'ImgLove provides free online image tools "as is", without warranties of any kind. You are responsible for the images you process and for making sure you have the rights to use them.',
+    body2:
+      'Do not use ImgLove for any unlawful purpose. We may update these terms at any time; continued use of the site means you accept the current version.',
+  },
+  notFound: {
+    title: 'Page not found',
+    desc: "The page you're looking for doesn't exist.",
+    backHome: 'Back to home',
+  },
+};
+
+export type Dict = typeof en;
+export default en;

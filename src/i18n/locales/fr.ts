@@ -1,0 +1,299 @@
+import type { Dict } from './en';
+
+const dict: Dict = {
+  meta: {
+    siteName: 'ImgLove',
+    homeTitle: 'ImgLove — Outils d\'image gratuits en ligne',
+    homeDesc:
+      'Compressez, redimensionnez, recadrez, convertissez et modifiez vos images en ligne gratuitement. Rapide, privé et simple — vos fichiers ne quittent jamais votre appareil.',
+  },
+  nav: {
+    home: 'Accueil',
+    tools: 'Outils',
+    features: 'Fonctionnalités',
+    faq: 'FAQ',
+    login: 'Se connecter',
+    signup: 'S\'inscrire',
+    menu: 'Menu',
+    close: 'Fermer',
+  },
+  account: {
+    title: 'Aucun compte requis',
+    desc: 'Tous les outils ImgLove sont gratuits et fonctionnent dans votre navigateur — sans inscription, sans connexion, jamais.',
+    ok: 'Compris',
+  },
+  hero: {
+    title: 'Tous les outils dont vous avez besoin pour vos images',
+    subtitle:
+      'Compressez, redimensionnez, recadrez, convertissez et modifiez vos images en ligne. Gratuit, rapide et sécurisé — directement dans votre navigateur.',
+  },
+  toolsSection: {
+    title: 'Tous vos outils image au même endroit',
+    subtitle: 'Choisissez un outil pour commencer. Aucune inscription requise.',
+  },
+  filters: {
+    all: 'Tout',
+    optimize: 'Optimiser',
+    create: 'Créer',
+    edit: 'Modifier',
+    convert: 'Convertir',
+    security: 'Sécurité',
+  },
+  tools: {
+    'compress-image': {
+      name: 'Compresser IMAGE',
+      desc: 'Réduisez le poids de vos images tout en gardant leur qualité.',
+    },
+    'resize-image': {
+      name: 'Redimensionner IMAGE',
+      desc: 'Modifiez les dimensions de vos images en pixels ou en pourcentage.',
+    },
+    'crop-image': {
+      name: 'Recadrer IMAGE',
+      desc: 'Découpez le cadre parfait dans vos images.',
+    },
+    'convert-image': {
+      name: 'Convertir IMAGE',
+      desc: 'Convertissez vos images entre JPG, PNG, WEBP et plus.',
+    },
+    'rotate-image': {
+      name: 'Pivoter IMAGE',
+      desc: 'Faites pivoter vos images vers la gauche, la droite ou retournez-les.',
+    },
+    'watermark-image': {
+      name: 'Filigrane IMAGE',
+      desc: 'Ajoutez un filigrane texte pour protéger vos images.',
+    },
+    'meme-generator': {
+      name: 'Générateur de mèmes',
+      desc: 'Ajoutez des légendes en haut et en bas pour créer des mèmes en quelques secondes.',
+    },
+    'photo-editor': {
+      name: 'Éditeur photo',
+      desc: 'Appliquez des filtres et ajustez la luminosité, le contraste et plus.',
+    },
+  },
+  features: {
+    title: 'Pourquoi tout le monde aime ImgLove',
+    items: [
+      {
+        title: '100 % gratuit',
+        desc: 'Tous les outils sont gratuits, sans filigrane et sans inscription.',
+      },
+      {
+        title: 'Privé par conception',
+        desc: 'Vos images sont traitées directement dans votre navigateur. Rien n\'est jamais envoyé à un serveur.',
+      },
+      {
+        title: 'Partout avec vous',
+        desc: 'Aucun logiciel à installer. Fonctionne sur téléphone, tablette ou ordinateur.',
+      },
+    ],
+  },
+  faq: {
+    title: 'Questions fréquentes',
+    items: [
+      {
+        q: 'Ces outils image sont-ils vraiment gratuits ?',
+        a: 'Oui. Tous les outils d\'ImgLove sont entièrement gratuits, sans limites cachées ni filigranes sur vos images.',
+      },
+      {
+        q: 'Mes images sont-elles envoyées sur un serveur ?',
+        a: 'Non. Chaque outil fonctionne entièrement dans votre navigateur grâce aux technologies web modernes. Vos fichiers ne quittent jamais votre appareil.',
+      },
+      {
+        q: 'Quels formats d\'image sont pris en charge ?',
+        a: 'JPG, PNG, WEBP, GIF, AVIF et HEIC (photos iPhone) en entrée. Vous pouvez exporter en JPG, PNG ou WEBP.',
+      },
+      {
+        q: 'Y a-t-il une limite de taille de fichier ?',
+        a: 'Il n\'y a aucune limite côté serveur puisque rien n\'est envoyé. Les images très lourdes peuvent prendre plus de temps à traiter sur les appareils lents.',
+      },
+    ],
+  },
+  work: {
+    title: 'Travaillez à votre façon',
+    cards: [
+      {
+        title: 'Traitement par lots',
+        desc: 'Traitez plusieurs images à la fois et téléchargez le tout en un ZIP.',
+        link: 'convert-image',
+      },
+      {
+        title: 'Fonctionne sur tous les appareils',
+        desc: 'Aucune installation, aucune configuration. Ouvrez ImgLove sur votre téléphone, tablette ou ordinateur.',
+        link: '',
+      },
+      {
+        title: 'Gratuit pour toujours',
+        desc: 'Tous les outils sont gratuits, sans filigrane ni limites cachées.',
+        link: '',
+      },
+    ],
+  },
+  trust: {
+    title: 'Votre éditeur d\'images en ligne de confiance',
+    desc: 'ImgLove est la solution simple pour retoucher vos images en ligne. Accédez à chaque outil directement depuis le web — avec votre confidentialité garantie, car vos fichiers ne quittent jamais votre appareil.',
+    badge1: '100% CÔTÉ NAVIGATEUR',
+    badge2: 'SANS ENVOI · SANS INSCRIPTION',
+  },
+  footer: {
+    colProduct: 'Produit',
+    tagline: 'Outils en ligne gratuits pour compresser, redimensionner, recadrer, convertir et modifier vos images.',
+    colTools: 'Outils image',
+    colCompany: 'Société',
+    colLegal: 'Mentions légales',
+    about: 'À propos',
+    contact: 'Contact',
+    privacy: 'Politique de confidentialité',
+    terms: 'Conditions d\'utilisation',
+    language: 'Langue',
+    rights: 'Tous droits réservés.',
+  },
+  common: {
+    selectImages: 'Sélectionner des images',
+    dropTitle: 'Déposez vos images ici',
+    dropSub: 'ou',
+    supported: 'Prend en charge JPG, PNG, WEBP, GIF, AVIF, HEIC',
+    processing: 'Traitement…',
+    download: 'Télécharger',
+    downloadAll: 'Tout télécharger',
+    startOver: 'Recommencer',
+    addMore: 'Ajouter d\'autres images',
+    original: 'Original',
+    result: 'Résultat',
+    images: 'images',
+    image: 'image',
+    errorGeneric: 'Une erreur s\'est produite. Essayez une autre image.',
+    errorType: 'Veuillez sélectionner un fichier image valide.',
+    back: 'Retour',
+    apply: 'Appliquer',
+    reset: 'Réinitialiser',
+    quality: 'Qualité',
+    width: 'Largeur',
+    height: 'Hauteur',
+    pixels: 'px',
+  },
+  toolPage: {
+    howItWorks: 'Comment ça marche',
+    steps: ['Sélectionnez vos images', 'Ajustez les réglages', 'Téléchargez le résultat'],
+  },
+  compress: {
+    title: 'Compresser IMAGE',
+    desc: 'Réduisez le poids de vos images sans perte de qualité visible.',
+    qualityLabel: 'Niveau de compression',
+    saved: 'économisé',
+    compressMore: 'Compresser',
+  },
+  resize: {
+    title: 'Redimensionner IMAGE',
+    desc: 'Redimensionnez vos images en pixels ou en pourcentage.',
+    mode: 'Redimensionner par',
+    byPixels: 'Pixels',
+    byPercent: 'Pourcentage',
+    percent: 'Pourcentage',
+    lockAspect: 'Verrouiller le rapport d\'aspect',
+    resizeBtn: 'Redimensionner les images',
+  },
+  crop: {
+    title: 'Recadrer IMAGE',
+    desc: 'Faites glisser sur l\'image pour sélectionner la zone à conserver.',
+    aspect: 'Rapport d\'aspect',
+    free: 'Libre',
+    square: 'Carré 1:1',
+    wide: 'Large 16:9',
+    classic: 'Classique 4:3',
+    portrait: 'Portrait 3:4',
+    cropBtn: 'Recadrer l\'image',
+    hint: 'Faites glisser sur l\'image pour dessiner la zone de recadrage',
+  },
+  convert: {
+    title: 'Convertir IMAGE',
+    desc: 'Convertissez vos images en JPG, PNG ou WEBP.',
+    format: 'Convertir en',
+    convertBtn: 'Convertir les images',
+  },
+  rotate: {
+    title: 'Pivoter IMAGE',
+    desc: 'Faites pivoter ou retournez vos images.',
+    left: 'Pivoter à gauche',
+    right: 'Pivoter à droite',
+    flipH: 'Retourner horizontalement',
+    flipV: 'Retourner verticalement',
+    applyBtn: 'Appliquer',
+  },
+  watermark: {
+    title: 'Filigrane IMAGE',
+    desc: 'Ajoutez un filigrane texte personnalisé à vos images.',
+    text: 'Texte du filigrane',
+    textPh: '© Votre nom',
+    position: 'Position',
+    opacity: 'Opacité',
+    size: 'Taille du texte',
+    color: 'Couleur',
+    white: 'Blanc',
+    black: 'Noir',
+    posTL: 'En haut à gauche',
+    posTC: 'En haut au centre',
+    posTR: 'En haut à droite',
+    posBL: 'En bas à gauche',
+    posBC: 'En bas au centre',
+    posBR: 'En bas à droite',
+    applyBtn: 'Ajouter le filigrane',
+  },
+  meme: {
+    title: 'Générateur de mèmes',
+    desc: 'Ajoutez des légendes à vos images et créez des mèmes.',
+    top: 'Texte du haut',
+    bottom: 'Texte du bas',
+    topPh: 'TEXTE DU HAUT',
+    bottomPh: 'TEXTE DU BAS',
+    applyBtn: 'Créer le mème',
+  },
+  editor: {
+    title: 'Éditeur photo',
+    desc: 'Appliquez des filtres et ajustez vos photos.',
+    filters: 'Filtres',
+    none: 'Aucun',
+    grayscale: 'N&B',
+    sepia: 'Sépia',
+    invert: 'Inverser',
+    vintage: 'Vintage',
+    cool: 'Froid',
+    warm: 'Chaud',
+    adjust: 'Réglages',
+    brightness: 'Luminosité',
+    contrast: 'Contraste',
+    saturate: 'Saturation',
+    blur: 'Flou',
+    applyBtn: 'Appliquer les modifications',
+  },
+  about: {
+    title: 'À propos',
+    body1:
+      'ImgLove est une collection gratuite d\'outils d\'image en ligne. Notre mission est simple : rendre les tâches quotidiennes — compresser, redimensionner, recadrer, convertir et retoucher légèrement — rapides et accessibles à tous.',
+    body2:
+      'Contrairement à la plupart des outils en ligne, tout sur ImgLove fonctionne directement dans votre navigateur. Vos images ne sont jamais envoyées sur nos serveurs : vos fichiers restent privés et les outils sont encore plus rapides.',
+  },
+  privacy: {
+    title: 'Politique de confidentialité',
+    body1:
+      'ImgLove traite vos images entièrement dans votre navigateur web. Nous ne téléversons, ne stockons ni ne transmettons vos fichiers image à aucun serveur.',
+    body2:
+      'Nous pouvons collecter des statistiques d\'utilisation anonymes et agrégées pour améliorer le site. Nous ne vendons aucune donnée personnelle. Si vous nous contactez par e-mail, nous n\'utiliserons votre adresse que pour vous répondre.',
+  },
+  terms: {
+    title: 'Conditions d\'utilisation',
+    body1:
+      'ImgLove fournit des outils d\'image gratuits en ligne « tels quels », sans aucune garantie. Vous êtes responsable des images que vous traitez et devez vous assurer d\'avoir les droits de les utiliser.',
+    body2:
+      'N\'utilisez pas ImgLove à des fins illégales. Nous pouvons mettre à jour ces conditions à tout moment ; continuer à utiliser le site signifie que vous acceptez la version en vigueur.',
+  },
+  notFound: {
+    title: 'Page introuvable',
+    desc: 'La page que vous cherchez n\'existe pas.',
+    backHome: 'Retour à l\'accueil',
+  },
+};
+
+export default dict;

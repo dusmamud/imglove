@@ -1,0 +1,77 @@
+---
+import { Icon } from 'astro-icon/components';
+import { l, localeNames, locales } from '../i18n/index';
+import { tools } from '../tools';
+import type { Dict } from '../i18n/dicts';
+
+interface Props {
+  locale: string;
+  dict: Dict;
+}
+const { locale, dict } = Astro.props;
+const toolNames = dict.tools as Record<string, { name: string }>;
+---
+
+<footer class="mt-20 bg-[#26262e] text-[#b9b9c4]">
+  <div class="mx-auto grid max-w-[1370px] gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-4">
+    <nav aria-label={dict.footer.colProduct}>
+      <p class="mb-4 text-xs font-bold uppercase tracking-widest text-white">{dict.footer.colProduct}</p>
+      <ul class="space-y-2.5">
+        <li><a href={l('/', locale)} class="text-sm hover:text-white">{dict.nav.home}</a></li>
+        <li><a href={l('/#features', locale)} class="text-sm hover:text-white">{dict.nav.features}</a></li>
+        <li><a href={l('/#tools', locale)} class="text-sm hover:text-white">{dict.nav.tools}</a></li>
+        <li><a href={l('/#faq', locale)} class="text-sm hover:text-white">{dict.nav.faq}</a></li>
+      </ul>
+    </nav>
+    <nav aria-label={dict.footer.colTools}>
+      <p class="mb-4 text-xs font-bold uppercase tracking-widest text-white">{dict.footer.colTools}</p>
+      <ul class="space-y-2.5">
+        {tools.map((t) => (
+          <li>
+            <a href={l('/' + t.slug, locale)} class="text-sm hover:text-white">{toolNames[t.slug].name}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <nav aria-label={dict.footer.colLegal}>
+      <p class="mb-4 text-xs font-bold uppercase tracking-widest text-white">{dict.footer.colLegal}</p>
+      <ul class="space-y-2.5">
+        <li><a href={l('/privacy', locale)} class="text-sm hover:text-white">{dict.footer.privacy}</a></li>
+        <li><a href={l('/terms', locale)} class="text-sm hover:text-white">{dict.footer.terms}</a></li>
+      </ul>
+    </nav>
+    <nav aria-label={dict.footer.colCompany}>
+      <p class="mb-4 text-xs font-bold uppercase tracking-widest text-white">{dict.footer.colCompany}</p>
+      <ul class="space-y-2.5">
+        <li><a href={l('/about', locale)} class="text-sm hover:text-white">{dict.footer.about}</a></li>
+      </ul>
+      <p class="mt-6 flex items-center gap-1.5">
+        <Icon name="ph:heart-fill" class="h-5 w-5 text-brand" />
+        <span class="text-base font-bold text-white">Img<span class="text-brand">Love</span></span>
+      </p>
+      <p class="mt-2 text-xs leading-relaxed">{dict.footer.tagline}</p>
+    </nav>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="mx-auto flex max-w-[1370px] flex-col items-center justify-between gap-4 px-6 py-5 text-xs sm:flex-row">
+      <details class="relative">
+        <summary class="flex cursor-pointer list-none items-center gap-2 rounded-full border border-white/25 px-4 py-2 font-medium text-white [&::-webkit-details-marker]:hidden">
+          <Icon name="ph:globe" class="h-4 w-4" />
+          {localeNames[locale as keyof typeof localeNames]}
+          <Icon name="ph:caret-down" class="h-3.5 w-3.5" />
+        </summary>
+        <div class="absolute bottom-full end-0 z-50 mb-2 max-h-72 w-44 overflow-y-auto rounded-card border border-line bg-white py-1 shadow-pop">
+          {locales.map((lc) => (
+            <a
+              href={l('/', lc)}
+              class={`block px-4 py-2 text-sm hover:bg-soft ${lc === locale ? 'font-semibold text-brand' : 'text-ink'}`}
+            >
+              {localeNames[lc as keyof typeof localeNames]}
+            </a>
+          ))}
+        </div>
+      </details>
+      <p>© {new Date().getFullYear()} {dict.meta.siteName} ® — {dict.footer.rights}</p>
+    </div>
+  </div>
+</footer>

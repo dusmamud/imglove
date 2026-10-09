@@ -1,0 +1,300 @@
+import type { Dict } from './en';
+
+const dict: Dict = {
+  meta: {
+    siteName: 'ImgLove',
+    homeTitle: 'ImgLove — Công cụ xử lý ảnh trực tuyến miễn phí',
+    homeDesc:
+      'Nén, đổi kích thước, cắt, chuyển đổi và chỉnh sửa ảnh trực tuyến miễn phí. Nhanh chóng, riêng tư và dễ dàng — tệp của bạn không bao giờ rời khỏi thiết bị.',
+  },
+  nav: {
+    home: 'Trang chủ',
+    tools: 'Công cụ',
+    features: 'Tính năng',
+    faq: 'Câu hỏi thường gặp',
+    login: 'Đăng nhập',
+    signup: 'Đăng ký',
+    menu: 'Menu',
+    close: 'Đóng',
+  },
+  account: {
+    title: 'Không cần tài khoản',
+    desc: 'Mọi công cụ trên ImgLove đều miễn phí và chạy ngay trong trình duyệt của bạn — không đăng ký, không đăng nhập, bao giờ cũng vậy.',
+    ok: 'Đã hiểu',
+  },
+  hero: {
+    title: 'Mọi công cụ bạn cần để làm việc với hình ảnh',
+    subtitle:
+      'Nén, đổi kích thước, cắt, chuyển đổi và chỉnh sửa ảnh trực tuyến. Miễn phí, nhanh chóng và an toàn — ngay trong trình duyệt của bạn.',
+  },
+  toolsSection: {
+    title: 'Mọi công cụ xử lý ảnh trong một nơi',
+    subtitle: 'Chọn một công cụ để bắt đầu. Không cần đăng ký.',
+  },
+  filters: {
+    all: 'Tất cả',
+    optimize: 'Tối ưu',
+    create: 'Tạo',
+    edit: 'Chỉnh sửa',
+    convert: 'Chuyển đổi',
+    security: 'Bảo mật',
+  },
+  tools: {
+    'compress-image': {
+      name: 'Nén IMAGE',
+      desc: 'Giảm dung lượng tệp ảnh mà vẫn giữ chất lượng.',
+    },
+    'resize-image': {
+      name: 'Đổi kích thước IMAGE',
+      desc: 'Thay đổi kích thước ảnh theo pixel hoặc phần trăm.',
+    },
+    'crop-image': {
+      name: 'Cắt IMAGE',
+      desc: 'Cắt khung hình hoàn hảo từ ảnh của bạn.',
+    },
+    'convert-image': {
+      name: 'Chuyển đổi IMAGE',
+      desc: 'Chuyển đổi ảnh giữa JPG, PNG, WEBP và nhiều định dạng khác.',
+    },
+    'rotate-image': {
+      name: 'Xoay IMAGE',
+      desc: 'Xoay ảnh sang trái, sang phải hoặc lật ảnh.',
+    },
+    'watermark-image': {
+      name: 'Chèn chữ mờ IMAGE',
+      desc: 'Thêm chữ mờ để bảo vệ ảnh của bạn.',
+    },
+    'meme-generator': {
+      name: 'Tạo meme',
+      desc: 'Thêm chú thích trên và dưới để tạo meme trong vài giây.',
+    },
+    'photo-editor': {
+      name: 'Chỉnh sửa ảnh',
+      desc: 'Áp dụng bộ lọc và điều chỉnh độ sáng, độ tương phản và nhiều hơn nữa.',
+    },
+  },
+  features: {
+    title: 'Vì sao mọi người yêu thích ImgLove',
+    items: [
+      {
+        title: '100% miễn phí',
+        desc: 'Mọi công cụ đều miễn phí, không chèn watermark, không cần đăng ký.',
+      },
+      {
+        title: 'Riêng tư từ thiết kế',
+        desc: 'Ảnh của bạn được xử lý ngay trong trình duyệt. Không có gì được tải lên máy chủ.',
+      },
+      {
+        title: 'Hoạt động mọi nơi',
+        desc: 'Không cần cài đặt phần mềm. Dùng được trên điện thoại, máy tính bảng hoặc máy tính.',
+      },
+    ],
+  },
+  faq: {
+    title: 'Câu hỏi thường gặp',
+    items: [
+      {
+        q: 'Các công cụ xử lý ảnh này có thực sự miễn phí không?',
+        a: 'Có. Tất cả công cụ trên ImgLove đều hoàn toàn miễn phí, không giới hạn ẩn và không chèn watermark lên ảnh của bạn.',
+      },
+      {
+        q: 'Ảnh của tôi có bị tải lên máy chủ không?',
+        a: 'Không. Mọi công cụ đều chạy hoàn toàn trong trình duyệt của bạn nhờ công nghệ web hiện đại. Tệp của bạn không bao giờ rời khỏi thiết bị.',
+      },
+      {
+        q: 'Hỗ trợ những định dạng ảnh nào?',
+        a: 'JPG, PNG, WEBP, GIF, AVIF và HEIC (ảnh iPhone) cho đầu vào. Bạn có thể xuất ra JPG, PNG hoặc WEBP.',
+      },
+      {
+        q: 'Có giới hạn dung lượng tệp không?',
+        a: 'Không có giới hạn phía máy chủ vì không có gì được tải lên. Ảnh rất lớn có thể mất nhiều thời gian xử lý hơn trên thiết bị cấu hình thấp.',
+      },
+    ],
+  },
+  work: {
+    title: 'Làm việc theo cách của bạn',
+    cards: [
+      {
+        title: 'Xử lý hàng loạt',
+        desc: 'Xử lý nhiều ảnh cùng lúc và tải tất cả về dưới dạng ZIP.',
+        link: 'convert-image',
+      },
+      {
+        title: 'Hoạt động trên mọi thiết bị',
+        desc: 'Không cần cài đặt, không cần thiết lập. Mở ImgLove trên điện thoại, máy tính bảng hoặc máy tính.',
+        link: '',
+      },
+      {
+        title: 'Miễn phí mãi mãi',
+        desc: 'Mọi công cụ đều miễn phí, không watermark, không giới hạn ẩn.',
+        link: '',
+      },
+    ],
+  },
+  trust: {
+    title: 'Trình chỉnh sửa ảnh trực tuyến đáng tin cậy của bạn',
+    desc: 'ImgLove là giải pháp đơn giản để chỉnh sửa ảnh trực tuyến. Truy cập mọi công cụ ngay từ web — với quyền riêng tư được đảm bảo, vì các tệp không bao giờ rời khỏi thiết bị của bạn.',
+    badge1: '100% TRÊN TRÌNH DUYỆT',
+    badge2: 'KHÔNG TẢI LÊN · KHÔNG ĐĂNG KÝ',
+  },
+  footer: {
+    colProduct: 'Sản phẩm',
+    tagline:
+      'Công cụ trực tuyến miễn phí để nén, đổi kích thước, cắt, chuyển đổi và chỉnh sửa ảnh.',
+    colTools: 'Công cụ ảnh',
+    colCompany: 'Công ty',
+    colLegal: 'Pháp lý',
+    about: 'Về chúng tôi',
+    contact: 'Liên hệ',
+    privacy: 'Chính sách bảo mật',
+    terms: 'Điều khoản dịch vụ',
+    language: 'Ngôn ngữ',
+    rights: 'Bảo lưu mọi quyền.',
+  },
+  common: {
+    selectImages: 'Chọn ảnh',
+    dropTitle: 'Thả ảnh của bạn vào đây',
+    dropSub: 'hoặc',
+    supported: 'Hỗ trợ JPG, PNG, WEBP, GIF, AVIF, HEIC',
+    processing: 'Đang xử lý…',
+    download: 'Tải xuống',
+    downloadAll: 'Tải xuống tất cả',
+    startOver: 'Bắt đầu lại',
+    addMore: 'Thêm ảnh',
+    original: 'Ảnh gốc',
+    result: 'Kết quả',
+    images: 'ảnh',
+    image: 'ảnh',
+    errorGeneric: 'Đã xảy ra lỗi. Vui lòng thử ảnh khác.',
+    errorType: 'Vui lòng chọn một tệp ảnh hợp lệ.',
+    back: 'Quay lại',
+    apply: 'Áp dụng',
+    reset: 'Đặt lại',
+    quality: 'Chất lượng',
+    width: 'Chiều rộng',
+    height: 'Chiều cao',
+    pixels: 'px',
+  },
+  toolPage: {
+    howItWorks: 'Cách hoạt động',
+    steps: ['Chọn ảnh của bạn', 'Điều chỉnh cài đặt', 'Tải xuống kết quả'],
+  },
+  compress: {
+    title: 'Nén IMAGE',
+    desc: 'Giảm dung lượng ảnh mà không làm mất chất lượng hiển thị.',
+    qualityLabel: 'Mức độ nén',
+    saved: 'tiết kiệm',
+    compressMore: 'Nén',
+  },
+  resize: {
+    title: 'Đổi kích thước IMAGE',
+    desc: 'Thay đổi kích thước ảnh theo pixel hoặc phần trăm.',
+    mode: 'Đổi kích thước theo',
+    byPixels: 'Pixel',
+    byPercent: 'Phần trăm',
+    percent: 'Phần trăm',
+    lockAspect: 'Giữ tỷ lệ khung hình',
+    resizeBtn: 'Đổi kích thước ảnh',
+  },
+  crop: {
+    title: 'Cắt IMAGE',
+    desc: 'Kéo trên ảnh để chọn vùng muốn giữ lại.',
+    aspect: 'Tỷ lệ khung hình',
+    free: 'Tự do',
+    square: 'Vuông 1:1',
+    wide: 'Rộng 16:9',
+    classic: 'Chuẩn 4:3',
+    portrait: 'Dọc 3:4',
+    cropBtn: 'Cắt ảnh',
+    hint: 'Kéo trên ảnh để vẽ vùng cắt',
+  },
+  convert: {
+    title: 'Chuyển đổi IMAGE',
+    desc: 'Chuyển đổi ảnh của bạn sang JPG, PNG hoặc WEBP.',
+    format: 'Chuyển sang',
+    convertBtn: 'Chuyển đổi ảnh',
+  },
+  rotate: {
+    title: 'Xoay IMAGE',
+    desc: 'Xoay hoặc lật ảnh của bạn.',
+    left: 'Xoay trái',
+    right: 'Xoay phải',
+    flipH: 'Lật ngang',
+    flipV: 'Lật dọc',
+    applyBtn: 'Áp dụng',
+  },
+  watermark: {
+    title: 'Chèn chữ mờ IMAGE',
+    desc: 'Thêm chữ mờ tùy chỉnh vào ảnh của bạn.',
+    text: 'Nội dung chữ mờ',
+    textPh: '© Tên của bạn',
+    position: 'Vị trí',
+    opacity: 'Độ mờ',
+    size: 'Cỡ chữ',
+    color: 'Màu sắc',
+    white: 'Trắng',
+    black: 'Đen',
+    posTL: 'Trên trái',
+    posTC: 'Trên giữa',
+    posTR: 'Trên phải',
+    posBL: 'Dưới trái',
+    posBC: 'Dưới giữa',
+    posBR: 'Dưới phải',
+    applyBtn: 'Thêm chữ mờ',
+  },
+  meme: {
+    title: 'Tạo meme',
+    desc: 'Thêm chú thích vào ảnh và tạo meme.',
+    top: 'Chữ phía trên',
+    bottom: 'Chữ phía dưới',
+    topPh: 'CHỮ PHÍA TRÊN',
+    bottomPh: 'CHỮ PHÍA DƯỚI',
+    applyBtn: 'Tạo meme',
+  },
+  editor: {
+    title: 'Chỉnh sửa ảnh',
+    desc: 'Áp dụng bộ lọc và tinh chỉnh ảnh của bạn.',
+    filters: 'Bộ lọc',
+    none: 'Không',
+    grayscale: 'Đen trắng',
+    sepia: 'Nâu đỏ',
+    invert: 'Đảo màu',
+    vintage: 'Cổ điển',
+    cool: 'Lạnh',
+    warm: 'Ấm',
+    adjust: 'Điều chỉnh',
+    brightness: 'Độ sáng',
+    contrast: 'Độ tương phản',
+    saturate: 'Độ bão hòa',
+    blur: 'Làm mờ',
+    applyBtn: 'Áp dụng chỉnh sửa',
+  },
+  about: {
+    title: 'Về chúng tôi',
+    body1:
+      'ImgLove là bộ sưu tập miễn phí các công cụ xử lý ảnh trực tuyến. Sứ mệnh của chúng tôi rất đơn giản: giúp các tác vụ ảnh hằng ngày — nén, đổi kích thước, cắt, chuyển đổi và chỉnh sửa nhẹ — trở nên nhanh chóng và dễ tiếp cận với mọi người.',
+    body2:
+      'Không giống hầu hết các công cụ trực tuyến, mọi thứ trên ImgLove đều chạy trực tiếp trong trình duyệt của bạn. Ảnh của bạn không bao giờ được tải lên máy chủ của chúng tôi, nghĩa là tệp của bạn luôn riêng tư và công cụ hoạt động nhanh hơn.',
+  },
+  privacy: {
+    title: 'Chính sách bảo mật',
+    body1:
+      'ImgLove xử lý ảnh của bạn hoàn toàn trong trình duyệt web. Chúng tôi không tải lên, lưu trữ hay truyền tệp ảnh của bạn đến bất kỳ máy chủ nào.',
+    body2:
+      'Chúng tôi có thể thu thập số liệu thống kê sử dụng ẩn danh, tổng hợp để cải thiện trang web. Chúng tôi không bán dữ liệu cá nhân. Nếu bạn liên hệ với chúng tôi qua email, chúng tôi chỉ dùng địa chỉ của bạn để trả lời.',
+  },
+  terms: {
+    title: 'Điều khoản dịch vụ',
+    body1:
+      'ImgLove cung cấp các công cụ xử lý ảnh trực tuyến miễn phí "nguyên trạng", không kèm bất kỳ bảo đảm nào. Bạn chịu trách nhiệm về những ảnh mình xử lý và phải đảm bảo mình có quyền sử dụng chúng.',
+    body2:
+      'Không sử dụng ImgLove cho bất kỳ mục đích bất hợp pháp nào. Chúng tôi có thể cập nhật các điều khoản này bất cứ lúc nào; việc tiếp tục sử dụng trang web đồng nghĩa với việc bạn chấp nhận phiên bản hiện tại.',
+  },
+  notFound: {
+    title: 'Không tìm thấy trang',
+    desc: 'Trang bạn đang tìm không tồn tại.',
+    backHome: 'Về trang chủ',
+  },
+};
+
+export default dict;

@@ -1,0 +1,299 @@
+import type { Dict } from './en';
+
+const dict: Dict = {
+  meta: {
+    siteName: 'ImgLove',
+    homeTitle: 'ImgLove — Herramientas de imagen online gratis',
+    homeDesc:
+      'Comprime, redimensiona, recorta, convierte y edita imágenes online gratis. Rápido, privado y fácil: tus archivos nunca salen de tu dispositivo.',
+  },
+  nav: {
+    home: 'Inicio',
+    tools: 'Herramientas',
+    features: 'Ventajas',
+    faq: 'FAQ',
+    login: 'Iniciar sesión',
+    signup: 'Registrarse',
+    menu: 'Menú',
+    close: 'Cerrar',
+  },
+  account: {
+    title: 'No necesitas cuenta',
+    desc: 'Todas las herramientas de ImgLove son gratuitas y funcionan en tu navegador — sin registro, sin inicio de sesión, nunca.',
+    ok: 'Entendido',
+  },
+  hero: {
+    title: 'Todas las herramientas que necesitas para trabajar con imágenes',
+    subtitle:
+      'Comprime, redimensiona, recorta, convierte y edita tus imágenes online. Gratis, rápido y seguro, directamente en tu navegador.',
+  },
+  toolsSection: {
+    title: 'Todas las herramientas de imagen en un solo lugar',
+    subtitle: 'Elige una herramienta para empezar. Sin registro.',
+  },
+  filters: {
+    all: 'Todo',
+    optimize: 'Optimizar',
+    create: 'Crear',
+    edit: 'Editar',
+    convert: 'Convertir',
+    security: 'Seguridad',
+  },
+  tools: {
+    'compress-image': {
+      name: 'Comprimir IMAGE',
+      desc: 'Reduce el tamaño de tus imágenes manteniendo la calidad.',
+    },
+    'resize-image': {
+      name: 'Redimensionar IMAGE',
+      desc: 'Cambia las dimensiones de tus imágenes en píxeles o porcentaje.',
+    },
+    'crop-image': {
+      name: 'Recortar IMAGE',
+      desc: 'Recorta el encuadre perfecto de tus imágenes.',
+    },
+    'convert-image': {
+      name: 'Convertir IMAGE',
+      desc: 'Convierte imágenes entre JPG, PNG, WEBP y más.',
+    },
+    'rotate-image': {
+      name: 'Rotar IMAGE',
+      desc: 'Rota tus imágenes a la izquierda, a la derecha o voltéalas.',
+    },
+    'watermark-image': {
+      name: 'Marca de agua IMAGE',
+      desc: 'Añade una marca de agua de texto para proteger tus imágenes.',
+    },
+    'meme-generator': {
+      name: 'Generador de memes',
+      desc: 'Añade textos arriba y abajo para crear memes en segundos.',
+    },
+    'photo-editor': {
+      name: 'Editor de fotos',
+      desc: 'Aplica filtros y ajusta el brillo, el contraste y más.',
+    },
+  },
+  features: {
+    title: 'Por qué la gente adora ImgLove',
+    items: [
+      {
+        title: '100 % gratis',
+        desc: 'Todas las herramientas son gratis, sin marcas de agua y sin registro.',
+      },
+      {
+        title: 'Privado por diseño',
+        desc: 'Tus imágenes se procesan en tu navegador. Nunca se sube nada a un servidor.',
+      },
+      {
+        title: 'Funciona en todas partes',
+        desc: 'Sin instalar nada. Funciona en tu móvil, tableta u ordenador.',
+      },
+    ],
+  },
+  faq: {
+    title: 'Preguntas frecuentes',
+    items: [
+      {
+        q: '¿Estas herramientas de imagen son realmente gratis?',
+        a: 'Sí. Todas las herramientas de ImgLove son completamente gratis, sin límites ocultos ni marcas de agua en tus imágenes.',
+      },
+      {
+        q: '¿Mis imágenes se suben a un servidor?',
+        a: 'No. Cada herramienta funciona por completo en tu navegador con tecnología web moderna. Tus archivos nunca salen de tu dispositivo.',
+      },
+      {
+        q: '¿Qué formatos de imagen son compatibles?',
+        a: 'JPG, PNG, WEBP, GIF, AVIF y HEIC (fotos de iPhone) como entrada. Puedes exportar a JPG, PNG o WEBP.',
+      },
+      {
+        q: '¿Hay un límite de tamaño de archivo?',
+        a: 'No hay límite en el servidor, ya que nada se sube. Las imágenes muy grandes pueden tardar más en procesarse en dispositivos lentos.',
+      },
+    ],
+  },
+  work: {
+    title: 'Trabaja a tu manera',
+    cards: [
+      {
+        title: 'Procesamiento por lotes',
+        desc: 'Procesa varias imágenes a la vez y descárgalas todas juntas en un ZIP.',
+        link: 'convert-image',
+      },
+      {
+        title: 'Funciona en cualquier dispositivo',
+        desc: 'Sin instalaciones ni configuración. Abre ImgLove en tu móvil, tableta u ordenador.',
+        link: '',
+      },
+      {
+        title: 'Gratis para siempre',
+        desc: 'Todas las herramientas son gratuitas, sin marcas de agua ni límites ocultos.',
+        link: '',
+      },
+    ],
+  },
+  trust: {
+    title: 'Tu editor de imágenes online de confianza',
+    desc: 'ImgLove es la solución sencilla para editar imágenes online. Accede a cada herramienta directamente desde la web — con tu privacidad garantizada, porque los archivos nunca salen de tu dispositivo.',
+    badge1: '100% EN EL NAVEGADOR',
+    badge2: 'SIN SUBIDAS · SIN REGISTRO',
+  },
+  footer: {
+    colProduct: 'Producto',
+    tagline: 'Herramientas online gratuitas para comprimir, redimensionar, recortar, convertir y editar imágenes.',
+    colTools: 'Herramientas de imagen',
+    colCompany: 'Empresa',
+    colLegal: 'Legal',
+    about: 'Sobre nosotros',
+    contact: 'Contacto',
+    privacy: 'Política de privacidad',
+    terms: 'Términos del servicio',
+    language: 'Idioma',
+    rights: 'Todos los derechos reservados.',
+  },
+  common: {
+    selectImages: 'Seleccionar imágenes',
+    dropTitle: 'Suelta tus imágenes aquí',
+    dropSub: 'o',
+    supported: 'Compatible con JPG, PNG, WEBP, GIF, AVIF, HEIC',
+    processing: 'Procesando…',
+    download: 'Descargar',
+    downloadAll: 'Descargar todo',
+    startOver: 'Empezar de nuevo',
+    addMore: 'Añadir más imágenes',
+    original: 'Original',
+    result: 'Resultado',
+    images: 'imágenes',
+    image: 'imagen',
+    errorGeneric: 'Algo salió mal. Prueba con otra imagen.',
+    errorType: 'Selecciona un archivo de imagen válido.',
+    back: 'Atrás',
+    apply: 'Aplicar',
+    reset: 'Restablecer',
+    quality: 'Calidad',
+    width: 'Ancho',
+    height: 'Alto',
+    pixels: 'px',
+  },
+  toolPage: {
+    howItWorks: 'Cómo funciona',
+    steps: ['Selecciona tus imágenes', 'Ajusta la configuración', 'Descarga el resultado'],
+  },
+  compress: {
+    title: 'Comprimir IMAGE',
+    desc: 'Reduce el tamaño de los archivos de imagen sin perder calidad visible.',
+    qualityLabel: 'Nivel de compresión',
+    saved: 'ahorrado',
+    compressMore: 'Comprimir',
+  },
+  resize: {
+    title: 'Redimensionar IMAGE',
+    desc: 'Redimensiona imágenes por píxeles o por porcentaje.',
+    mode: 'Redimensionar por',
+    byPixels: 'Píxeles',
+    byPercent: 'Porcentaje',
+    percent: 'Porcentaje',
+    lockAspect: 'Bloquear relación de aspecto',
+    resizeBtn: 'Redimensionar imágenes',
+  },
+  crop: {
+    title: 'Recortar IMAGE',
+    desc: 'Arrastra sobre la imagen para seleccionar el área que quieres conservar.',
+    aspect: 'Relación de aspecto',
+    free: 'Libre',
+    square: 'Cuadrado 1:1',
+    wide: 'Panorámico 16:9',
+    classic: 'Clásico 4:3',
+    portrait: 'Retrato 3:4',
+    cropBtn: 'Recortar imagen',
+    hint: 'Arrastra sobre la imagen para dibujar el área de recorte',
+  },
+  convert: {
+    title: 'Convertir IMAGE',
+    desc: 'Convierte tus imágenes a JPG, PNG o WEBP.',
+    format: 'Convertir a',
+    convertBtn: 'Convertir imágenes',
+  },
+  rotate: {
+    title: 'Rotar IMAGE',
+    desc: 'Rota o voltea tus imágenes.',
+    left: 'Rotar a la izquierda',
+    right: 'Rotar a la derecha',
+    flipH: 'Voltear horizontal',
+    flipV: 'Voltear vertical',
+    applyBtn: 'Aplicar',
+  },
+  watermark: {
+    title: 'Marca de agua IMAGE',
+    desc: 'Añade una marca de agua de texto personalizada a tus imágenes.',
+    text: 'Texto de la marca de agua',
+    textPh: '© Tu nombre',
+    position: 'Posición',
+    opacity: 'Opacidad',
+    size: 'Tamaño del texto',
+    color: 'Color',
+    white: 'Blanco',
+    black: 'Negro',
+    posTL: 'Arriba a la izquierda',
+    posTC: 'Arriba al centro',
+    posTR: 'Arriba a la derecha',
+    posBL: 'Abajo a la izquierda',
+    posBC: 'Abajo al centro',
+    posBR: 'Abajo a la derecha',
+    applyBtn: 'Añadir marca de agua',
+  },
+  meme: {
+    title: 'Generador de memes',
+    desc: 'Añade textos a tus imágenes y crea memes.',
+    top: 'Texto superior',
+    bottom: 'Texto inferior',
+    topPh: 'TEXTO SUPERIOR',
+    bottomPh: 'TEXTO INFERIOR',
+    applyBtn: 'Crear meme',
+  },
+  editor: {
+    title: 'Editor de fotos',
+    desc: 'Aplica filtros y ajusta tus fotos.',
+    filters: 'Filtros',
+    none: 'Ninguno',
+    grayscale: 'B/N',
+    sepia: 'Sepia',
+    invert: 'Invertir',
+    vintage: 'Vintage',
+    cool: 'Frío',
+    warm: 'Cálido',
+    adjust: 'Ajustes',
+    brightness: 'Brillo',
+    contrast: 'Contraste',
+    saturate: 'Saturación',
+    blur: 'Desenfoque',
+    applyBtn: 'Aplicar cambios',
+  },
+  about: {
+    title: 'Sobre nosotros',
+    body1:
+      'ImgLove es una colección gratuita de herramientas de imagen online. Nuestra misión es sencilla: hacer que las tareas cotidianas con imágenes —comprimir, redimensionar, recortar, convertir y editar— sean rápidas y accesibles para todos.',
+    body2:
+      'A diferencia de la mayoría de las herramientas online, todo en ImgLove funciona directamente en tu navegador. Tus imágenes nunca se suben a nuestros servidores, así que tus archivos siguen siendo privados y las herramientas funcionan aún más rápido.',
+  },
+  privacy: {
+    title: 'Política de privacidad',
+    body1:
+      'ImgLove procesa tus imágenes por completo en tu navegador web. No subimos, almacenamos ni transmitimos tus archivos de imagen a ningún servidor.',
+    body2:
+      'Podemos recopilar estadísticas de uso anónimas y agregadas para mejorar el sitio web. No vendemos datos personales. Si nos contactas por correo electrónico, solo usaremos tu dirección para responderte.',
+  },
+  terms: {
+    title: 'Términos del servicio',
+    body1:
+      'ImgLove ofrece herramientas de imagen online gratuitas «tal cual», sin garantías de ningún tipo. Eres responsable de las imágenes que procesas y de asegurarte de que tienes los derechos para usarlas.',
+    body2:
+      'No uses ImgLove para ningún fin ilícito. Podemos actualizar estos términos en cualquier momento; seguir usando el sitio significa que aceptas la versión vigente.',
+  },
+  notFound: {
+    title: 'Página no encontrada',
+    desc: 'La página que buscas no existe.',
+    backHome: 'Volver al inicio',
+  },
+};
+
+export default dict;

@@ -1,0 +1,299 @@
+import type { Dict } from './en';
+
+const dict: Dict = {
+  meta: {
+    siteName: 'ImgLove',
+    homeTitle: 'ImgLove — 免费在线图片工具',
+    homeDesc:
+      '免费在线压缩、调整尺寸、裁剪、转换和编辑图片。快速、私密、简单——您的文件从不离开您的设备。',
+  },
+  nav: {
+    home: '首页',
+    tools: '工具',
+    features: '功能',
+    faq: '常见问题',
+    login: '登录',
+    signup: '注册',
+    menu: '菜单',
+    close: '关闭',
+  },
+  account: {
+    title: '无需注册账号',
+    desc: 'ImgLove 的所有工具均免费，且直接在浏览器中运行——无需注册，无需登录，永远如此。',
+    ok: '知道了',
+  },
+  hero: {
+    title: '处理图片所需的各种工具',
+    subtitle:
+      '在线压缩、调整尺寸、裁剪、转换和编辑图片。免费、快速、安全——直接在浏览器中完成。',
+  },
+  toolsSection: {
+    title: '所有图片工具，一站齐全',
+    subtitle: '选择工具即可开始，无需注册。',
+  },
+  filters: {
+    all: '全部',
+    optimize: '优化',
+    create: '创建',
+    edit: '编辑',
+    convert: '转换',
+    security: '安全',
+  },
+  tools: {
+    'compress-image': {
+      name: '压缩 IMAGE',
+      desc: '在保持画质的同时减小图片文件体积。',
+    },
+    'resize-image': {
+      name: '调整尺寸 IMAGE',
+      desc: '按像素或百分比更改图片尺寸。',
+    },
+    'crop-image': {
+      name: '裁剪 IMAGE',
+      desc: '从图片中裁出完美的画面。',
+    },
+    'convert-image': {
+      name: '转换 IMAGE',
+      desc: '在 JPG、PNG、WEBP 等格式之间转换图片。',
+    },
+    'rotate-image': {
+      name: '旋转 IMAGE',
+      desc: '向左、向右旋转图片或进行翻转。',
+    },
+    'watermark-image': {
+      name: '水印 IMAGE',
+      desc: '添加文字水印，保护您的图片。',
+    },
+    'meme-generator': {
+      name: '表情包生成器',
+      desc: '添加顶部和底部文字，几秒钟做出表情包。',
+    },
+    'photo-editor': {
+      name: '照片编辑器',
+      desc: '应用滤镜，调整亮度、对比度等。',
+    },
+  },
+  features: {
+    title: '为什么大家都爱 ImgLove',
+    items: [
+      {
+        title: '100% 免费',
+        desc: '所有工具免费使用，无水印，无需注册。',
+      },
+      {
+        title: '隐私优先设计',
+        desc: '图片直接在您的浏览器中处理，绝不会上传到服务器。',
+      },
+      {
+        title: '随时随地可用',
+        desc: '无需安装软件，在手机、平板或电脑上都能用。',
+      },
+    ],
+  },
+  faq: {
+    title: '常见问题',
+    items: [
+      {
+        q: '这些图片工具真的免费吗？',
+        a: '是的。ImgLove 上的所有工具完全免费，没有隐藏限制，图片上也没有水印。',
+      },
+      {
+        q: '我的图片会上传到服务器吗？',
+        a: '不会。每个工具都使用现代网页技术完全在您的浏览器中运行，您的文件从不离开您的设备。',
+      },
+      {
+        q: '支持哪些图片格式？',
+        a: '输入支持 JPG、PNG、WEBP、GIF、AVIF 和 HEIC（iPhone 照片），可导出为 JPG、PNG 或 WEBP。',
+      },
+      {
+        q: '有文件大小限制吗？',
+        a: '由于不上传任何内容，没有服务器端限制。非常大的图片在较慢的设备上处理可能需要更长时间。',
+      },
+    ],
+  },
+  work: {
+    title: '按你的方式工作',
+    cards: [
+      {
+        title: '批量处理',
+        desc: '一次处理多张图片，并将所有结果打包为 ZIP 下载。',
+        link: 'convert-image',
+      },
+      {
+        title: '适用于任何设备',
+        desc: '无需安装，无需设置。在手机、平板或电脑上打开 ImgLove 即可。',
+        link: '',
+      },
+      {
+        title: '永久免费',
+        desc: '所有工具免费，无水印，无隐藏限制。',
+        link: '',
+      },
+    ],
+  },
+  trust: {
+    title: '值得信赖的在线图片编辑器',
+    desc: 'ImgLove 是在线编辑图片的简单解决方案。直接从网页使用每款工具——隐私有保障，因为文件从不离开你的设备。',
+    badge1: '100% 本地运行',
+    badge2: '无需上传 · 无需注册',
+  },
+  footer: {
+    colProduct: '产品',
+    tagline: '免费在线压缩、调整尺寸、裁剪、转换和编辑图片的工具。',
+    colTools: '图片工具',
+    colCompany: '公司',
+    colLegal: '法律',
+    about: '关于我们',
+    contact: '联系我们',
+    privacy: '隐私政策',
+    terms: '服务条款',
+    language: '语言',
+    rights: '版权所有。',
+  },
+  common: {
+    selectImages: '选择图片',
+    dropTitle: '将图片拖放到这里',
+    dropSub: '或',
+    supported: '支持 JPG、PNG、WEBP、GIF、AVIF、HEIC',
+    processing: '处理中…',
+    download: '下载',
+    downloadAll: '全部下载',
+    startOver: '重新开始',
+    addMore: '添加更多图片',
+    original: '原图',
+    result: '结果',
+    images: '张图片',
+    image: '张图片',
+    errorGeneric: '出错了，请换一张图片试试。',
+    errorType: '请选择有效的图片文件。',
+    back: '返回',
+    apply: '应用',
+    reset: '重置',
+    quality: '画质',
+    width: '宽度',
+    height: '高度',
+    pixels: 'px',
+  },
+  toolPage: {
+    howItWorks: '使用方法',
+    steps: ['选择图片', '调整设置', '下载结果'],
+  },
+  compress: {
+    title: '压缩 IMAGE',
+    desc: '在不损失可见画质的前提下减小图片文件体积。',
+    qualityLabel: '压缩程度',
+    saved: '已节省',
+    compressMore: '压缩',
+  },
+  resize: {
+    title: '调整尺寸 IMAGE',
+    desc: '按像素或百分比调整图片尺寸。',
+    mode: '调整方式',
+    byPixels: '像素',
+    byPercent: '百分比',
+    percent: '百分比',
+    lockAspect: '锁定宽高比',
+    resizeBtn: '调整图片尺寸',
+  },
+  crop: {
+    title: '裁剪 IMAGE',
+    desc: '在图片上拖动以选择要保留的区域。',
+    aspect: '宽高比',
+    free: '自由',
+    square: '正方形 1:1',
+    wide: '宽屏 16:9',
+    classic: '经典 4:3',
+    portrait: '竖屏 3:4',
+    cropBtn: '裁剪图片',
+    hint: '在图片上拖动以绘制裁剪区域',
+  },
+  convert: {
+    title: '转换 IMAGE',
+    desc: '将图片转换为 JPG、PNG 或 WEBP。',
+    format: '转换为',
+    convertBtn: '转换图片',
+  },
+  rotate: {
+    title: '旋转 IMAGE',
+    desc: '旋转或翻转图片。',
+    left: '向左旋转',
+    right: '向右旋转',
+    flipH: '水平翻转',
+    flipV: '垂直翻转',
+    applyBtn: '应用',
+  },
+  watermark: {
+    title: '水印 IMAGE',
+    desc: '为图片添加自定义文字水印。',
+    text: '水印文字',
+    textPh: '© 您的名字',
+    position: '位置',
+    opacity: '不透明度',
+    size: '文字大小',
+    color: '颜色',
+    white: '白色',
+    black: '黑色',
+    posTL: '左上',
+    posTC: '顶部居中',
+    posTR: '右上',
+    posBL: '左下',
+    posBC: '底部居中',
+    posBR: '右下',
+    applyBtn: '添加水印',
+  },
+  meme: {
+    title: '表情包生成器',
+    desc: '为图片添加文字，制作表情包。',
+    top: '顶部文字',
+    bottom: '底部文字',
+    topPh: '顶部文字',
+    bottomPh: '底部文字',
+    applyBtn: '生成表情包',
+  },
+  editor: {
+    title: '照片编辑器',
+    desc: '应用滤镜并微调照片。',
+    filters: '滤镜',
+    none: '无',
+    grayscale: '黑白',
+    sepia: '怀旧',
+    invert: '反色',
+    vintage: '复古',
+    cool: '冷色',
+    warm: '暖色',
+    adjust: '调整',
+    brightness: '亮度',
+    contrast: '对比度',
+    saturate: '饱和度',
+    blur: '模糊',
+    applyBtn: '应用编辑',
+  },
+  about: {
+    title: '关于我们',
+    body1:
+      'ImgLove 是一个免费的在线图片工具集合。我们的使命很简单：让日常图片任务——压缩、调整尺寸、裁剪、转换和轻度编辑——对每个人都快速易用。',
+    body2:
+      '与大多数在线工具不同，ImgLove 的一切都在您的浏览器中直接运行。您的图片从不上传到我们的服务器，这意味着您的文件保持私密，工具运行也更快。',
+  },
+  privacy: {
+    title: '隐私政策',
+    body1:
+      'ImgLove 完全在您的网页浏览器中处理图片。我们不会将您的图片文件上传、存储或传输到任何服务器。',
+    body2:
+      '我们可能会收集匿名、汇总的使用统计数据以改进网站。我们不出售个人数据。如果您通过电子邮件联系我们，我们只会用您的地址回复您。',
+  },
+  terms: {
+    title: '服务条款',
+    body1:
+      'ImgLove 按“现状”提供免费在线图片工具，不作任何形式的保证。您对所处理的图片负责，并确保您拥有使用这些图片的权利。',
+    body2:
+      '请勿将 ImgLove 用于任何非法目的。我们可能随时更新这些条款；继续使用本网站即表示您接受当前版本。',
+  },
+  notFound: {
+    title: '页面未找到',
+    desc: '您要找的页面不存在。',
+    backHome: '返回首页',
+  },
+};
+
+export default dict;

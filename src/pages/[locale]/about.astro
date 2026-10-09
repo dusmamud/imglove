@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getDict } from '../../i18n/dicts';
+import { locales } from '../../i18n/index';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const dict = getDict(locale);
+---
+
+<Base locale={locale} title={`${dict.about.title} — ${dict.meta.siteName}`} description={dict.about.body1} path="/about">
+  <section class="mx-auto max-w-3xl px-4 py-14">
+    <h1 class="text-3xl font-bold tracking-tight text-ink sm:text-4xl">{dict.about.title}</h1>
+    <div class="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+      <p>{dict.about.body1}</p>
+      <p>{dict.about.body2}</p>
+    </div>
+  </section>
+</Base>

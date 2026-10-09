@@ -1,0 +1,140 @@
+---
+import { Icon } from 'astro-icon/components';
+import { l, localeNames, locales } from '../i18n/index';
+import type { Dict } from '../i18n/dicts';
+
+interface Props {
+  locale: string;
+  dict: Dict;
+}
+const { locale, dict } = Astro.props;
+---
+
+<header class="fixed inset-x-0 top-0 z-40 h-[60px] border-b border-[#d6d6df] bg-white">
+  <div class="mx-auto flex h-full max-w-[1370px] items-center justify-between px-6">
+    <a href={l('/', locale)} class="flex items-center" aria-label={dict.meta.siteName}>
+      <span class="text-[22px] font-bold tracking-tight text-[#161616]">Img</span>
+      <Icon name="ph:heart-fill" class="mx-0.5 h-6 w-6 text-brand" />
+      <span class="text-[22px] font-bold tracking-tight text-[#161616]">Love</span>
+    </a>
+
+    <nav class="hidden items-center gap-8 min-[860px]:flex" aria-label="primary">
+      <a href={l('/', locale) + '#tools'} class="text-sm font-medium uppercase text-[#161616] hover:text-brand">{dict.nav.tools}</a>
+      <a href={l('/', locale) + '#features'} class="text-sm font-medium uppercase text-[#161616] hover:text-brand">{dict.nav.features}</a>
+      <a href={l('/', locale) + '#faq'} class="text-sm font-medium uppercase text-[#161616] hover:text-brand">{dict.nav.faq}</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <div class="relative" id="lang-wrap">
+        <button
+          type="button"
+          id="lang-btn"
+          class="flex items-center gap-1.5 rounded-lg border border-line px-3 py-2 text-sm font-medium text-ink hover:border-brand"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+        >
+          <Icon name="ph:globe" class="h-4 w-4" />
+          <span class="hidden sm:inline">{localeNames[locale as keyof typeof localeNames]}</span>
+          <Icon name="ph:caret-down" class="h-3.5 w-3.5" />
+        </button>
+        <div
+          id="lang-menu"
+          class="absolute end-0 top-full z-50 mt-2 hidden max-h-80 w-44 overflow-y-auto rounded-card border border-line bg-white py-1 shadow-pop"
+          role="listbox"
+        >
+          {locales.map((lc) => (
+            <a
+              href={l('/', lc)}
+              role="option"
+              aria-selected={lc === locale}
+              class={`block px-4 py-2 text-sm hover:bg-soft ${lc === locale ? 'font-semibold text-brand' : 'text-ink'}`}
+            >
+              {localeNames[lc as keyof typeof localeNames]}
+            </a>
+          ))}
+        </div>
+      </div>
+      <button type="button" data-account class="hidden px-3 py-2 text-sm font-semibold text-[#161616] hover:text-brand min-[860px]:block">
+        {dict.nav.login}
+      </button>
+      <button type="button" data-account class="hidden rounded-lg bg-brand px-3 py-2 text-sm font-semibold text-white hover:bg-brand-dark min-[860px]:block">
+        {dict.nav.signup}
+      </button>
+      <button
+        type="button"
+        id="nav-toggle"
+        class="flex h-10 w-10 items-center justify-center text-[#161616] min-[860px]:hidden"
+        aria-label={dict.nav.menu}
+      >
+        <Icon name="ph:list" class="h-6 w-6" />
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="hidden border-b border-[#d6d6df] bg-white px-4 py-3 min-[860px]:hidden" aria-label="mobile">
+    <a href={l('/', locale) + '#tools'} class="block rounded-lg px-3 py-2.5 text-sm font-medium uppercase text-[#161616] hover:bg-soft">{dict.nav.tools}</a>
+    <a href={l('/', locale) + '#features'} class="block rounded-lg px-3 py-2.5 text-sm font-medium uppercase text-[#161616] hover:bg-soft">{dict.nav.features}</a>
+    <a href={l('/', locale) + '#faq'} class="block rounded-lg px-3 py-2.5 text-sm font-medium uppercase text-[#161616] hover:bg-soft">{dict.nav.faq}</a>
+    <div class="mt-2 flex gap-2 px-3 pb-1">
+      <button type="button" data-account class="flex-1 rounded-lg border border-line px-3 py-2.5 text-sm font-semibold text-[#161616]">{dict.nav.login}</button>
+      <button type="button" data-account class="flex-1 rounded-lg bg-brand px-3 py-2.5 text-sm font-semibold text-white">{dict.nav.signup}</button>
+    </div>
+  </nav>
+</header>
+<div class="h-[60px]"></div>
+
+<!-- No-account modal -->
+<div id="account-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 p-4">
+  <div class="w-full max-w-sm rounded-card bg-white p-6 text-center shadow-pop">
+    <span class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-brand">
+      <Icon name="ph:lock-key" class="h-6 w-6" />
+    </span>
+    <h3 class="text-lg font-semibold text-ink">{dict.account.title}</h3>
+    <p class="mt-2 text-sm leading-relaxed text-muted">{dict.account.desc}</p>
+    <button type="button" id="account-close" class="mt-5 w-full rounded-lg bg-brand px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-dark">
+      {dict.account.ok}
+    </button>
+  </div>
+</div>
+
+<script>
+  (function () {
+    if (document.documentElement.dataset.navInit) return;
+    document.documentElement.dataset.navInit = '1';
+    var toggle = document.getElementById('nav-toggle');
+    var mobileNav = document.getElementById('mobile-nav');
+    toggle?.addEventListener('click', function () {
+      mobileNav?.classList.toggle('hidden');
+    });
+    mobileNav?.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { mobileNav?.classList.add('hidden'); });
+    });
+    var langBtn = document.getElementById('lang-btn');
+    var langMenu = document.getElementById('lang-menu');
+    langBtn?.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var willOpen = langMenu?.classList.contains('hidden');
+      langMenu?.classList.toggle('hidden');
+      langBtn?.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function () {
+      langMenu?.classList.add('hidden');
+      langBtn?.setAttribute('aria-expanded', 'false');
+    });
+    var modal = document.getElementById('account-modal');
+    var openModal = function () {
+      modal?.classList.remove('hidden');
+      modal?.classList.add('flex');
+    };
+    var closeModal = function () {
+      modal?.classList.add('hidden');
+      modal?.classList.remove('flex');
+    };
+    document.querySelectorAll('[data-account]').forEach(function (b) {
+      b.addEventListener('click', openModal);
+    });
+    document.getElementById('account-close')?.addEventListener('click', closeModal);
+    modal?.addEventListener('click', function (e) {
+      if (e.target === modal) closeModal();
+    });
+  })();
+</script>

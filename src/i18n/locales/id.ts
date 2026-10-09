@@ -1,0 +1,299 @@
+import type { Dict } from './en';
+
+const dict: Dict = {
+  meta: {
+    siteName: 'ImgLove',
+    homeTitle: 'ImgLove — Alat Gambar Online Gratis',
+    homeDesc:
+      'Kompres, ubah ukuran, potong, konversi, dan edit gambar online secara gratis. Cepat, privat, dan mudah — file Anda tidak pernah meninggalkan perangkat Anda.',
+  },
+  nav: {
+    home: 'Beranda',
+    tools: 'Alat',
+    features: 'Fitur',
+    faq: 'FAQ',
+    login: 'Masuk',
+    signup: 'Daftar',
+    menu: 'Menu',
+    close: 'Tutup',
+  },
+  account: {
+    title: 'Tanpa perlu akun',
+    desc: 'Semua alat di ImgLove gratis dan berjalan langsung di browser Anda — tanpa daftar, tanpa masuk, selamanya.',
+    ok: 'Mengerti',
+  },
+  hero: {
+    title: 'Semua alat yang Anda butuhkan untuk mengolah gambar',
+    subtitle:
+      'Kompres, ubah ukuran, potong, konversi, dan edit gambar Anda secara online. Gratis, cepat, dan aman — langsung di browser Anda.',
+  },
+  toolsSection: {
+    title: 'Semua alat gambar dalam satu tempat',
+    subtitle: 'Pilih alat untuk memulai. Tanpa perlu mendaftar.',
+  },
+  filters: {
+    all: 'Semua',
+    optimize: 'Optimalkan',
+    create: 'Buat',
+    edit: 'Edit',
+    convert: 'Konversi',
+    security: 'Keamanan',
+  },
+  tools: {
+    'compress-image': {
+      name: 'Kompres IMAGE',
+      desc: 'Perkecil ukuran file gambar Anda tanpa mengurangi kualitas.',
+    },
+    'resize-image': {
+      name: 'Ubah Ukuran IMAGE',
+      desc: 'Ubah dimensi gambar Anda dalam piksel atau persen.',
+    },
+    'crop-image': {
+      name: 'Potong IMAGE',
+      desc: 'Potong bingkai sempurna dari gambar Anda.',
+    },
+    'convert-image': {
+      name: 'Konversi IMAGE',
+      desc: 'Konversi gambar antara JPG, PNG, WEBP, dan lainnya.',
+    },
+    'rotate-image': {
+      name: 'Putar IMAGE',
+      desc: 'Putar gambar Anda ke kiri, kanan, atau balik.',
+    },
+    'watermark-image': {
+      name: 'Watermark IMAGE',
+      desc: 'Tambahkan watermark teks untuk melindungi gambar Anda.',
+    },
+    'meme-generator': {
+      name: 'Pembuat meme',
+      desc: 'Tambahkan teks atas dan bawah untuk membuat meme dalam hitungan detik.',
+    },
+    'photo-editor': {
+      name: 'Editor foto',
+      desc: 'Terapkan filter dan sesuaikan kecerahan, kontras, dan lainnya.',
+    },
+  },
+  features: {
+    title: 'Mengapa orang menyukai ImgLove',
+    items: [
+      {
+        title: '100% gratis',
+        desc: 'Semua alat gratis digunakan, tanpa watermark dan tanpa perlu mendaftar.',
+      },
+      {
+        title: 'Privat sejak awal',
+        desc: 'Gambar Anda diproses langsung di browser Anda. Tidak ada yang diunggah ke server.',
+      },
+      {
+        title: 'Berfungsi di mana saja',
+        desc: 'Tanpa perlu menginstal perangkat lunak. Berfungsi di ponsel, tablet, atau komputer Anda.',
+      },
+    ],
+  },
+  faq: {
+    title: 'Pertanyaan yang sering diajukan',
+    items: [
+      {
+        q: 'Apakah alat gambar ini benar-benar gratis?',
+        a: 'Ya. Semua alat di ImgLove sepenuhnya gratis tanpa batasan tersembunyi dan tanpa watermark pada gambar Anda.',
+      },
+      {
+        q: 'Apakah gambar saya diunggah ke server?',
+        a: 'Tidak. Setiap alat berjalan sepenuhnya di browser Anda menggunakan teknologi web modern. File Anda tidak pernah meninggalkan perangkat Anda.',
+      },
+      {
+        q: 'Format gambar apa saja yang didukung?',
+        a: 'JPG, PNG, WEBP, GIF, AVIF, dan HEIC (foto iPhone) untuk input. Anda dapat mengekspor ke JPG, PNG, atau WEBP.',
+      },
+      {
+        q: 'Apakah ada batas ukuran file?',
+        a: 'Tidak ada batas di sisi server karena tidak ada yang diunggah. Gambar yang sangat besar mungkin membutuhkan waktu lebih lama untuk diproses di perangkat yang lambat.',
+      },
+    ],
+  },
+  work: {
+    title: 'Bekerja dengan caramu',
+    cards: [
+      {
+        title: 'Pemrosesan batch',
+        desc: 'Proses banyak gambar sekaligus dan unduh semuanya bersama sebagai ZIP.',
+        link: 'convert-image',
+      },
+      {
+        title: 'Berfungsi di perangkat apa pun',
+        desc: 'Tanpa instal, tanpa pengaturan. Buka ImgLove di ponsel, tablet, atau komputer.',
+        link: '',
+      },
+      {
+        title: 'Gratis selamanya',
+        desc: 'Semua alat gratis tanpa watermark dan tanpa batas tersembunyi.',
+        link: '',
+      },
+    ],
+  },
+  trust: {
+    title: 'Editor gambar online tepercaya Anda',
+    desc: 'ImgLove adalah solusi sederhana untuk mengedit gambar online. Akses setiap alat langsung dari web — dengan privasi terjamin, karena file tidak pernah meninggalkan perangkat Anda.',
+    badge1: '100% DI BROWSER',
+    badge2: 'TANPA UNGGAH · TANPA DAFTAR',
+  },
+  footer: {
+    colProduct: 'Produk',
+    tagline: 'Alat online gratis untuk mengompres, mengubah ukuran, memotong, mengonversi, dan mengedit gambar.',
+    colTools: 'Alat gambar',
+    colCompany: 'Perusahaan',
+    colLegal: 'Legal',
+    about: 'Tentang kami',
+    contact: 'Kontak',
+    privacy: 'Kebijakan Privasi',
+    terms: 'Syarat Layanan',
+    language: 'Bahasa',
+    rights: 'Hak cipta dilindungi.',
+  },
+  common: {
+    selectImages: 'Pilih gambar',
+    dropTitle: 'Tarik gambar Anda ke sini',
+    dropSub: 'atau',
+    supported: 'Mendukung JPG, PNG, WEBP, GIF, AVIF, HEIC',
+    processing: 'Memproses…',
+    download: 'Unduh',
+    downloadAll: 'Unduh semua',
+    startOver: 'Mulai ulang',
+    addMore: 'Tambah gambar',
+    original: 'Asli',
+    result: 'Hasil',
+    images: 'gambar',
+    image: 'gambar',
+    errorGeneric: 'Terjadi kesalahan. Silakan coba gambar lain.',
+    errorType: 'Silakan pilih file gambar yang valid.',
+    back: 'Kembali',
+    apply: 'Terapkan',
+    reset: 'Atur ulang',
+    quality: 'Kualitas',
+    width: 'Lebar',
+    height: 'Tinggi',
+    pixels: 'px',
+  },
+  toolPage: {
+    howItWorks: 'Cara kerja',
+    steps: ['Pilih gambar Anda', 'Sesuaikan pengaturan', 'Unduh hasilnya'],
+  },
+  compress: {
+    title: 'Kompres IMAGE',
+    desc: 'Perkecil ukuran file gambar tanpa kehilangan kualitas yang terlihat.',
+    qualityLabel: 'Tingkat kompresi',
+    saved: 'dihemat',
+    compressMore: 'Kompres',
+  },
+  resize: {
+    title: 'Ubah Ukuran IMAGE',
+    desc: 'Ubah ukuran gambar berdasarkan piksel atau persentase.',
+    mode: 'Ubah berdasarkan',
+    byPixels: 'Piksel',
+    byPercent: 'Persen',
+    percent: 'Persen',
+    lockAspect: 'Kunci rasio aspek',
+    resizeBtn: 'Ubah ukuran gambar',
+  },
+  crop: {
+    title: 'Potong IMAGE',
+    desc: 'Seret pada gambar untuk memilih area yang ingin dipertahankan.',
+    aspect: 'Rasio aspek',
+    free: 'Bebas',
+    square: 'Persegi 1:1',
+    wide: 'Lebar 16:9',
+    classic: 'Klasik 4:3',
+    portrait: 'Potret 3:4',
+    cropBtn: 'Potong gambar',
+    hint: 'Seret pada gambar untuk menggambar area potong',
+  },
+  convert: {
+    title: 'Konversi IMAGE',
+    desc: 'Konversi gambar Anda ke JPG, PNG, atau WEBP.',
+    format: 'Konversi ke',
+    convertBtn: 'Konversi gambar',
+  },
+  rotate: {
+    title: 'Putar IMAGE',
+    desc: 'Putar atau balik gambar Anda.',
+    left: 'Putar kiri',
+    right: 'Putar kanan',
+    flipH: 'Balik horizontal',
+    flipV: 'Balik vertikal',
+    applyBtn: 'Terapkan',
+  },
+  watermark: {
+    title: 'Watermark IMAGE',
+    desc: 'Tambahkan watermark teks kustom ke gambar Anda.',
+    text: 'Teks watermark',
+    textPh: '© Nama Anda',
+    position: 'Posisi',
+    opacity: 'Opasitas',
+    size: 'Ukuran teks',
+    color: 'Warna',
+    white: 'Putih',
+    black: 'Hitam',
+    posTL: 'Kiri atas',
+    posTC: 'Tengah atas',
+    posTR: 'Kanan atas',
+    posBL: 'Kiri bawah',
+    posBC: 'Tengah bawah',
+    posBR: 'Kanan bawah',
+    applyBtn: 'Tambah watermark',
+  },
+  meme: {
+    title: 'Pembuat meme',
+    desc: 'Tambahkan teks ke gambar Anda dan buat meme.',
+    top: 'Teks atas',
+    bottom: 'Teks bawah',
+    topPh: 'TEKS ATAS',
+    bottomPh: 'TEKS BAWAH',
+    applyBtn: 'Buat meme',
+  },
+  editor: {
+    title: 'Editor foto',
+    desc: 'Terapkan filter dan sempurnakan foto Anda.',
+    filters: 'Filter',
+    none: 'Tidak ada',
+    grayscale: 'Hitam putih',
+    sepia: 'Sepia',
+    invert: 'Inversi',
+    vintage: 'Vintage',
+    cool: 'Dingin',
+    warm: 'Hangat',
+    adjust: 'Penyesuaian',
+    brightness: 'Kecerahan',
+    contrast: 'Kontras',
+    saturate: 'Saturasi',
+    blur: 'Buram',
+    applyBtn: 'Terapkan edit',
+  },
+  about: {
+    title: 'Tentang kami',
+    body1:
+      'ImgLove adalah kumpulan alat gambar online gratis. Misi kami sederhana: membuat tugas gambar sehari-hari — mengompres, mengubah ukuran, memotong, mengonversi, dan mengedit ringan — menjadi cepat dan mudah diakses oleh semua orang.',
+    body2:
+      'Berbeda dengan kebanyakan alat online, semua yang ada di ImgLove berjalan langsung di browser Anda. Gambar Anda tidak pernah diunggah ke server kami, yang berarti file Anda tetap privat dan alat bekerja lebih cepat.',
+  },
+  privacy: {
+    title: 'Kebijakan Privasi',
+    body1:
+      'ImgLove memproses gambar Anda sepenuhnya di browser web Anda. Kami tidak mengunggah, menyimpan, atau mengirim file gambar Anda ke server mana pun.',
+    body2:
+      'Kami dapat mengumpulkan statistik penggunaan anonim dan agregat untuk meningkatkan situs web. Kami tidak menjual data pribadi. Jika Anda menghubungi kami melalui email, kami hanya akan menggunakan alamat Anda untuk membalas.',
+  },
+  terms: {
+    title: 'Syarat Layanan',
+    body1:
+      'ImgLove menyediakan alat gambar online gratis "sebagaimana adanya", tanpa jaminan apa pun. Anda bertanggung jawab atas gambar yang Anda proses dan memastikan Anda memiliki hak untuk menggunakannya.',
+    body2:
+      'Jangan gunakan ImgLove untuk tujuan yang melanggar hukum. Kami dapat memperbarui syarat ini kapan saja; penggunaan situs yang berkelanjutan berarti Anda menerima versi saat ini.',
+  },
+  notFound: {
+    title: 'Halaman tidak ditemukan',
+    desc: 'Halaman yang Anda cari tidak ada.',
+    backHome: 'Kembali ke beranda',
+  },
+};
+
+export default dict;

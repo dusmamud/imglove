@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Design tokens (verified against iloveimg.com live CSS, 2026-10-09) ---------- */
+:root {
+  --brand: #4d90fe;
+  --brand-dark: #2c64c0;
+  --brand-soft: #e9f1fe;
+  --ink: #33333b;
+  --body-text: #47474f;
+  --muted: #707078;
+  --line: #ebebf4;
+  --line-strong: #d6d6df;
+  --soft-bg: #f5f5fa;
+  --radius-btn: 8px;
+  --radius-card: 12px;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-pop: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- Self-hosted Inter (closest free match to the site's grotesque) ---------- */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-400.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-500.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-600.woff2') format('woff2');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-700.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+body {
+  overflow-x: clip;
+  background: var(--soft-bg);
+  color: var(--body-text);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Arial,
+    'Noto Sans Devanagari', 'Noto Sans Bengali', 'Noto Sans SC', 'Noto Sans JP',
+    'Noto Sans KR', 'Noto Sans Arabic', 'Noto Sans Thai', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  line-height: 1.5;
+}
+::selection {
+  background: var(--brand);
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Range slider styling (webkit + moz) */
+input[type='range'].slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: #e5e5e5;
+  outline: none;
+}
+input[type='range'].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: var(--brand);
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+input[type='range'].slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: var(--brand);
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}

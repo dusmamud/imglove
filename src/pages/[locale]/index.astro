@@ -1,0 +1,192 @@
+---
+import Base from '../../layouts/Base.astro';
+import { Icon } from 'astro-icon/components';
+import { getDict } from '../../i18n/dicts';
+import { l, locales } from '../../i18n/index';
+import { tools } from '../../tools';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const dict = getDict(locale);
+const toolNames = dict.tools as Record<string, { name: string; desc: string }>;
+
+const featureIcons = ['ph:gift', 'ph:lock-key', 'ph:devices'];
+
+/** category + accent color per tool (mirrors iloveimg's grouping) */
+const toolStyle: Record<string, { cat: string; color: string }> = {
+  'compress-image': { cat: 'optimize', color: '#22c55e' },
+  'resize-image': { cat: 'edit', color: '#4d90fe' },
+  'crop-image': { cat: 'edit', color: '#8b5cf6' },
+  'convert-image': { cat: 'convert', color: '#f59e0b' },
+  'rotate-image': { cat: 'edit', color: '#14b8a6' },
+  'watermark-image': { cat: 'security', color: '#6366f1' },
+  'meme-generator': { cat: 'create', color: '#ec4899' },
+  'photo-editor': { cat: 'create', color: '#f97316' },
+};
+
+const filters = [
+  { key: 'all', label: dict.filters.all },
+  { key: 'optimize', label: dict.filters.optimize },
+  { key: 'create', label: dict.filters.create },
+  { key: 'edit', label: dict.filters.edit },
+  { key: 'convert', label: dict.filters.convert },
+  { key: 'security', label: dict.filters.security },
+];
+---
+
+<Base locale={locale} title={dict.meta.homeTitle} description={dict.meta.homeDesc} path="/">
+  <!-- Hero -->
+  <section class="mx-auto max-w-4xl px-4 pb-8 pt-12 text-center sm:pt-16">
+    <h1 class="text-[38px] font-semibold leading-[1.15] tracking-tight text-ink sm:text-[60px] sm:leading-[70px]">
+      {dict.hero.title}
+    </h1>
+    <p class="mx-auto mt-4 max-w-2xl text-lg text-muted sm:text-[22px] sm:leading-8">
+      {dict.hero.subtitle}
+    </p>
+  </section>
+
+  <!-- Tools grid -->
+  <section id="tools" class="mx-auto max-w-[1370px] scroll-mt-24 px-6 pb-4">
+    <div class="flex flex-wrap justify-center gap-2" id="filter-pills" role="tablist" aria-label={dict.toolsSection.title}>
+      {filters.map((f, i) => (
+        <button
+          type="button"
+          role="tab"
+          aria-selected={i === 0}
+          data-filter={f.key}
+          class={`rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
+            i === 0 ? 'bg-brand text-white' : 'border border-line bg-white text-ink hover:border-brand hover:text-brand'
+          }`}
+        >
+          {f.label}
+        </button>
+      ))}
+    </div>
+    <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4" id="tool-grid">
+      {tools.map((t) => (
+        <a
+          href={l('/' + t.slug, locale)}
+          data-category={toolStyle[t.slug].cat}
+          class="tool-card group rounded-card border border-line bg-white p-6 shadow-card transition-all hover:-translate-y-0.5 hover:border-brand"
+        >
+          <span
+            class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl text-white"
+            style={`background-color: ${toolStyle[t.slug].color}`}
+          >
+            <Icon name={'ph:' + t.icon} class="h-7 w-7" />
+          </span>
+          <span class="block text-left text-[20px] font-semibold leading-7 text-ink group-hover:text-brand">{toolNames[t.slug].name}</span>
+          <span class="mt-1 block text-left text-sm leading-relaxed text-muted">{toolNames[t.slug].desc}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Work your way -->
+  <section class="mt-16 bg-white py-14">
+    <div class="mx-auto max-w-[1370px] px-6">
+      <h2 class="text-center text-[28px] font-semibold text-ink sm:text-[42px] sm:leading-[52px]">{dict.work.title}</h2>
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        {dict.work.cards.map((c, i) => (
+          <a
+            href={c.link ? l('/' + c.link, locale) : l('/#tools', locale)}
+            class="group relative rounded-card border border-line bg-white p-7 shadow-card transition-all hover:-translate-y-0.5 hover:border-brand"
+          >
+            <span class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-soft text-brand">
+              <Icon name={['ph:stack', 'ph:devices', 'ph:gift'][i]} class="h-6 w-6" />
+            </span>
+            <h3 class="text-lg font-semibold text-ink group-hover:text-brand">{c.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">{c.desc}</p>
+            <Icon name="ph:arrow-up-right" class="absolute bottom-6 end-6 h-5 w-5 text-muted transition-colors group-hover:text-brand" />
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="mx-auto max-w-[1370px] scroll-mt-24 px-6 py-14">
+    <h2 class="text-center text-[28px] font-semibold text-ink sm:text-[42px] sm:leading-[52px]">{dict.features.title}</h2>
+    <div class="mt-10 grid gap-6 sm:grid-cols-3">
+      {dict.features.items.map((f, i) => (
+        <div class="rounded-card border border-line bg-white p-7 text-center shadow-card">
+          <span class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-brand">
+            <Icon name={featureIcons[i]} class="h-6 w-6" />
+          </span>
+          <h3 class="text-base font-semibold text-ink">{f.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted">{f.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="bg-white py-14">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <h2 class="text-[24px] font-semibold text-ink sm:text-[28px]">{dict.trust.title}</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted">{dict.trust.desc}</p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <span class="flex items-center gap-2 rounded-lg border border-line bg-soft px-4 py-2 text-xs font-bold tracking-wide text-ink">
+          <Icon name="ph:shield-check" class="h-4 w-4 text-brand" />
+          {dict.trust.badge1}
+        </span>
+        <span class="flex items-center gap-2 rounded-lg border border-line bg-soft px-4 py-2 text-xs font-bold tracking-wide text-ink">
+          <Icon name="ph:lock-key" class="h-4 w-4 text-brand" />
+          {dict.trust.badge2}
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="mx-auto max-w-3xl scroll-mt-24 px-4 py-14">
+    <h2 class="text-center text-[24px] font-semibold text-ink sm:text-[28px]">{dict.faq.title}</h2>
+    <div class="mt-8 divide-y divide-line rounded-card border border-line bg-white px-6 shadow-card">
+      {dict.faq.items.map((item) => (
+        <details class="group py-4">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-[15px] font-semibold text-ink [&::-webkit-details-marker]:hidden">
+            {item.q}
+            <Icon name="ph:caret-down" class="h-5 w-5 shrink-0 text-muted transition-transform group-open:rotate-180" />
+          </summary>
+          <p class="mt-2 text-sm leading-relaxed text-muted">{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- FAQ JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: dict.faq.items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  })} />
+
+  <script>
+    (function () {
+      var pills = document.querySelectorAll('#filter-pills [data-filter]');
+      var cards = document.querySelectorAll('#tool-grid .tool-card');
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          var f = pill.getAttribute('data-filter');
+          pills.forEach(function (p) {
+            var active = p === pill;
+            p.setAttribute('aria-selected', active ? 'true' : 'false');
+            p.className = 'rounded-full px-5 py-2 text-sm font-semibold transition-colors ' +
+              (active ? 'bg-brand text-white' : 'border border-line bg-white text-ink hover:border-brand hover:text-brand');
+          });
+          cards.forEach(function (card) {
+            var show = f === 'all' || card.getAttribute('data-category') === f;
+            card.classList.toggle('hidden', !show);
+          });
+        });
+      });
+    })();
+  </script>
+</Base>

@@ -1,0 +1,75 @@
+---
+import Base from '../../layouts/Base.astro';
+import { Icon } from 'astro-icon/components';
+import { getDict, type Dict } from '../../i18n/dicts';
+import { locales } from '../../i18n/index';
+import { tools, toolBySlug } from '../../tools';
+import CompressApp from '../../tools/compress-image/CompressApp';
+import ResizeApp from '../../tools/resize-image/ResizeApp';
+import CropApp from '../../tools/crop-image/CropApp';
+import ConvertApp from '../../tools/convert-image/ConvertApp';
+import RotateApp from '../../tools/rotate-image/RotateApp';
+import WatermarkApp from '../../tools/watermark-image/WatermarkApp';
+import MemeApp from '../../tools/meme-generator/MemeApp';
+import PhotoEditorApp from '../../tools/photo-editor/PhotoEditorApp';
+
+export function getStaticPaths() {
+  return locales.flatMap((locale) =>
+    tools.map((t) => ({ params: { locale, tool: t.slug } })),
+  );
+}
+
+const { locale, tool } = Astro.params;
+const def = tool ? toolBySlug(tool) : undefined;
+if (!def || !tool) return Astro.redirect(`/${locale}/`);
+const dict = getDict(locale);
+
+const toolDict = {
+  'compress-image': dict.compress,
+  'resize-image': dict.resize,
+  'crop-image': dict.crop,
+  'convert-image': dict.convert,
+  'rotate-image': dict.rotate,
+  'watermark-image': dict.watermark,
+  'meme-generator': dict.meme,
+  'photo-editor': dict.editor,
+}[tool] as Dict['compress'];
+
+const names = dict.tools as Record<string, { name: string; desc: string }>;
+const pageTitle = `${names[tool].name} — ${dict.meta.siteName}`;
+---
+
+<Base locale={locale} title={pageTitle} description={names[tool].desc} path={'/' + tool}>
+  <section class="mx-auto max-w-4xl px-4 pb-8 pt-10 text-center sm:pt-14">
+    <span class="mb-5 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-soft text-brand">
+      <Icon name={'ph:' + def.icon} class="h-8 w-8" />
+    </span>
+    <h1 class="text-[38px] font-semibold leading-[1.15] tracking-tight text-ink sm:text-[60px] sm:leading-[70px]">{toolDict.title}</h1>
+    <p class="mx-auto mt-4 max-w-xl text-base text-muted sm:text-lg">{toolDict.desc}</p>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 pb-6">
+    {tool === 'compress-image' && <CompressApp t={dict.compress} common={dict.common} client:only="react" />}
+    {tool === 'resize-image' && <ResizeApp t={dict.resize} common={dict.common} client:only="react" />}
+    {tool === 'crop-image' && <CropApp t={dict.crop} common={dict.common} client:only="react" />}
+    {tool === 'convert-image' && <ConvertApp t={dict.convert} common={dict.common} client:only="react" />}
+    {tool === 'rotate-image' && <RotateApp t={dict.rotate} common={dict.common} client:only="react" />}
+    {tool === 'watermark-image' && <WatermarkApp t={dict.watermark} common={dict.common} client:only="react" />}
+    {tool === 'meme-generator' && <MemeApp t={dict.meme} common={dict.common} client:only="react" />}
+    {tool === 'photo-editor' && <PhotoEditorApp t={dict.editor} common={dict.common} client:only="react" />}
+  </section>
+
+  <section class="mx-auto max-w-4xl px-4 py-10">
+    <h2 class="text-center text-xl font-bold text-ink sm:text-2xl">{dict.toolPage.howItWorks}</h2>
+    <ol class="mt-6 grid gap-4 sm:grid-cols-3">
+      {dict.toolPage.steps.map((s, i) => (
+        <li class="rounded-card border border-line bg-white p-5 text-center shadow-card">
+          <span class="mx-auto mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">
+            {i + 1}
+          </span>
+          <p class="text-sm font-medium text-ink">{s}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+</Base>

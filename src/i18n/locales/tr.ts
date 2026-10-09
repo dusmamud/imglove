@@ -1,0 +1,299 @@
+import type { Dict } from './en';
+
+const dict: Dict = {
+  meta: {
+    siteName: 'ImgLove',
+    homeTitle: 'ImgLove — Ücretsiz Çevrimiçi Görsel Araçları',
+    homeDesc:
+      'Görsellerinizi çevrimiçi olarak ücretsiz sıkıştırın, yeniden boyutlandırın, kırpın, dönüştürün ve düzenleyin. Hızlı, gizli ve kolay — dosyalarınız cihazınızdan asla ayrılmaz.',
+  },
+  nav: {
+    home: 'Ana Sayfa',
+    tools: 'Araçlar',
+    features: 'Özellikler',
+    faq: 'SSS',
+    login: 'Giriş yap',
+    signup: 'Kaydol',
+    menu: 'Menü',
+    close: 'Kapat',
+  },
+  account: {
+    title: 'Hesap gerekmez',
+    desc: 'ImgLove\'daki tüm araçlar ücretsizdir ve doğrudan tarayıcınızda çalışır — kayıt yok, giriş yok, asla.',
+    ok: 'Anladım',
+  },
+  hero: {
+    title: 'Görsellerle çalışmak için ihtiyacınız olan her araç',
+    subtitle:
+      'Görsellerinizi çevrimiçi sıkıştırın, yeniden boyutlandırın, kırpın, dönüştürün ve düzenleyin. Ücretsiz, hızlı ve güvenli — doğrudan tarayıcınızda.',
+  },
+  toolsSection: {
+    title: 'Tüm görsel araçları tek yerde',
+    subtitle: 'Başlamak için bir araç seçin. Kayıt gerekmez.',
+  },
+  filters: {
+    all: 'Tümü',
+    optimize: 'Optimize Et',
+    create: 'Oluştur',
+    edit: 'Düzenle',
+    convert: 'Dönüştür',
+    security: 'Güvenlik',
+  },
+  tools: {
+    'compress-image': {
+      name: 'Sıkıştır IMAGE',
+      desc: 'Kaliteden ödün vermeden görsellerinizin dosya boyutunu küçültün.',
+    },
+    'resize-image': {
+      name: 'Yeniden Boyutlandır IMAGE',
+      desc: 'Görsellerinizin boyutlarını piksel veya yüzde olarak değiştirin.',
+    },
+    'crop-image': {
+      name: 'Kırp IMAGE',
+      desc: 'Görsellerinizden mükemmel kareyi kesin.',
+    },
+    'convert-image': {
+      name: 'Dönüştür IMAGE',
+      desc: 'Görselleri JPG, PNG, WEBP ve daha fazlası arasında dönüştürün.',
+    },
+    'rotate-image': {
+      name: 'Döndür IMAGE',
+      desc: 'Görsellerinizi sola, sağa döndürün veya çevirin.',
+    },
+    'watermark-image': {
+      name: 'Filigran IMAGE',
+      desc: 'Görsellerinizi korumak için metin filigranı ekleyin.',
+    },
+    'meme-generator': {
+      name: 'Meme oluşturucu',
+      desc: 'Üst ve alt yazılar ekleyerek saniyeler içinde meme oluşturun.',
+    },
+    'photo-editor': {
+      name: 'Fotoğraf düzenleyici',
+      desc: 'Filtreler uygulayın; parlaklık, kontrast ve daha fazlasını ayarlayın.',
+    },
+  },
+  features: {
+    title: 'İnsanlar ImgLove\u2019u neden seviyor',
+    items: [
+      {
+        title: '%100 ücretsiz',
+        desc: 'Her araç ücretsizdir; filigran yok, kayıt gerekmez.',
+      },
+      {
+        title: 'Gizlilik odaklı tasarım',
+        desc: 'Görselleriniz doğrudan tarayıcınızda işlenir. Hiçbir şey sunucuya yüklenmez.',
+      },
+      {
+        title: 'Her yerde çalışır',
+        desc: 'Yazılım kurmanıza gerek yok. Telefon, tablet veya bilgisayarınızda çalışır.',
+      },
+    ],
+  },
+  faq: {
+    title: 'Sık sorulan sorular',
+    items: [
+      {
+        q: 'Bu görsel araçları gerçekten ücretsiz mi?',
+        a: 'Evet. ImgLove\u2019daki tüm araçlar tamamen ücretsizdir; gizli limit yok, görsellerinizde filigran yok.',
+      },
+      {
+        q: 'Görsellerim sunucuya yükleniyor mu?',
+        a: 'Hayır. Her araç modern web teknolojisiyle tamamen tarayıcınızda çalışır. Dosyalarınız cihazınızdan asla ayrılmaz.',
+      },
+      {
+        q: 'Hangi görsel formatları destekleniyor?',
+        a: 'Girdi olarak JPG, PNG, WEBP, GIF, AVIF ve HEIC (iPhone fotoğrafları). JPG, PNG veya WEBP olarak dışa aktarabilirsiniz.',
+      },
+      {
+        q: 'Dosya boyutu sınırı var mı?',
+        a: 'Hiçbir şey yüklenmediği için sunucu tarafında bir sınır yoktur. Çok büyük görsellerin yavaş cihazlarda işlenmesi daha uzun sürebilir.',
+      },
+    ],
+  },
+  work: {
+    title: 'Kendi yönteminle çalış',
+    cards: [
+      {
+        title: 'Toplu işlem',
+        desc: 'Birden fazla görseli aynı anda işleyin ve hepsini ZIP olarak birlikte indirin.',
+        link: 'convert-image',
+      },
+      {
+        title: 'Her cihazda çalışır',
+        desc: 'Kurulum yok, ayar yok. ImgLove\'u telefon, tablet veya bilgisayarda açın.',
+        link: '',
+      },
+      {
+        title: 'Sonsuza dek ücretsiz',
+        desc: 'Tüm araçlar ücretsiz — filigran yok, gizli limit yok.',
+        link: '',
+      },
+    ],
+  },
+  trust: {
+    title: 'Güvenilir çevrimiçi görsel düzenleyiciniz',
+    desc: 'ImgLove, çevrimiçi görsel düzenlemenin basit çözümüdür. Her araca doğrudan web\'den erişin — dosyalar cihazınızdan asla ayrılmadığı için gizliliğiniz garantilidir.',
+    badge1: '100% TARAYICIDA',
+    badge2: 'YÜKLEME YOK · KAYIT YOK',
+  },
+  footer: {
+    colProduct: 'Ürün',
+    tagline: 'Görsel sıkıştırmak, yeniden boyutlandırmak, kırpmak, dönüştürmek ve düzenlemek için ücretsiz çevrimiçi araçlar.',
+    colTools: 'Görsel araçları',
+    colCompany: 'Şirket',
+    colLegal: 'Yasal',
+    about: 'Hakkımızda',
+    contact: 'İletişim',
+    privacy: 'Gizlilik Politikası',
+    terms: 'Kullanım Şartları',
+    language: 'Dil',
+    rights: 'Tüm hakları saklıdır.',
+  },
+  common: {
+    selectImages: 'Görselleri seç',
+    dropTitle: 'Görsellerinizi buraya bırakın',
+    dropSub: 'veya',
+    supported: 'JPG, PNG, WEBP, GIF, AVIF, HEIC desteklenir',
+    processing: 'İşleniyor…',
+    download: 'İndir',
+    downloadAll: 'Tümünü indir',
+    startOver: 'Baştan başla',
+    addMore: 'Daha fazla görsel ekle',
+    original: 'Orijinal',
+    result: 'Sonuç',
+    images: 'görsel',
+    image: 'görsel',
+    errorGeneric: 'Bir şeyler ters gitti. Lütfen başka bir görsel deneyin.',
+    errorType: 'Lütfen geçerli bir görsel dosyası seçin.',
+    back: 'Geri',
+    apply: 'Uygula',
+    reset: 'Sıfırla',
+    quality: 'Kalite',
+    width: 'Genişlik',
+    height: 'Yükseklik',
+    pixels: 'px',
+  },
+  toolPage: {
+    howItWorks: 'Nasıl çalışır',
+    steps: ['Görsellerinizi seçin', 'Ayarları yapın', 'Sonucu indirin'],
+  },
+  compress: {
+    title: 'Sıkıştır IMAGE',
+    desc: 'Görünür kalite kaybı olmadan görsel dosya boyutunu küçültün.',
+    qualityLabel: 'Sıkıştırma düzeyi',
+    saved: 'kazanıldı',
+    compressMore: 'Sıkıştır',
+  },
+  resize: {
+    title: 'Yeniden Boyutlandır IMAGE',
+    desc: 'Görselleri piksel veya yüzde ile yeniden boyutlandırın.',
+    mode: 'Boyutlandırma ölçütü',
+    byPixels: 'Piksel',
+    byPercent: 'Yüzde',
+    percent: 'Yüzde',
+    lockAspect: 'En-boy oranını kilitle',
+    resizeBtn: 'Görselleri boyutlandır',
+  },
+  crop: {
+    title: 'Kırp IMAGE',
+    desc: 'Korumak istediğiniz alanı seçmek için görsel üzerinde sürükleyin.',
+    aspect: 'En-boy oranı',
+    free: 'Serbest',
+    square: 'Kare 1:1',
+    wide: 'Geniş 16:9',
+    classic: 'Klasik 4:3',
+    portrait: 'Dikey 3:4',
+    cropBtn: 'Görseli kırp',
+    hint: 'Kırpma alanını çizmek için görsel üzerinde sürükleyin',
+  },
+  convert: {
+    title: 'Dönüştür IMAGE',
+    desc: 'Görsellerinizi JPG, PNG veya WEBP\u2019ye dönüştürün.',
+    format: 'Dönüştürme hedefi',
+    convertBtn: 'Görselleri dönüştür',
+  },
+  rotate: {
+    title: 'Döndür IMAGE',
+    desc: 'Görsellerinizi döndürün veya çevirin.',
+    left: 'Sola döndür',
+    right: 'Sağa döndür',
+    flipH: 'Yatay çevir',
+    flipV: 'Dikey çevir',
+    applyBtn: 'Uygula',
+  },
+  watermark: {
+    title: 'Filigran IMAGE',
+    desc: 'Görsellerinize özel metin filigranı ekleyin.',
+    text: 'Filigran metni',
+    textPh: '© Adınız',
+    position: 'Konum',
+    opacity: 'Opaklık',
+    size: 'Metin boyutu',
+    color: 'Renk',
+    white: 'Beyaz',
+    black: 'Siyah',
+    posTL: 'Sol üst',
+    posTC: 'Üst orta',
+    posTR: 'Sağ üst',
+    posBL: 'Sol alt',
+    posBC: 'Alt orta',
+    posBR: 'Sağ alt',
+    applyBtn: 'Filigran ekle',
+  },
+  meme: {
+    title: 'Meme oluşturucu',
+    desc: 'Görsellerinize yazı ekleyin ve meme oluşturun.',
+    top: 'Üst yazı',
+    bottom: 'Alt yazı',
+    topPh: 'ÜST YAZI',
+    bottomPh: 'ALT YAZI',
+    applyBtn: 'Meme oluştur',
+  },
+  editor: {
+    title: 'Fotoğraf düzenleyici',
+    desc: 'Filtreler uygulayın ve fotoğraflarınızı ince ayar yapın.',
+    filters: 'Filtreler',
+    none: 'Yok',
+    grayscale: 'S/B',
+    sepia: 'Sepya',
+    invert: 'Ters çevir',
+    vintage: 'Vintage',
+    cool: 'Soğuk',
+    warm: 'Sıcak',
+    adjust: 'Ayarlar',
+    brightness: 'Parlaklık',
+    contrast: 'Kontrast',
+    saturate: 'Doygunluk',
+    blur: 'Bulanıklık',
+    applyBtn: 'Düzenlemeleri uygula',
+  },
+  about: {
+    title: 'Hakkımızda',
+    body1:
+      'ImgLove ücretsiz bir çevrimiçi görsel araçları koleksiyonudur. Misyonumuz basit: sıkıştırma, yeniden boyutlandırma, kırpma, dönüştürme ve hafif düzenleme gibi günlük görsel işlerini herkes için hızlı ve erişilebilir kılmak.',
+    body2:
+      'Çoğu çevrimiçi aracın aksine, ImgLove\u2019daki her şey doğrudan tarayıcınızda çalışır. Görselleriniz sunucularımıza asla yüklenmez; bu da dosyalarınızın gizli kalması ve araçların daha hızlı çalışması demektir.',
+  },
+  privacy: {
+    title: 'Gizlilik Politikası',
+    body1:
+      'ImgLove görsellerinizi tamamen web tarayıcınızda işler. Görsel dosyalarınızı hiçbir sunucuya yüklemez, saklamaz veya iletmeyiz.',
+    body2:
+      'Siteyi iyileştirmek için anonim, toplu kullanım istatistikleri toplayabiliriz. Kişisel verileri satmıyoruz. Bize e-postayla ulaşırsanız adresinizi yalnızca yanıt vermek için kullanırız.',
+  },
+  terms: {
+    title: 'Kullanım Şartları',
+    body1:
+      'ImgLove, ücretsiz çevrimiçi görsel araçlarını "olduğu gibi", hiçbir garanti vermeden sunar. İşlediğiniz görsellerden ve bunları kullanma hakkına sahip olmanızdan siz sorumlusunuz.',
+    body2:
+      'ImgLove\u2019u yasa dışı amaçlarla kullanmayın. Bu şartları dilediğimiz zaman güncelleyebiliriz; siteyi kullanmaya devam etmeniz güncel sürümü kabul ettiğiniz anlamına gelir.',
+  },
+  notFound: {
+    title: 'Sayfa bulunamadı',
+    desc: 'Aradığınız sayfa mevcut değil.',
+    backHome: 'Ana sayfaya dön',
+  },
+};
+
+export default dict;
