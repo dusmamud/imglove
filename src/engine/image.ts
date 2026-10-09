@@ -137,7 +137,7 @@ export function cloneCanvas(src: HTMLCanvasElement): HTMLCanvasElement {
  * Median-cut color quantization to 256 colors (for real PNG size savings).
  * Alpha channel is preserved as-is.
  */
-export function quantizeTo256(src: ImageData): ImageData {
+export function quantize(src: ImageData, maxColors: number): ImageData {
   const data = src.data;
   const n = src.width * src.height;
   // Collect opaque-ish pixel indices
@@ -156,7 +156,8 @@ export function quantizeTo256(src: ImageData): ImageData {
     return { pixels, rmin, rmax, gmin, gmax, bmin, bmax };
   }
   let boxes: Box[] = [makeBox(idx)];
-  while (boxes.length < 256) {
+  const target = Math.max(2, Math.min(256, Math.round(maxColors)));
+  while (boxes.length < target) {
     // Split the box with the largest channel range * pixel count
     let bi = -1, best = -1;
     boxes.forEach((b, i) => {
@@ -188,4 +189,22 @@ export function quantizeTo256(src: ImageData): ImageData {
     out.data[i * 4 + 3] = data[i * 4 + 3];
   }
   return out;
+}
+
+/** Back-compat wrapper: quantize to 256 colors. */
+export function quantizeTo256(src: ImageData): ImageData {
+  return quantize(src, 256);
+}
+
+/**
+ * Map a 10-100 quality value to a PNG palette size.
+ * PNG is lossless so the quality slider must drive color reduction.
+ */
+export function pngQualityToColors(quality: number): number {
+  if (quality >= 95) return 0; // lossless: no quantization
+  if (quality >= 75) return 256;
+  if (quality >= 60) return 128;
+  if (quality >= 45) return 64;
+  if (quality >= 30) return 32;
+  return 16;
 }

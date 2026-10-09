@@ -2,7 +2,7 @@ import { useState } from 'react';
 import type { Dict } from '../../i18n/dicts';
 import ToolShell, { type ProcessedImage } from '../../components/react/ToolShell';
 import {
-  drawScaled, canvasToBlob, withExtension, quantizeTo256,
+  drawScaled, canvasToBlob, withExtension, quantize, pngQualityToColors,
   type LoadedImage, type OutFormat, FORMAT_META,
 } from '../../engine/image';
 
@@ -28,10 +28,14 @@ export default function CompressApp({ t, common }: Props) {
         const canvas = drawScaled(f.img, f.width, f.height, {
           background: format === 'jpeg' ? '#ffffff' : undefined,
         });
-        if (format === 'png' && quality < 100) {
-          const ctx = canvas.getContext('2d')!;
-          const id = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          ctx.putImageData(quantizeTo256(id), 0, 0);
+        if (format === 'png') {
+          // PNG ignores the encoder quality param — drive real compression via palette reduction
+          const colors = pngQualityToColors(quality);
+          if (colors > 0) {
+            const ctx = canvas.getContext('2d')!;
+            const id = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            ctx.putImageData(quantize(id, colors), 0, 0);
+          }
         }
         const blob = await canvasToBlob(canvas, format, quality / 100);
         const saved = Math.max(0, Math.round((1 - blob.size / f.size) * 100));
