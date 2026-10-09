@@ -176,6 +176,9 @@ const dict: Dict = {
     width: 'அகலம்',
     height: 'உயரம்',
     pixels: 'px',
+    toolLoading: 'கருவி ஏற்றப்படுகிறது…',
+    toolLoadFailed: 'கருவியை ஏற்ற முடியவில்லை.',
+    refreshPage: 'பக்கத்தைப் புதுப்பிக்கவும்',
     settings: 'அமைப்புகள்',
   },
   toolPage: {

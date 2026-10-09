@@ -176,6 +176,9 @@ const dict: Dict = {
     width: 'Chiều rộng',
     height: 'Chiều cao',
     pixels: 'px',
+    toolLoading: 'Đang tải công cụ…',
+    toolLoadFailed: 'Không thể tải công cụ.',
+    refreshPage: 'Tải lại trang',
     settings: 'Cài đặt',
   },
   toolPage: {

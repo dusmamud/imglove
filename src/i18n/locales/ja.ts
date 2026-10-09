@@ -175,6 +175,9 @@ const dict: Dict = {
     width: '幅',
     height: '高さ',
     pixels: 'px',
+    toolLoading: 'ツールを読み込み中…',
+    toolLoadFailed: 'ツールを読み込めませんでした。',
+    refreshPage: 'ページを更新',
     settings: '設定',
   },
   toolPage: {

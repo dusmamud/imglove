@@ -175,6 +175,9 @@ const dict: Dict = {
     width: 'Genişlik',
     height: 'Yükseklik',
     pixels: 'px',
+    toolLoading: 'Araç yükleniyor…',
+    toolLoadFailed: 'Araç yüklenemedi.',
+    refreshPage: 'Sayfayı yenile',
     settings: 'Ayarlar',
   },
   toolPage: {

@@ -49,15 +49,61 @@ const pageTitle = `${names[tool].name} — ${dict.meta.siteName}`;
   </section>
 
   <section class="mx-auto max-w-6xl px-4 pb-6">
-    {tool === 'compress-image' && <CompressApp t={dict.compress} common={dict.common} client:only="react" />}
-    {tool === 'resize-image' && <ResizeApp t={dict.resize} common={dict.common} client:only="react" />}
-    {tool === 'crop-image' && <CropApp t={dict.crop} common={dict.common} client:only="react" />}
-    {tool === 'convert-image' && <ConvertApp t={dict.convert} common={dict.common} client:only="react" />}
-    {tool === 'rotate-image' && <RotateApp t={dict.rotate} common={dict.common} client:only="react" />}
-    {tool === 'watermark-image' && <WatermarkApp t={dict.watermark} common={dict.common} client:only="react" />}
-    {tool === 'meme-generator' && <MemeApp t={dict.meme} common={dict.common} client:only="react" />}
-    {tool === 'photo-editor' && <PhotoEditorApp t={dict.editor} common={dict.common} client:only="react" />}
+    <div id="tool-loading" class="mx-auto max-w-4xl rounded-card border border-line bg-white px-6 py-16 text-center">
+      <div class="mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-[3px] border-line border-t-brand"></div>
+      <p class="text-sm text-muted">{dict.common.toolLoading}</p>
+    </div>
+    <div id="tool-load-error" class="mx-auto hidden max-w-4xl rounded-card border border-line bg-white px-6 py-16 text-center">
+      <p class="mb-4 text-sm text-ink">{dict.common.toolLoadFailed}</p>
+      <button
+        type="button"
+        onclick="location.reload()"
+        class="rounded-lg bg-brand px-8 py-3 text-sm font-semibold text-white hover:bg-brand-dark"
+      >
+        {dict.common.refreshPage}
+      </button>
+    </div>
+    <div id="tool-app">
+      {tool === 'compress-image' && <CompressApp t={dict.compress} common={dict.common} client:only="react" />}
+      {tool === 'resize-image' && <ResizeApp t={dict.resize} common={dict.common} client:only="react" />}
+      {tool === 'crop-image' && <CropApp t={dict.crop} common={dict.common} client:only="react" />}
+      {tool === 'convert-image' && <ConvertApp t={dict.convert} common={dict.common} client:only="react" />}
+      {tool === 'rotate-image' && <RotateApp t={dict.rotate} common={dict.common} client:only="react" />}
+      {tool === 'watermark-image' && <WatermarkApp t={dict.watermark} common={dict.common} client:only="react" />}
+      {tool === 'meme-generator' && <MemeApp t={dict.meme} common={dict.common} client:only="react" />}
+      {tool === 'photo-editor' && <PhotoEditorApp t={dict.editor} common={dict.common} client:only="react" />}
+    </div>
   </section>
+  <script>
+    // If the tool island fails to hydrate (stale cache, blocked JS), show a clear error instead of a dead page.
+    (function () {
+      var loading = document.getElementById('tool-loading');
+      var errorBox = document.getElementById('tool-load-error');
+      var hydrated = false;
+      function check() {
+        var island = document.querySelector('astro-island');
+        // Hydrated island renders interactive content (buttons/inputs)
+        if (island && island.querySelector('button, input')) {
+          hydrated = true;
+          if (loading) loading.style.display = 'none';
+          return true;
+        }
+        return false;
+      }
+      if (check()) return;
+      var obs = new MutationObserver(function () {
+        if (check()) obs.disconnect();
+      });
+      obs.observe(document.body, { childList: true, subtree: true });
+      setTimeout(function () {
+        obs.disconnect();
+        if (!hydrated && !check()) {
+          if (loading) loading.style.display = 'none';
+          if (errorBox) errorBox.classList.remove('hidden');
+        }
+      }, 12000);
+    })();
+  </script>
 
   <section class="mx-auto max-w-4xl px-4 py-10">
     <h2 class="text-center text-xl font-bold text-ink sm:text-2xl">{dict.toolPage.howItWorks}</h2>

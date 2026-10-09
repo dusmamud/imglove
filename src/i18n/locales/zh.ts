@@ -175,6 +175,9 @@ const dict: Dict = {
     width: '宽度',
     height: '高度',
     pixels: 'px',
+    toolLoading: '正在加载工具…',
+    toolLoadFailed: '工具无法加载。',
+    refreshPage: '刷新页面',
     settings: '设置',
   },
   toolPage: {

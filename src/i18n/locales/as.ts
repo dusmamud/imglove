@@ -175,6 +175,9 @@ const dict: Dict = {
     width: 'প্ৰস্থ',
     height: 'উচ্চতা',
     pixels: 'px',
+    toolLoading: 'সঁজুলি লোড হৈ আছে…',
+    toolLoadFailed: 'সঁজুলি লোড কৰিব নোৱাৰি।',
+    refreshPage: 'পেজ ৰিফ্ৰেছ কৰক',
     settings: 'ছেটিংছ',
   },
   toolPage: {

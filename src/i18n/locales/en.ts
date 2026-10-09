@@ -172,6 +172,9 @@ const en = {
     width: 'Width',
     height: 'Height',
     pixels: 'px',
+    toolLoading: 'Loading tool…',
+    toolLoadFailed: 'The tool could not be loaded.',
+    refreshPage: 'Refresh page',
     settings: 'Settings',
   },
   toolPage: {

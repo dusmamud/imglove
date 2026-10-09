@@ -175,6 +175,9 @@ const dict: Dict = {
     width: 'Lebar',
     height: 'Tinggi',
     pixels: 'px',
+    toolLoading: 'Memuat alat…',
+    toolLoadFailed: 'Alat tidak dapat dimuat.',
+    refreshPage: 'Muat ulang halaman',
     settings: 'Pengaturan',
   },
   toolPage: {

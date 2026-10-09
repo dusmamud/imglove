@@ -175,6 +175,9 @@ const dict: Dict = {
     width: '너비',
     height: '높이',
     pixels: 'px',
+    toolLoading: '도구 로드 중…',
+    toolLoadFailed: '도구를 로드할 수 없습니다.',
+    refreshPage: '페이지 새로고침',
     settings: '설정',
   },
   toolPage: {
