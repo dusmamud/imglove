@@ -181,6 +181,7 @@ export default function CropApp({ t, common }: Props) {
   return (
     <ToolShell
       t={common}
+      settingsInfo={t.info}
       actionLabel={t.cropBtn}
       process={process}
       settings={(files) =>

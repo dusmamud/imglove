@@ -16,16 +16,17 @@ export interface ProcessedImage {
 interface Props {
   t: Dict['common'];
   settings: React.ReactNode | ((files: LoadedImage[]) => React.ReactNode);
+  settingsInfo?: string;
   actionLabel: string;
   process: (files: LoadedImage[]) => Promise<ProcessedImage[]>;
 }
 
-function Thumb({ img }: { img: HTMLImageElement }) {
+function Thumb({ img, size = 'h-20 w-20' }: { img: HTMLImageElement; size?: string }) {
   const url = useMemo(() => {
     const c = drawScaled(img, Math.min(160, img.naturalWidth), (Math.min(160, img.naturalWidth) / img.naturalWidth) * img.naturalHeight);
     return c.toDataURL('image/jpeg', 0.7);
   }, [img]);
-  return <img src={url} alt="" className="h-20 w-20 rounded-lg border border-line object-cover" />;
+  return <img src={url} alt="" className={`${size} shrink-0 rounded-lg border border-line object-cover`} />;
 }
 
 function ResultThumb({ blob }: { blob: Blob }) {
@@ -33,7 +34,7 @@ function ResultThumb({ blob }: { blob: Blob }) {
   return <img src={url} alt="" className="h-20 w-20 rounded-lg border border-line object-cover" />;
 }
 
-export default function ToolShell({ t, settings, actionLabel, process }: Props) {
+export default function ToolShell({ t, settings, settingsInfo, actionLabel, process }: Props) {
   const [files, setFiles] = useState<LoadedImage[]>([]);
   const [results, setResults] = useState<ProcessedImage[]>([]);
   const [phase, setPhase] = useState<'idle' | 'ready' | 'working' | 'done'>('idle');
@@ -102,35 +103,57 @@ export default function ToolShell({ t, settings, actionLabel, process }: Props) 
       )}
 
       {(phase === 'ready' || phase === 'working') && (
-        <div>
-          <div className="rounded-card border border-line bg-white p-4 sm:p-6">
-            <div className="flex flex-wrap gap-3">
+        <div className="space-y-4">
+          {/* Files card — filename, dimensions and real size per file */}
+          <section className="rounded-card border border-line bg-white p-4 sm:p-6">
+            <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+              <h2 className="text-base font-semibold text-ink">
+                {files.length} {files.length === 1 ? t.image : t.images}
+                <span className="ml-2 text-sm font-normal text-muted">
+                  {formatBytes(files.reduce((s, f) => s + f.size, 0))}
+                </span>
+              </h2>
+              <button
+                type="button"
+                onClick={() => inputRef.current?.click()}
+                title={t.addMore}
+                className="flex items-center gap-1.5 rounded-btn border border-line px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
+              >
+                <Plus size={16} weight="bold" />
+                {t.addMore}
+              </button>
+            </div>
+            <ul className="space-y-3">
               {files.map((f, i) => (
-                <div key={i} className="relative">
-                  <Thumb img={f.img} />
+                <li
+                  key={`${f.name}-${i}`}
+                  className="flex items-center gap-4 rounded-xl border border-line bg-soft/60 p-3"
+                >
+                  <Thumb img={f.img} size="h-20 w-20" />
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-sm font-semibold text-ink" title={f.name}>
+                      {f.name}
+                    </p>
+                    <p className="mt-0.5 text-xs text-muted">
+                      {f.width} × {f.height} {t.pixels} · {formatBytes(f.size)}
+                    </p>
+                  </div>
                   <button
                     type="button"
                     aria-label="remove"
+                    title={t.remove}
                     onClick={() => {
                       const next = files.filter((_, j) => j !== i);
                       setFiles(next);
                       if (!next.length) setPhase('idle');
                     }}
-                    className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-ink text-xs text-white"
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:bg-white hover:text-red-600"
                   >
                     ✕
                   </button>
-                </div>
+                </li>
               ))}
-              <button
-                type="button"
-                onClick={() => inputRef.current?.click()}
-                className="flex h-20 w-20 flex-col items-center justify-center gap-1 rounded-lg border-2 border-dashed border-line text-muted transition-colors hover:border-brand hover:text-brand"
-              >
-                <Plus size={20} />
-                <span className="text-[10px]">{t.addMore}</span>
-              </button>
-            </div>
+            </ul>
             <input
               ref={inputRef}
               type="file"
@@ -143,25 +166,33 @@ export default function ToolShell({ t, settings, actionLabel, process }: Props) 
                 e.target.value = '';
               }}
             />
+          </section>
 
-            <div className="mt-6 border-t border-line pt-6">
-              {typeof settings === 'function' ? settings(files) : settings}
-            </div>
+          {/* Settings card */}
+          <section className="rounded-card border border-line bg-white p-4 sm:p-6">
+            <h2 className="mb-4 text-base font-semibold text-ink">{t.settings}</h2>
+            {settingsInfo && (
+              <p className="mb-5 rounded-lg bg-brand-soft px-4 py-3 text-sm leading-relaxed text-ink">
+                {settingsInfo}
+              </p>
+            )}
+            {typeof settings === 'function' ? settings(files) : settings}
+          </section>
 
-            <div className="mt-6 text-center">
-              <button
-                type="button"
-                disabled={phase === 'working' || !files.length}
-                onClick={run}
-                className="w-full rounded-lg bg-brand px-12 py-3.5 text-base font-semibold text-white transition-colors hover:bg-brand-dark disabled:opacity-60 sm:w-auto"
-              >
-                {phase === 'working' ? t.processing : `${actionLabel} ${files.length > 1 ? `(${files.length})` : ''}`}
+          {/* Action */}
+          <div className="text-center">
+            <button
+              type="button"
+              disabled={phase === 'working' || !files.length}
+              onClick={run}
+              className="w-full rounded-lg bg-brand px-12 py-4 text-lg font-semibold text-white transition-colors hover:bg-brand-dark disabled:opacity-60 sm:w-auto sm:min-w-72"
+            >
+              {phase === 'working' ? t.processing : `${actionLabel}${files.length > 1 ? ` (${files.length})` : ''}`}
+            </button>
+            <div>
+              <button type="button" onClick={reset} className="mt-3 text-sm text-muted underline hover:text-ink">
+                {t.startOver}
               </button>
-              <div>
-                <button type="button" onClick={reset} className="mt-3 text-sm text-muted underline hover:text-ink">
-                  {t.startOver}
-                </button>
-              </div>
             </div>
           </div>
         </div>

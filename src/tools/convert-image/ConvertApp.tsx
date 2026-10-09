@@ -38,6 +38,7 @@ export default function ConvertApp({ t, common }: Props) {
   return (
     <ToolShell
       t={common}
+      settingsInfo={t.info}
       actionLabel={t.convertBtn}
       process={process}
       settings={

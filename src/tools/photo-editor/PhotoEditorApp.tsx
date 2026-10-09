@@ -87,6 +87,7 @@ export default function PhotoEditorApp({ t, common }: Props) {
   return (
     <ToolShell
       t={common}
+      settingsInfo={t.info}
       actionLabel={t.applyBtn}
       process={process}
       settings={

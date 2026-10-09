@@ -134,6 +134,7 @@ const dict: Dict = {
   trust: {
     title: 'Trình chỉnh sửa ảnh trực tuyến đáng tin cậy của bạn',
     desc: 'ImgLove là giải pháp đơn giản để chỉnh sửa ảnh trực tuyến. Truy cập mọi công cụ ngay từ web — với quyền riêng tư được đảm bảo, vì các tệp không bao giờ rời khỏi thiết bị của bạn.',
+    info: 'Bộ lọc được áp dụng ngay lập tức và không bao giờ chạm vào tệp gốc của bạn.',
     badge1: '100% TRÊN TRÌNH DUYỆT',
     badge2: 'KHÔNG TẢI LÊN · KHÔNG ĐĂNG KÝ',
   },
@@ -161,6 +162,7 @@ const dict: Dict = {
     downloadAll: 'Tải xuống tất cả',
     startOver: 'Bắt đầu lại',
     addMore: 'Thêm ảnh',
+    remove: 'Xóa',
     original: 'Ảnh gốc',
     result: 'Kết quả',
     images: 'ảnh',
@@ -174,6 +176,7 @@ const dict: Dict = {
     width: 'Chiều rộng',
     height: 'Chiều cao',
     pixels: 'px',
+    settings: 'Cài đặt',
   },
   toolPage: {
     howItWorks: 'Cách hoạt động',
@@ -182,13 +185,18 @@ const dict: Dict = {
   compress: {
     title: 'Nén IMAGE',
     desc: 'Giảm dung lượng ảnh mà không làm mất chất lượng hiển thị.',
+    info: 'Mọi hình ảnh sẽ được nén với tỷ lệ chất lượng và kích thước tệp tốt nhất.',
     qualityLabel: 'Mức độ nén',
+    qualityLow: 'Tệp nhỏ hơn',
+    qualityHigh: 'Chất lượng tốt nhất',
+    qualityHint: 'Giá trị thấp tạo tệp nhỏ hơn nhiều; giá trị cao giữ lại nhiều chi tiết hơn. 80% là mức cân bằng tốt.',
     saved: 'tiết kiệm',
     compressMore: 'Nén',
   },
   resize: {
     title: 'Đổi kích thước IMAGE',
     desc: 'Thay đổi kích thước ảnh theo pixel hoặc phần trăm.',
+    info: 'Hình ảnh sẽ được thay đổi kích thước chính xác theo kích thước bạn chọn.',
     mode: 'Đổi kích thước theo',
     byPixels: 'Pixel',
     byPercent: 'Phần trăm',
@@ -199,6 +207,7 @@ const dict: Dict = {
   crop: {
     title: 'Cắt IMAGE',
     desc: 'Kéo trên ảnh để chọn vùng muốn giữ lại.',
+    info: 'Kéo khung để chọn vùng bạn muốn giữ lại.',
     aspect: 'Tỷ lệ khung hình',
     free: 'Tự do',
     square: 'Vuông 1:1',
@@ -211,12 +220,14 @@ const dict: Dict = {
   convert: {
     title: 'Chuyển đổi IMAGE',
     desc: 'Chuyển đổi ảnh của bạn sang JPG, PNG hoặc WEBP.',
+    info: 'Hình ảnh sẽ được chuyển đổi mà không thay đổi kích thước.',
     format: 'Chuyển sang',
     convertBtn: 'Chuyển đổi ảnh',
   },
   rotate: {
     title: 'Xoay IMAGE',
     desc: 'Xoay hoặc lật ảnh của bạn.',
+    info: 'Xoay không mất dữ liệu và giữ nguyên chất lượng gốc.',
     left: 'Xoay trái',
     right: 'Xoay phải',
     flipH: 'Lật ngang',
@@ -226,6 +237,7 @@ const dict: Dict = {
   watermark: {
     title: 'Chèn chữ mờ IMAGE',
     desc: 'Thêm chữ mờ tùy chỉnh vào ảnh của bạn.',
+    info: 'Hình mờ của bạn sẽ được áp dụng cho mọi hình ảnh.',
     text: 'Nội dung chữ mờ',
     textPh: '© Tên của bạn',
     position: 'Vị trí',
@@ -245,6 +257,7 @@ const dict: Dict = {
   meme: {
     title: 'Tạo meme',
     desc: 'Thêm chú thích vào ảnh và tạo meme.',
+    info: 'Meme của bạn sẽ được tạo ở độ phân giải đầy đủ.',
     top: 'Chữ phía trên',
     bottom: 'Chữ phía dưới',
     topPh: 'CHỮ PHÍA TRÊN',
@@ -254,6 +267,7 @@ const dict: Dict = {
   editor: {
     title: 'Chỉnh sửa ảnh',
     desc: 'Áp dụng bộ lọc và tinh chỉnh ảnh của bạn.',
+    info: 'Bộ lọc được áp dụng ngay lập tức và không bao giờ chạm vào tệp gốc của bạn.',
     filters: 'Bộ lọc',
     none: 'Không',
     grayscale: 'Đen trắng',

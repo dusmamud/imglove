@@ -134,6 +134,7 @@ const dict: Dict = {
   trust: {
     title: '신뢰할 수 있는 온라인 이미지 편집기',
     desc: 'ImgLove는 온라인에서 이미지를 편집하는 간단한 솔루션입니다. 모든 도구를 웹에서 바로 사용하세요 — 파일이 기기를 절대 떠나지 않으므로 개인정보가 보장됩니다.',
+    info: '필터는 즉시 적용되며 원본 파일을 건드리지 않습니다.',
     badge1: '100% 브라우저 처리',
     badge2: '업로드 없음 · 가입 없음',
   },
@@ -160,6 +161,7 @@ const dict: Dict = {
     downloadAll: '모두 다운로드',
     startOver: '처음부터',
     addMore: '이미지 추가',
+    remove: '제거',
     original: '원본',
     result: '결과',
     images: '이미지들',
@@ -173,6 +175,7 @@ const dict: Dict = {
     width: '너비',
     height: '높이',
     pixels: 'px',
+    settings: '설정',
   },
   toolPage: {
     howItWorks: '사용 방법',
@@ -181,13 +184,18 @@ const dict: Dict = {
   compress: {
     title: '압축 IMAGE',
     desc: '눈에 보이는 화질 손실 없이 이미지 파일 크기를 줄이세요.',
+    info: '모든 이미지는 최고의 화질과 파일 크기 비율로 압축됩니다.',
     qualityLabel: '압축 수준',
+    qualityLow: '더 작은 파일',
+    qualityHigh: '최고 화질',
+    qualityHint: '값을 낮추면 파일이 훨씬 작아지고, 값을 높이면 디테일이 유지됩니다. 80%가 좋은 균형입니다.',
     saved: '절약',
     compressMore: '압축',
   },
   resize: {
     title: '크기 조정 IMAGE',
     desc: '픽셀 또는 비율(%)로 이미지 크기를 조정하세요.',
+    info: '이미지는 선택한 크기로 정확하게 조정됩니다.',
     mode: '조정 기준',
     byPixels: '픽셀',
     byPercent: '비율',
@@ -198,6 +206,7 @@ const dict: Dict = {
   crop: {
     title: '자르기 IMAGE',
     desc: '유지할 영역을 이미지 위에 드래그하여 선택하세요.',
+    info: '유지할 영역을 선택하려면 상자를 드래그하세요.',
     aspect: '종횡비',
     free: '자유',
     square: '정사각형 1:1',
@@ -210,12 +219,14 @@ const dict: Dict = {
   convert: {
     title: '변환 IMAGE',
     desc: '이미지를 JPG, PNG, WEBP로 변환하세요.',
+    info: '이미지는 크기를 변경하지 않고 변환됩니다.',
     format: '변환 형식',
     convertBtn: '이미지 변환',
   },
   rotate: {
     title: '회전 IMAGE',
     desc: '이미지를 회전하거나 뒤집으세요.',
+    info: '회전은 무손실이며 원본 화질을 유지합니다.',
     left: '왼쪽으로 회전',
     right: '오른쪽으로 회전',
     flipH: '좌우 뒤집기',
@@ -225,6 +236,7 @@ const dict: Dict = {
   watermark: {
     title: '워터마크 IMAGE',
     desc: '이미지에 사용자 정의 텍스트 워터마크를 추가하세요.',
+    info: '워터마크가 모든 이미지에 적용됩니다.',
     text: '워터마크 텍스트',
     textPh: '© 이름',
     position: '위치',
@@ -244,6 +256,7 @@ const dict: Dict = {
   meme: {
     title: '밈 생성기',
     desc: '이미지에 자막을 넣어 밈을 만드세요.',
+    info: '밈은 전체 해상도로 생성됩니다.',
     top: '위 텍스트',
     bottom: '아래 텍스트',
     topPh: '상단 텍스트',
@@ -253,6 +266,7 @@ const dict: Dict = {
   editor: {
     title: '사진 편집기',
     desc: '필터를 적용하고 사진을 세밀하게 조정하세요.',
+    info: '필터는 즉시 적용되며 원본 파일을 건드리지 않습니다.',
     filters: '필터',
     none: '없음',
     grayscale: '흑백',

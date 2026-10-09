@@ -131,6 +131,7 @@ const en = {
   trust: {
     title: 'Your trusted online image editor',
     desc: 'ImgLove is the simple solution for editing images online. Access every tool straight from the web — with your privacy guaranteed, because files never leave your device.',
+    info: 'Filters are applied instantly and never touch your original file.',
     badge1: '100% CLIENT-SIDE',
     badge2: 'NO UPLOAD · NO SIGN-UP',
   },
@@ -157,6 +158,7 @@ const en = {
     downloadAll: 'Download all',
     startOver: 'Start over',
     addMore: 'Add more images',
+    remove: 'Remove',
     original: 'Original',
     result: 'Result',
     images: 'images',
@@ -170,6 +172,7 @@ const en = {
     width: 'Width',
     height: 'Height',
     pixels: 'px',
+    settings: 'Settings',
   },
   toolPage: {
     howItWorks: 'How it works',
@@ -178,13 +181,18 @@ const en = {
   compress: {
     title: 'Compress IMAGE',
     desc: 'Reduce image file size without losing visible quality.',
+    info: 'All images will be compressed with the best quality and filesize ratio.',
     qualityLabel: 'Compression level',
+    qualityLow: 'Smaller file',
+    qualityHigh: 'Best quality',
+    qualityHint: 'Lower values make much smaller files; higher values keep more detail. 80% is a good balance.',
     saved: 'saved',
     compressMore: 'Compress',
   },
   resize: {
     title: 'Resize IMAGE',
     desc: 'Resize images by pixels or by percentage.',
+    info: 'Images will be resized exactly to the dimensions you choose.',
     mode: 'Resize by',
     byPixels: 'Pixels',
     byPercent: 'Percent',
@@ -195,6 +203,7 @@ const en = {
   crop: {
     title: 'Crop IMAGE',
     desc: 'Drag on the image to select the area to keep.',
+    info: 'Drag the box to choose the area you want to keep.',
     aspect: 'Aspect ratio',
     free: 'Free',
     square: 'Square 1:1',
@@ -207,12 +216,14 @@ const en = {
   convert: {
     title: 'Convert IMAGE',
     desc: 'Convert your images to JPG, PNG or WEBP.',
+    info: 'Images will be converted without changing their dimensions.',
     format: 'Convert to',
     convertBtn: 'Convert images',
   },
   rotate: {
     title: 'Rotate IMAGE',
     desc: 'Rotate or flip your images.',
+    info: 'Rotation is lossless and keeps the original quality.',
     left: 'Rotate left',
     right: 'Rotate right',
     flipH: 'Flip horizontal',
@@ -222,6 +233,7 @@ const en = {
   watermark: {
     title: 'Watermark IMAGE',
     desc: 'Add a custom text watermark to your images.',
+    info: 'Your watermark will be applied to every image.',
     text: 'Watermark text',
     textPh: '© Your name',
     position: 'Position',
@@ -241,6 +253,7 @@ const en = {
   meme: {
     title: 'Meme generator',
     desc: 'Add captions to your images and create memes.',
+    info: 'Your meme will be generated at full resolution.',
     top: 'Top text',
     bottom: 'Bottom text',
     topPh: 'TOP TEXT',
@@ -250,6 +263,7 @@ const en = {
   editor: {
     title: 'Photo editor',
     desc: 'Apply filters and fine-tune your photos.',
+    info: 'Filters are applied instantly and never touch your original file.',
     filters: 'Filters',
     none: 'None',
     grayscale: 'B&W',

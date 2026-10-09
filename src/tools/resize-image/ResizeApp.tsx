@@ -51,6 +51,7 @@ export default function ResizeApp({ t, common }: Props) {
   return (
     <ToolShell
       t={common}
+      settingsInfo={t.info}
       actionLabel={t.resizeBtn}
       process={process}
       settings={

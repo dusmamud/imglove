@@ -134,6 +134,7 @@ const dict: Dict = {
   trust: {
     title: 'Editor gambar online tepercaya Anda',
     desc: 'ImgLove adalah solusi sederhana untuk mengedit gambar online. Akses setiap alat langsung dari web — dengan privasi terjamin, karena file tidak pernah meninggalkan perangkat Anda.',
+    info: 'Filter diterapkan seketika dan tidak pernah menyentuh file asli Anda.',
     badge1: '100% DI BROWSER',
     badge2: 'TANPA UNGGAH · TANPA DAFTAR',
   },
@@ -160,6 +161,7 @@ const dict: Dict = {
     downloadAll: 'Unduh semua',
     startOver: 'Mulai ulang',
     addMore: 'Tambah gambar',
+    remove: 'Hapus',
     original: 'Asli',
     result: 'Hasil',
     images: 'gambar',
@@ -173,6 +175,7 @@ const dict: Dict = {
     width: 'Lebar',
     height: 'Tinggi',
     pixels: 'px',
+    settings: 'Pengaturan',
   },
   toolPage: {
     howItWorks: 'Cara kerja',
@@ -181,13 +184,18 @@ const dict: Dict = {
   compress: {
     title: 'Kompres IMAGE',
     desc: 'Perkecil ukuran file gambar tanpa kehilangan kualitas yang terlihat.',
+    info: 'Semua gambar akan dikompresi dengan rasio kualitas dan ukuran file terbaik.',
     qualityLabel: 'Tingkat kompresi',
+    qualityLow: 'File lebih kecil',
+    qualityHigh: 'Kualitas terbaik',
+    qualityHint: 'Nilai rendah menghasilkan file yang jauh lebih kecil; nilai tinggi mempertahankan lebih banyak detail. 80% adalah keseimbangan yang baik.',
     saved: 'dihemat',
     compressMore: 'Kompres',
   },
   resize: {
     title: 'Ubah Ukuran IMAGE',
     desc: 'Ubah ukuran gambar berdasarkan piksel atau persentase.',
+    info: 'Gambar akan diubah ukurannya tepat ke dimensi yang Anda pilih.',
     mode: 'Ubah berdasarkan',
     byPixels: 'Piksel',
     byPercent: 'Persen',
@@ -198,6 +206,7 @@ const dict: Dict = {
   crop: {
     title: 'Potong IMAGE',
     desc: 'Seret pada gambar untuk memilih area yang ingin dipertahankan.',
+    info: 'Seret kotak untuk memilih area yang ingin dipertahankan.',
     aspect: 'Rasio aspek',
     free: 'Bebas',
     square: 'Persegi 1:1',
@@ -210,12 +219,14 @@ const dict: Dict = {
   convert: {
     title: 'Konversi IMAGE',
     desc: 'Konversi gambar Anda ke JPG, PNG, atau WEBP.',
+    info: 'Gambar akan dikonversi tanpa mengubah dimensinya.',
     format: 'Konversi ke',
     convertBtn: 'Konversi gambar',
   },
   rotate: {
     title: 'Putar IMAGE',
     desc: 'Putar atau balik gambar Anda.',
+    info: 'Rotasi bersifat lossless dan menjaga kualitas asli.',
     left: 'Putar kiri',
     right: 'Putar kanan',
     flipH: 'Balik horizontal',
@@ -225,6 +236,7 @@ const dict: Dict = {
   watermark: {
     title: 'Watermark IMAGE',
     desc: 'Tambahkan watermark teks kustom ke gambar Anda.',
+    info: 'Tanda air Anda akan diterapkan ke setiap gambar.',
     text: 'Teks watermark',
     textPh: '© Nama Anda',
     position: 'Posisi',
@@ -244,6 +256,7 @@ const dict: Dict = {
   meme: {
     title: 'Pembuat meme',
     desc: 'Tambahkan teks ke gambar Anda dan buat meme.',
+    info: 'Meme Anda akan dibuat dalam resolusi penuh.',
     top: 'Teks atas',
     bottom: 'Teks bawah',
     topPh: 'TEKS ATAS',
@@ -253,6 +266,7 @@ const dict: Dict = {
   editor: {
     title: 'Editor foto',
     desc: 'Terapkan filter dan sempurnakan foto Anda.',
+    info: 'Filter diterapkan seketika dan tidak pernah menyentuh file asli Anda.',
     filters: 'Filter',
     none: 'Tidak ada',
     grayscale: 'Hitam putih',

@@ -134,6 +134,7 @@ const dict: Dict = {
   trust: {
     title: 'Güvenilir çevrimiçi görsel düzenleyiciniz',
     desc: 'ImgLove, çevrimiçi görsel düzenlemenin basit çözümüdür. Her araca doğrudan web\'den erişin — dosyalar cihazınızdan asla ayrılmadığı için gizliliğiniz garantilidir.',
+    info: 'Filtreler anında uygulanır ve orijinal dosyanıza asla dokunmaz.',
     badge1: '100% TARAYICIDA',
     badge2: 'YÜKLEME YOK · KAYIT YOK',
   },
@@ -160,6 +161,7 @@ const dict: Dict = {
     downloadAll: 'Tümünü indir',
     startOver: 'Baştan başla',
     addMore: 'Daha fazla görsel ekle',
+    remove: 'Kaldır',
     original: 'Orijinal',
     result: 'Sonuç',
     images: 'görsel',
@@ -173,6 +175,7 @@ const dict: Dict = {
     width: 'Genişlik',
     height: 'Yükseklik',
     pixels: 'px',
+    settings: 'Ayarlar',
   },
   toolPage: {
     howItWorks: 'Nasıl çalışır',
@@ -181,13 +184,18 @@ const dict: Dict = {
   compress: {
     title: 'Sıkıştır IMAGE',
     desc: 'Görünür kalite kaybı olmadan görsel dosya boyutunu küçültün.',
+    info: 'Tüm görseller en iyi kalite ve dosya boyutu oranıyla sıkıştırılacak.',
     qualityLabel: 'Sıkıştırma düzeyi',
+    qualityLow: 'Daha küçük dosya',
+    qualityHigh: 'En iyi kalite',
+    qualityHint: 'Düşük değerler çok daha küçük dosyalar oluşturur; yüksek değerler daha fazla ayrıntı korur. %80 iyi bir dengedir.',
     saved: 'kazanıldı',
     compressMore: 'Sıkıştır',
   },
   resize: {
     title: 'Yeniden Boyutlandır IMAGE',
     desc: 'Görselleri piksel veya yüzde ile yeniden boyutlandırın.',
+    info: 'Görseller seçtiğiniz boyutlara tam olarak yeniden boyutlandırılacak.',
     mode: 'Boyutlandırma ölçütü',
     byPixels: 'Piksel',
     byPercent: 'Yüzde',
@@ -198,6 +206,7 @@ const dict: Dict = {
   crop: {
     title: 'Kırp IMAGE',
     desc: 'Korumak istediğiniz alanı seçmek için görsel üzerinde sürükleyin.',
+    info: 'Korumak istediğiniz alanı seçmek için kutuyu sürükleyin.',
     aspect: 'En-boy oranı',
     free: 'Serbest',
     square: 'Kare 1:1',
@@ -210,12 +219,14 @@ const dict: Dict = {
   convert: {
     title: 'Dönüştür IMAGE',
     desc: 'Görsellerinizi JPG, PNG veya WEBP\u2019ye dönüştürün.',
+    info: 'Görseller boyutları değiştirilmeden dönüştürülecek.',
     format: 'Dönüştürme hedefi',
     convertBtn: 'Görselleri dönüştür',
   },
   rotate: {
     title: 'Döndür IMAGE',
     desc: 'Görsellerinizi döndürün veya çevirin.',
+    info: 'Döndürme kayıpsızdır ve orijinal kaliteyi korur.',
     left: 'Sola döndür',
     right: 'Sağa döndür',
     flipH: 'Yatay çevir',
@@ -225,6 +236,7 @@ const dict: Dict = {
   watermark: {
     title: 'Filigran IMAGE',
     desc: 'Görsellerinize özel metin filigranı ekleyin.',
+    info: 'Filigranınız her görsele uygulanacak.',
     text: 'Filigran metni',
     textPh: '© Adınız',
     position: 'Konum',
@@ -244,6 +256,7 @@ const dict: Dict = {
   meme: {
     title: 'Meme oluşturucu',
     desc: 'Görsellerinize yazı ekleyin ve meme oluşturun.',
+    info: 'Meme\'niz tam çözünürlükte oluşturulacak.',
     top: 'Üst yazı',
     bottom: 'Alt yazı',
     topPh: 'ÜST YAZI',
@@ -253,6 +266,7 @@ const dict: Dict = {
   editor: {
     title: 'Fotoğraf düzenleyici',
     desc: 'Filtreler uygulayın ve fotoğraflarınızı ince ayar yapın.',
+    info: 'Filtreler anında uygulanır ve orijinal dosyanıza asla dokunmaz.',
     filters: 'Filtreler',
     none: 'Yok',
     grayscale: 'S/B',

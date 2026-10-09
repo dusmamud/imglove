@@ -134,6 +134,7 @@ const dict: Dict = {
   trust: {
     title: 'Ihr vertrauenswürdiger Online-Bildeditor',
     desc: 'ImgLove ist die einfache Lösung zum Bearbeiten von Bildern online. Nutzen Sie jedes Tool direkt aus dem Web — mit garantierter Privatsphäre, denn Ihre Dateien verlassen niemals Ihr Gerät.',
+    info: 'Filter werden sofort angewendet und berühren nie Ihre Originaldatei.',
     badge1: '100% IM BROWSER',
     badge2: 'KEIN UPLOAD · KEINE ANMELDUNG',
   },
@@ -160,6 +161,7 @@ const dict: Dict = {
     downloadAll: 'Alle herunterladen',
     startOver: 'Von vorne beginnen',
     addMore: 'Weitere Bilder hinzufügen',
+    remove: 'Entfernen',
     original: 'Original',
     result: 'Ergebnis',
     images: 'Bilder',
@@ -173,6 +175,7 @@ const dict: Dict = {
     width: 'Breite',
     height: 'Höhe',
     pixels: 'px',
+    settings: 'Einstellungen',
   },
   toolPage: {
     howItWorks: 'So funktioniert es',
@@ -181,13 +184,18 @@ const dict: Dict = {
   compress: {
     title: 'Komprimieren IMAGE',
     desc: 'Verringern Sie die Dateigröße ohne sichtbaren Qualitätsverlust.',
+    info: 'Alle Bilder werden mit dem besten Verhältnis von Qualität zu Dateigröße komprimiert.',
     qualityLabel: 'Komprimierungsstufe',
+    qualityLow: 'Kleinere Datei',
+    qualityHigh: 'Beste Qualität',
+    qualityHint: 'Niedrige Werte erzeugen deutlich kleinere Dateien; hohe Werte erhalten mehr Details. 80 % ist eine gute Balance.',
     saved: 'gespart',
     compressMore: 'Komprimieren',
   },
   resize: {
     title: 'Skalieren IMAGE',
     desc: 'Skalieren Sie Bilder nach Pixeln oder Prozent.',
+    info: 'Bilder werden genau auf die gewählten Maße skaliert.',
     mode: 'Skalieren nach',
     byPixels: 'Pixeln',
     byPercent: 'Prozent',
@@ -198,6 +206,7 @@ const dict: Dict = {
   crop: {
     title: 'Zuschneiden IMAGE',
     desc: 'Ziehen Sie über das Bild, um den zu behaltenden Bereich zu wählen.',
+    info: 'Ziehen Sie den Rahmen, um den zu behaltenden Bereich zu wählen.',
     aspect: 'Seitenverhältnis',
     free: 'Frei',
     square: 'Quadrat 1:1',
@@ -210,12 +219,14 @@ const dict: Dict = {
   convert: {
     title: 'Konvertieren IMAGE',
     desc: 'Konvertieren Sie Ihre Bilder nach JPG, PNG oder WEBP.',
+    info: 'Bilder werden ohne Änderung der Maße konvertiert.',
     format: 'Konvertieren nach',
     convertBtn: 'Bilder konvertieren',
   },
   rotate: {
     title: 'Drehen IMAGE',
     desc: 'Drehen oder spiegeln Sie Ihre Bilder.',
+    info: 'Drehung ist verlustfrei und erhält die Originalqualität.',
     left: 'Nach links drehen',
     right: 'Nach rechts drehen',
     flipH: 'Horizontal spiegeln',
@@ -225,6 +236,7 @@ const dict: Dict = {
   watermark: {
     title: 'Wasserzeichen IMAGE',
     desc: 'Fügen Sie Ihren Bildern ein eigenes Text-Wasserzeichen hinzu.',
+    info: 'Ihr Wasserzeichen wird auf jedes Bild angewendet.',
     text: 'Wasserzeichen-Text',
     textPh: '© Ihr Name',
     position: 'Position',
@@ -244,6 +256,7 @@ const dict: Dict = {
   meme: {
     title: 'Meme-Generator',
     desc: 'Fügen Sie Ihren Bildern Texte hinzu und erstellen Sie Memes.',
+    info: 'Ihr Meme wird in voller Auflösung erstellt.',
     top: 'Oberer Text',
     bottom: 'Unterer Text',
     topPh: 'OBERER TEXT',
@@ -253,6 +266,7 @@ const dict: Dict = {
   editor: {
     title: 'Fotoeditor',
     desc: 'Wenden Sie Filter an und optimieren Sie Ihre Fotos.',
+    info: 'Filter werden sofort angewendet und berühren nie Ihre Originaldatei.',
     filters: 'Filter',
     none: 'Keiner',
     grayscale: 'S/W',

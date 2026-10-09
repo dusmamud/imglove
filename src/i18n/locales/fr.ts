@@ -134,6 +134,7 @@ const dict: Dict = {
   trust: {
     title: 'Votre éditeur d\'images en ligne de confiance',
     desc: 'ImgLove est la solution simple pour retoucher vos images en ligne. Accédez à chaque outil directement depuis le web — avec votre confidentialité garantie, car vos fichiers ne quittent jamais votre appareil.',
+    info: 'Les filtres s\'appliquent instantanément et ne touchent jamais votre fichier d\'origine.',
     badge1: '100% CÔTÉ NAVIGATEUR',
     badge2: 'SANS ENVOI · SANS INSCRIPTION',
   },
@@ -160,6 +161,7 @@ const dict: Dict = {
     downloadAll: 'Tout télécharger',
     startOver: 'Recommencer',
     addMore: 'Ajouter d\'autres images',
+    remove: 'Retirer',
     original: 'Original',
     result: 'Résultat',
     images: 'images',
@@ -173,6 +175,7 @@ const dict: Dict = {
     width: 'Largeur',
     height: 'Hauteur',
     pixels: 'px',
+    settings: 'Paramètres',
   },
   toolPage: {
     howItWorks: 'Comment ça marche',
@@ -181,13 +184,18 @@ const dict: Dict = {
   compress: {
     title: 'Compresser IMAGE',
     desc: 'Réduisez le poids de vos images sans perte de qualité visible.',
+    info: 'Toutes les images seront compressées avec le meilleur rapport qualité-taille.',
     qualityLabel: 'Niveau de compression',
+    qualityLow: 'Fichier plus petit',
+    qualityHigh: 'Meilleure qualité',
+    qualityHint: 'Des valeurs basses créent des fichiers bien plus petits ; des valeurs hautes conservent plus de détails. 80 % est un bon équilibre.',
     saved: 'économisé',
     compressMore: 'Compresser',
   },
   resize: {
     title: 'Redimensionner IMAGE',
     desc: 'Redimensionnez vos images en pixels ou en pourcentage.',
+    info: 'Les images seront redimensionnées exactement aux dimensions choisies.',
     mode: 'Redimensionner par',
     byPixels: 'Pixels',
     byPercent: 'Pourcentage',
@@ -198,6 +206,7 @@ const dict: Dict = {
   crop: {
     title: 'Recadrer IMAGE',
     desc: 'Faites glisser sur l\'image pour sélectionner la zone à conserver.',
+    info: 'Faites glisser le cadre pour choisir la zone à conserver.',
     aspect: 'Rapport d\'aspect',
     free: 'Libre',
     square: 'Carré 1:1',
@@ -210,12 +219,14 @@ const dict: Dict = {
   convert: {
     title: 'Convertir IMAGE',
     desc: 'Convertissez vos images en JPG, PNG ou WEBP.',
+    info: 'Les images seront converties sans changer leurs dimensions.',
     format: 'Convertir en',
     convertBtn: 'Convertir les images',
   },
   rotate: {
     title: 'Pivoter IMAGE',
     desc: 'Faites pivoter ou retournez vos images.',
+    info: 'La rotation est sans perte et conserve la qualité d\'origine.',
     left: 'Pivoter à gauche',
     right: 'Pivoter à droite',
     flipH: 'Retourner horizontalement',
@@ -225,6 +236,7 @@ const dict: Dict = {
   watermark: {
     title: 'Filigrane IMAGE',
     desc: 'Ajoutez un filigrane texte personnalisé à vos images.',
+    info: 'Votre filigrane sera appliqué à chaque image.',
     text: 'Texte du filigrane',
     textPh: '© Votre nom',
     position: 'Position',
@@ -244,6 +256,7 @@ const dict: Dict = {
   meme: {
     title: 'Générateur de mèmes',
     desc: 'Ajoutez des légendes à vos images et créez des mèmes.',
+    info: 'Votre mème sera généré en pleine résolution.',
     top: 'Texte du haut',
     bottom: 'Texte du bas',
     topPh: 'TEXTE DU HAUT',
@@ -253,6 +266,7 @@ const dict: Dict = {
   editor: {
     title: 'Éditeur photo',
     desc: 'Appliquez des filtres et ajustez vos photos.',
+    info: 'Les filtres s\'appliquent instantanément et ne touchent jamais votre fichier d\'origine.',
     filters: 'Filtres',
     none: 'Aucun',
     grayscale: 'N&B',

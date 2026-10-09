@@ -134,6 +134,7 @@ const dict: Dict = {
   trust: {
     title: '信頼のオンライン画像エディター',
     desc: 'ImgLove はオンラインで画像を編集するためのシンプルなソリューションです。すべてのツールをウェブから直接利用でき、ファイルがデバイスの外に出ることはないため、プライバシーは万全です。',
+    info: 'フィルターは即座に適用され、元のファイルには影響しません。',
     badge1: '100% ブラウザ処理',
     badge2: 'アップロード不要 · 登録不要',
   },
@@ -160,6 +161,7 @@ const dict: Dict = {
     downloadAll: 'すべてダウンロード',
     startOver: '最初から',
     addMore: '画像を追加',
+    remove: '削除',
     original: 'オリジナル',
     result: '結果',
     images: '枚の画像',
@@ -173,6 +175,7 @@ const dict: Dict = {
     width: '幅',
     height: '高さ',
     pixels: 'px',
+    settings: '設定',
   },
   toolPage: {
     howItWorks: '使い方',
@@ -181,13 +184,18 @@ const dict: Dict = {
   compress: {
     title: '圧縮 IMAGE',
     desc: '目に見える画質を落とさず画像のファイルサイズを小さくします。',
+    info: 'すべての画像は最高の画質とファイルサイズのバランスで圧縮されます。',
     qualityLabel: '圧縮レベル',
+    qualityLow: 'ファイルサイズ小',
+    qualityHigh: '最高画質',
+    qualityHint: '値を低くするとファイルは大幅に小さくなり、値を高くすると細部が保持されます。80%がバランスの良い値です。',
     saved: '削減',
     compressMore: '圧縮',
   },
   resize: {
     title: 'リサイズ IMAGE',
     desc: 'ピクセルまたはパーセントで画像をリサイズします。',
+    info: '画像は選択した寸法に正確にリサイズされます。',
     mode: 'リサイズ方法',
     byPixels: 'ピクセル',
     byPercent: 'パーセント',
@@ -198,6 +206,7 @@ const dict: Dict = {
   crop: {
     title: '切り抜き IMAGE',
     desc: '画像上でドラッグして残す範囲を選択します。',
+    info: '残したい領域を選択するにはボックスをドラッグします。',
     aspect: 'アスペクト比',
     free: '自由',
     square: '正方形 1:1',
@@ -210,12 +219,14 @@ const dict: Dict = {
   convert: {
     title: '変換 IMAGE',
     desc: '画像をJPG、PNG、WEBPに変換します。',
+    info: '画像は寸法を変えずに変換されます。',
     format: '変換先',
     convertBtn: '画像を変換',
   },
   rotate: {
     title: '回転 IMAGE',
     desc: '画像を回転・反転します。',
+    info: '回転はロスレスで元の画質を保持します。',
     left: '左に回転',
     right: '右に回転',
     flipH: '左右反転',
@@ -225,6 +236,7 @@ const dict: Dict = {
   watermark: {
     title: '透かし IMAGE',
     desc: '画像にオリジナルのテキスト透かしを追加します。',
+    info: '透かしはすべての画像に適用されます。',
     text: '透かしのテキスト',
     textPh: '© お名前',
     position: '位置',
@@ -244,6 +256,7 @@ const dict: Dict = {
   meme: {
     title: 'ミームジェネレーター',
     desc: '画像にキャプションを追加してミームを作成。',
+    info: 'ミームはフル解像度で生成されます。',
     top: '上のテキスト',
     bottom: '下のテキスト',
     topPh: '上のテキスト',
@@ -253,6 +266,7 @@ const dict: Dict = {
   editor: {
     title: '写真エディター',
     desc: 'フィルターを適用し、写真を微調整します。',
+    info: 'フィルターは即座に適用され、元のファイルには影響しません。',
     filters: 'フィルター',
     none: 'なし',
     grayscale: 'モノクロ',

@@ -50,26 +50,33 @@ export default function CompressApp({ t, common }: Props) {
   return (
     <ToolShell
       t={common}
+      settingsInfo={t.info}
       actionLabel={t.compressMore}
       process={process}
       settings={
         <div className="mx-auto max-w-md">
-          <label className="mb-2 flex items-center justify-between text-sm font-medium text-ink">
-            <span>{t.qualityLabel}</span>
-            <span className="rounded-full bg-brand-soft px-3 py-0.5 font-semibold text-brand">{quality}%</span>
-          </label>
+          <div className="mb-3 flex items-center justify-between">
+            <label htmlFor="compress-quality" className="text-sm font-semibold text-ink">
+              {t.qualityLabel}
+            </label>
+            <span className="rounded-full bg-brand px-3 py-1 text-sm font-bold text-white">{quality}%</span>
+          </div>
           <input
+            id="compress-quality"
             type="range"
             min={10}
             max={100}
+            step={1}
             value={quality}
             onChange={(e) => setQuality(Number(e.target.value))}
             className="slider w-full"
+            aria-label={t.qualityLabel}
           />
-          <div className="mt-1 flex justify-between text-xs text-muted">
-            <span>10%</span>
-            <span>100%</span>
+          <div className="mt-2 flex justify-between text-xs font-medium text-muted">
+            <span>{t.qualityLow}</span>
+            <span>{t.qualityHigh}</span>
           </div>
+          <p className="mt-3 text-xs leading-relaxed text-muted">{t.qualityHint}</p>
         </div>
       }
     />

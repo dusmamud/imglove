@@ -134,6 +134,7 @@ const dict: Dict = {
   trust: {
     title: '值得信赖的在线图片编辑器',
     desc: 'ImgLove 是在线编辑图片的简单解决方案。直接从网页使用每款工具——隐私有保障，因为文件从不离开你的设备。',
+    info: '滤镜即时应用，绝不会改动您的原始文件。',
     badge1: '100% 本地运行',
     badge2: '无需上传 · 无需注册',
   },
@@ -160,6 +161,7 @@ const dict: Dict = {
     downloadAll: '全部下载',
     startOver: '重新开始',
     addMore: '添加更多图片',
+    remove: '移除',
     original: '原图',
     result: '结果',
     images: '张图片',
@@ -173,6 +175,7 @@ const dict: Dict = {
     width: '宽度',
     height: '高度',
     pixels: 'px',
+    settings: '设置',
   },
   toolPage: {
     howItWorks: '使用方法',
@@ -181,13 +184,18 @@ const dict: Dict = {
   compress: {
     title: '压缩 IMAGE',
     desc: '在不损失可见画质的前提下减小图片文件体积。',
+    info: '所有图片都将以最佳的质量与文件大小比例进行压缩。',
     qualityLabel: '压缩程度',
+    qualityLow: '更小的文件',
+    qualityHigh: '最佳质量',
+    qualityHint: '较低的值会生成小得多的文件；较高的值保留更多细节。80% 是一个很好的平衡。',
     saved: '已节省',
     compressMore: '压缩',
   },
   resize: {
     title: '调整尺寸 IMAGE',
     desc: '按像素或百分比调整图片尺寸。',
+    info: '图片将精确调整为您选择的尺寸。',
     mode: '调整方式',
     byPixels: '像素',
     byPercent: '百分比',
@@ -198,6 +206,7 @@ const dict: Dict = {
   crop: {
     title: '裁剪 IMAGE',
     desc: '在图片上拖动以选择要保留的区域。',
+    info: '拖动方框以选择要保留的区域。',
     aspect: '宽高比',
     free: '自由',
     square: '正方形 1:1',
@@ -210,12 +219,14 @@ const dict: Dict = {
   convert: {
     title: '转换 IMAGE',
     desc: '将图片转换为 JPG、PNG 或 WEBP。',
+    info: '转换图片时不会改变其尺寸。',
     format: '转换为',
     convertBtn: '转换图片',
   },
   rotate: {
     title: '旋转 IMAGE',
     desc: '旋转或翻转图片。',
+    info: '旋转是无损的，可保持原始质量。',
     left: '向左旋转',
     right: '向右旋转',
     flipH: '水平翻转',
@@ -225,6 +236,7 @@ const dict: Dict = {
   watermark: {
     title: '水印 IMAGE',
     desc: '为图片添加自定义文字水印。',
+    info: '您的水印将应用于每张图片。',
     text: '水印文字',
     textPh: '© 您的名字',
     position: '位置',
@@ -244,6 +256,7 @@ const dict: Dict = {
   meme: {
     title: '表情包生成器',
     desc: '为图片添加文字，制作表情包。',
+    info: '您的表情包将以完整分辨率生成。',
     top: '顶部文字',
     bottom: '底部文字',
     topPh: '顶部文字',
@@ -253,6 +266,7 @@ const dict: Dict = {
   editor: {
     title: '照片编辑器',
     desc: '应用滤镜并微调照片。',
+    info: '滤镜即时应用，绝不会改动您的原始文件。',
     filters: '滤镜',
     none: '无',
     grayscale: '黑白',

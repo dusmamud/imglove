@@ -134,6 +134,7 @@ const dict: Dict = {
   trust: {
     title: 'Il tuo editor di immagini online di fiducia',
     desc: 'ImgLove è la soluzione semplice per modificare le immagini online. Accedi a ogni strumento direttamente dal web — con la privacy garantita, perché i file non lasciano mai il tuo dispositivo.',
+    info: 'I filtri si applicano istantaneamente e non toccano mai il file originale.',
     badge1: '100% NEL BROWSER',
     badge2: 'NESSUN CARICAMENTO · NESSUNA REGISTRAZIONE',
   },
@@ -161,6 +162,7 @@ const dict: Dict = {
     downloadAll: 'Scarica tutto',
     startOver: 'Ricomincia',
     addMore: 'Aggiungi altre immagini',
+    remove: 'Rimuovi',
     original: 'Originale',
     result: 'Risultato',
     images: 'immagini',
@@ -174,6 +176,7 @@ const dict: Dict = {
     width: 'Larghezza',
     height: 'Altezza',
     pixels: 'px',
+    settings: 'Impostazioni',
   },
   toolPage: {
     howItWorks: 'Come funziona',
@@ -182,13 +185,18 @@ const dict: Dict = {
   compress: {
     title: 'Comprimi IMAGE',
     desc: 'Riduci il peso delle immagini senza perdere qualità visibile.',
+    info: 'Tutte le immagini saranno compresse con il miglior rapporto qualità-dimensione.',
     qualityLabel: 'Livello di compressione',
+    qualityLow: 'File più piccolo',
+    qualityHigh: 'Migliore qualità',
+    qualityHint: 'Valori bassi creano file molto più piccoli; valori alti conservano più dettagli. 80% è un buon equilibrio.',
     saved: 'risparmiato',
     compressMore: 'Comprimi',
   },
   resize: {
     title: 'Ridimensiona IMAGE',
     desc: 'Ridimensiona le immagini in pixel o in percentuale.',
+    info: 'Le immagini saranno ridimensionate esattamente alle dimensioni scelte.',
     mode: 'Ridimensiona per',
     byPixels: 'Pixel',
     byPercent: 'Percentuale',
@@ -199,6 +207,7 @@ const dict: Dict = {
   crop: {
     title: 'Ritaglia IMAGE',
     desc: 'Trascina sull’immagine per selezionare l’area da mantenere.',
+    info: 'Trascina il riquadro per scegliere l\'area da conservare.',
     aspect: 'Proporzioni',
     free: 'Libero',
     square: 'Quadrato 1:1',
@@ -211,12 +220,14 @@ const dict: Dict = {
   convert: {
     title: 'Converti IMAGE',
     desc: 'Converti le tue immagini in JPG, PNG o WEBP.',
+    info: 'Le immagini saranno convertite senza cambiarne le dimensioni.',
     format: 'Converti in',
     convertBtn: 'Converti immagini',
   },
   rotate: {
     title: 'Ruota IMAGE',
     desc: 'Ruota o capovolgi le tue immagini.',
+    info: 'La rotazione è senza perdita e mantiene la qualità originale.',
     left: 'Ruota a sinistra',
     right: 'Ruota a destra',
     flipH: 'Specchia orizzontale',
@@ -226,6 +237,7 @@ const dict: Dict = {
   watermark: {
     title: 'Filigrana IMAGE',
     desc: 'Aggiungi una filigrana di testo personalizzata alle tue immagini.',
+    info: 'La tua filigrana sarà applicata a ogni immagine.',
     text: 'Testo filigrana',
     textPh: '© Il tuo nome',
     position: 'Posizione',
@@ -245,6 +257,7 @@ const dict: Dict = {
   meme: {
     title: 'Generatore di meme',
     desc: 'Aggiungi scritte alle tue immagini e crea meme.',
+    info: 'Il tuo meme sarà generato a piena risoluzione.',
     top: 'Testo in alto',
     bottom: 'Testo in basso',
     topPh: 'TESTO IN ALTO',
@@ -254,6 +267,7 @@ const dict: Dict = {
   editor: {
     title: 'Editor foto',
     desc: 'Applica filtri e ottimizza le tue foto.',
+    info: 'I filtri si applicano istantaneamente e non toccano mai il file originale.',
     filters: 'Filtri',
     none: 'Nessuno',
     grayscale: 'B/N',
