@@ -19,6 +19,7 @@ export interface LoadedImage {
   name: string;
   size: number;
   type: string;
+  blob: Blob;
 }
 
 const HEIC_TYPES = ['image/heic', 'image/heif'];
@@ -54,7 +55,7 @@ export async function loadImage(file: File): Promise<LoadedImage> {
       el.src = url;
     });
     // Browsers apply EXIF orientation when decoding into <img>; naturalWidth/Height are oriented.
-    return { img, width: img.naturalWidth, height: img.naturalHeight, name, size: file.size, type: file.type };
+    return { img, width: img.naturalWidth, height: img.naturalHeight, name, size: file.size, type: file.type, blob };
   } finally {
     URL.revokeObjectURL(url);
   }
@@ -202,9 +203,10 @@ export function quantizeTo256(src: ImageData): ImageData {
  */
 export function pngQualityToColors(quality: number): number {
   if (quality >= 95) return 0; // lossless: no quantization
-  if (quality >= 75) return 256;
-  if (quality >= 60) return 128;
-  if (quality >= 45) return 64;
-  if (quality >= 30) return 32;
-  return 16;
+  if (quality >= 80) return 256;
+  if (quality >= 65) return 128;
+  if (quality >= 50) return 64;
+  if (quality >= 35) return 32;
+  if (quality >= 20) return 16;
+  return 8;
 }

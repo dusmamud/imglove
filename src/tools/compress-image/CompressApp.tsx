@@ -38,12 +38,16 @@ export default function CompressApp({ t, common }: Props) {
           }
         }
         const blob = await canvasToBlob(canvas, format, quality / 100);
-        const saved = Math.max(0, Math.round((1 - blob.size / f.size) * 100));
+        // Never emit a bigger file than the input: if compression didn't help,
+        // return the original file instead of a larger "compressed" one.
+        const useOriginal = blob.size >= f.size;
+        const finalBlob = useOriginal ? f.blob : blob;
+        const saved = Math.max(0, Math.round((1 - finalBlob.size / f.size) * 100));
         return {
-          blob,
-          name: withExtension(f.name, FORMAT_META[format].ext),
-          width: canvas.width,
-          height: canvas.height,
+          blob: finalBlob,
+          name: useOriginal ? f.name : withExtension(f.name, FORMAT_META[format].ext),
+          width: useOriginal ? f.width : canvas.width,
+          height: useOriginal ? f.height : canvas.height,
           originalSize: f.size,
           note: `${saved}% ${t.saved}`,
         };
