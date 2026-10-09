@@ -8,14 +8,19 @@ interface Props {
   common: Dict['common'];
 }
 
-type FilterKey = 'none' | 'grayscale' | 'sepia' | 'invert' | 'vintage' | 'cool' | 'warm';
+type FilterKey = 'none' | 'grayscale' | 'mono' | 'sepia' | 'invert' | 'vintage' | 'polaroid' | 'kodachrome' | 'technicolor' | 'brownie' | 'cool' | 'warm';
 
 const FILTERS: Record<FilterKey, string> = {
   none: 'none',
   grayscale: 'grayscale(1)',
+  mono: 'grayscale(1) contrast(1.3) brightness(1.05)',
   sepia: 'sepia(0.9)',
   invert: 'invert(1)',
   vintage: 'sepia(0.4) contrast(1.1) brightness(0.95) saturate(0.85)',
+  polaroid: 'sepia(0.35) saturate(1.5) contrast(1.08) brightness(1.06)',
+  kodachrome: 'sepia(0.55) saturate(1.6) contrast(1.25) brightness(0.95)',
+  technicolor: 'saturate(1.9) contrast(1.35) brightness(1.02)',
+  brownie: 'sepia(0.65) contrast(1.15) brightness(0.92) saturate(1.1)',
   cool: 'saturate(1.1) hue-rotate(-12deg) brightness(1.03)',
   warm: 'saturate(1.15) hue-rotate(10deg) sepia(0.25)',
 };
@@ -70,9 +75,14 @@ export default function PhotoEditorApp({ t, common }: Props) {
   const filterLabels: Record<FilterKey, string> = {
     none: t.none,
     grayscale: t.grayscale,
+    mono: t.mono,
     sepia: t.sepia,
     invert: t.invert,
     vintage: t.vintage,
+    polaroid: t.polaroid,
+    kodachrome: t.kodachrome,
+    technicolor: t.technicolor,
+    brownie: t.brownie,
     cool: t.cool,
     warm: t.warm,
   };

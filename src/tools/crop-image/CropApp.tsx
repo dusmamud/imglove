@@ -26,10 +26,12 @@ const PRESETS: { key: 'free' | 'square' | 'wide' | 'classic' | 'portrait'; ratio
 function CropSelector({
   img,
   t,
+  common,
   onChange,
 }: {
   img: HTMLImageElement;
   t: Dict['crop'];
+  common: Dict['common'];
   onChange: (box: Box | null, dispW: number, dispH: number) => void;
 }) {
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -101,6 +103,29 @@ function CropSelector({
     portrait: t.portrait,
   };
 
+  // Numeric crop options in real pixels (like iloveimg's Width/Height/Position X/Y)
+  const scale = disp.w > 0 ? img.naturalWidth / disp.w : 1;
+  const toReal = (v: number) => Math.max(0, Math.round(v * scale));
+  const toDisp = (v: number) => v / scale;
+  const numCls =
+    'w-full rounded-lg border border-line px-3 py-2 text-sm text-ink focus:border-brand focus:outline-none';
+
+  const setRealBox = (rx: number, ry: number, rw: number, rh: number) => {
+    // typing exact numbers breaks any aspect preset -> free mode
+    setPresetState(null);
+    const dw = disp.w;
+    const dh = disp.h;
+    const w = Math.max(0, Math.min(dw, toDisp(rw)));
+    const h = Math.max(0, Math.min(dh, toDisp(rh)));
+    const x = Math.max(0, Math.min(dw - w, toDisp(rx)));
+    const y = Math.max(0, Math.min(dh - h, toDisp(ry)));
+    setBox({ x, y, w, h });
+  };
+
+  const real = box
+    ? { x: toReal(box.x), y: toReal(box.y), w: toReal(box.w), h: toReal(box.h) }
+    : { x: 0, y: 0, w: 0, h: 0 };
+
   return (
     <div className="mx-auto max-w-2xl">
       <p className="mb-2 text-sm font-medium text-ink">{t.aspect}</p>
@@ -146,6 +171,58 @@ function CropSelector({
         )}
       </div>
       {(!box || box.w <= 4) && <p className="mt-2 text-center text-xs text-muted">{t.hint}</p>}
+      {box && box.w > 4 && box.h > 4 && (
+        <div className="mx-auto mt-4 grid max-w-md grid-cols-2 gap-3 sm:grid-cols-4">
+          <label className="block">
+            <span className="mb-1 block text-xs text-muted">
+              {common.width} ({common.pixels})
+            </span>
+            <input
+              type="number"
+              min={1}
+              max={img.naturalWidth}
+              value={real.w}
+              onChange={(e) => setRealBox(real.x, real.y, Number(e.target.value) || 1, real.h)}
+              className={numCls}
+            />
+          </label>
+          <label className="block">
+            <span className="mb-1 block text-xs text-muted">
+              {common.height} ({common.pixels})
+            </span>
+            <input
+              type="number"
+              min={1}
+              max={img.naturalHeight}
+              value={real.h}
+              onChange={(e) => setRealBox(real.x, real.y, real.w, Number(e.target.value) || 1)}
+              className={numCls}
+            />
+          </label>
+          <label className="block">
+            <span className="mb-1 block text-xs text-muted">{t.posX} ({common.pixels})</span>
+            <input
+              type="number"
+              min={0}
+              max={img.naturalWidth}
+              value={real.x}
+              onChange={(e) => setRealBox(Number(e.target.value) || 0, real.y, real.w, real.h)}
+              className={numCls}
+            />
+          </label>
+          <label className="block">
+            <span className="mb-1 block text-xs text-muted">{t.posY} ({common.pixels})</span>
+            <input
+              type="number"
+              min={0}
+              max={img.naturalHeight}
+              value={real.y}
+              onChange={(e) => setRealBox(real.x, Number(e.target.value) || 0, real.w, real.h)}
+              className={numCls}
+            />
+          </label>
+        </div>
+      )}
     </div>
   );
 }
@@ -189,6 +266,7 @@ export default function CropApp({ t, common }: Props) {
           <CropSelector
             img={files[0].img}
             t={t}
+            common={common}
             onChange={(b, dw, dh) => (cropRef.current = { box: b, dw, dh })}
           />
         ) : null
