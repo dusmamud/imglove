@@ -16,6 +16,10 @@ const dict: Dict = {
     signup: 'سائن اَپ',
     menu: 'مینیو',
     close: 'بند کریں',
+    theme: 'تھیم',
+    themeLight: 'لائٹ',
+    themeDark: 'ڈارک',
+    themeSystem: 'سسٹم',
   },
   account: {
     title: 'اکاؤنٹ کی ضرورت نہیں',

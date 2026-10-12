@@ -39,7 +39,7 @@ export default function SplitApp({ t, common }: Props) {
   };
 
   const numCls =
-    'w-24 rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink focus:border-brand focus:outline-none';
+    'w-24 rounded-lg border border-line bg-card px-3 py-2 text-sm text-ink focus:border-brand focus:outline-none';
 
   return (
     <ToolShell

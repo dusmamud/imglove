@@ -60,7 +60,7 @@ const toolNames = dict.tools as Record<string, { name: string }>;
           {localeNames[locale as keyof typeof localeNames]}
           <Icon name="ph:caret-down" class="h-3.5 w-3.5" />
         </summary>
-        <div class="absolute bottom-full end-0 z-50 mb-2 max-h-72 w-44 overflow-y-auto rounded-card border border-line bg-white py-1 shadow-pop">
+        <div class="absolute bottom-full end-0 z-50 mb-2 max-h-72 w-44 overflow-y-auto rounded-card border border-line bg-card py-1 shadow-pop">
           {locales.map((lc) => (
             <a
               href={l('/', lc)}

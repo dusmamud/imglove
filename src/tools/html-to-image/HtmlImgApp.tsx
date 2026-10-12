@@ -53,11 +53,11 @@ export default function HtmlImgApp({ t, common }: Props) {
   return (
     <div className="mx-auto w-full max-w-4xl">
       {error && (
-        <div className="mb-4 rounded-card border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>
+        <div className="mb-4 rounded-card border border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-950/40 px-4 py-3 text-sm text-red-700 dark:text-red-400">{error}</div>
       )}
 
       <div className="space-y-4">
-        <section className="rounded-card border border-line bg-white p-4 sm:p-6">
+        <section className="rounded-card border border-line bg-card p-4 sm:p-6">
           <h2 className="mb-1 text-base font-semibold text-ink">{common.settings}</h2>
           <p className="mb-4 rounded-lg bg-brand-soft/50 px-3 py-2 text-xs text-muted">{t.info}</p>
 
@@ -67,7 +67,7 @@ export default function HtmlImgApp({ t, common }: Props) {
             onChange={(e) => setHtml(e.target.value)}
             rows={8}
             spellCheck={false}
-            className="w-full rounded-lg border border-line bg-gray-50 px-3 py-2 font-mono text-xs text-ink focus:border-brand focus:outline-none"
+            className="w-full rounded-lg border border-line bg-code px-3 py-2 font-mono text-xs text-ink focus:border-brand focus:outline-none"
             placeholder={t.htmlPh}
           />
 
@@ -100,8 +100,8 @@ export default function HtmlImgApp({ t, common }: Props) {
         </div>
 
         {imgUrl && (
-          <section className="rounded-card border border-line bg-white p-4 sm:p-6">
-            <div className="mb-4 overflow-hidden rounded-lg border border-line bg-gray-50">
+          <section className="rounded-card border border-line bg-card p-4 sm:p-6">
+            <div className="mb-4 overflow-hidden rounded-lg border border-line bg-code">
               <img src={imgUrl} alt="Rendered HTML" className="mx-auto max-w-full" />
             </div>
             <div className="text-center">

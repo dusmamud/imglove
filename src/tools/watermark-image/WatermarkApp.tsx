@@ -153,7 +153,7 @@ export default function WatermarkApp({ t, common }: Props) {
                     type="color"
                     value={color}
                     onChange={(e) => setColor(e.target.value)}
-                    className="h-8 w-12 cursor-pointer rounded border border-line bg-white p-0.5"
+                    className="h-8 w-12 cursor-pointer rounded border border-line bg-card p-0.5"
                   />
                   <span className="text-sm font-medium text-ink">{color.toUpperCase()}</span>
                 </label>
@@ -189,7 +189,7 @@ export default function WatermarkApp({ t, common }: Props) {
                     <img
                       src={logoThumb}
                       alt=""
-                      className="h-12 w-12 rounded-lg border border-line object-contain bg-white"
+                      className="h-12 w-12 rounded-lg border border-line object-contain bg-card"
                     />
                   )}
                   <input

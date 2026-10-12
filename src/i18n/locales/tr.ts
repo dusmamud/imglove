@@ -16,6 +16,10 @@ const dict: Dict = {
     signup: 'Kaydol',
     menu: 'Menü',
     close: 'Kapat',
+    theme: 'Tema',
+    themeLight: 'Açık',
+    themeDark: 'Koyu',
+    themeSystem: 'Sistem',
   },
   account: {
     title: 'Hesap gerekmez',

@@ -69,7 +69,7 @@ const filters = [
           aria-selected={i === 0}
           data-filter={f.key}
           class={`rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
-            i === 0 ? 'bg-brand text-white' : 'border border-line bg-white text-ink hover:border-brand hover:text-brand'
+            i === 0 ? 'bg-brand text-white' : 'border border-line bg-card text-ink hover:border-brand hover:text-brand'
           }`}
         >
           {f.label}
@@ -81,7 +81,7 @@ const filters = [
         <a
           href={l('/' + t.slug, locale)}
           data-category={toolStyle[t.slug].cat}
-          class="tool-card group rounded-card border border-line bg-white p-6 shadow-card transition-all hover:-translate-y-0.5 hover:border-brand"
+          class="tool-card group rounded-card border border-line bg-card p-6 shadow-card transition-all hover:-translate-y-0.5 hover:border-brand"
         >
           <span
             class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl text-white"
@@ -97,14 +97,14 @@ const filters = [
   </section>
 
   <!-- Work your way -->
-  <section class="mt-16 bg-white py-14">
+  <section class="mt-16 bg-card py-14">
     <div class="mx-auto max-w-[1370px] px-6">
       <h2 class="text-center text-[28px] font-semibold text-ink sm:text-[42px] sm:leading-[52px]">{dict.work.title}</h2>
       <div class="mt-10 grid gap-6 md:grid-cols-3">
         {dict.work.cards.map((c, i) => (
           <a
             href={c.link ? l('/' + c.link, locale) : l('/#tools', locale)}
-            class="group relative rounded-card border border-line bg-white p-7 shadow-card transition-all hover:-translate-y-0.5 hover:border-brand"
+            class="group relative rounded-card border border-line bg-card p-7 shadow-card transition-all hover:-translate-y-0.5 hover:border-brand"
           >
             <span class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-soft text-brand">
               <Icon name={['ph:stack', 'ph:devices', 'ph:gift'][i]} class="h-6 w-6" />
@@ -123,7 +123,7 @@ const filters = [
     <h2 class="text-center text-[28px] font-semibold text-ink sm:text-[42px] sm:leading-[52px]">{dict.features.title}</h2>
     <div class="mt-10 grid gap-6 sm:grid-cols-3">
       {dict.features.items.map((f, i) => (
-        <div class="rounded-card border border-line bg-white p-7 text-center shadow-card">
+        <div class="rounded-card border border-line bg-card p-7 text-center shadow-card">
           <span class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-brand">
             <Icon name={featureIcons[i]} class="h-6 w-6" />
           </span>
@@ -135,7 +135,7 @@ const filters = [
   </section>
 
   <!-- Trust -->
-  <section class="bg-white py-14">
+  <section class="bg-card py-14">
     <div class="mx-auto max-w-3xl px-6 text-center">
       <h2 class="text-[24px] font-semibold text-ink sm:text-[28px]">{dict.trust.title}</h2>
       <p class="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted">{dict.trust.desc}</p>
@@ -155,7 +155,7 @@ const filters = [
   <!-- FAQ -->
   <section id="faq" class="mx-auto max-w-3xl scroll-mt-24 px-4 py-14">
     <h2 class="text-center text-[24px] font-semibold text-ink sm:text-[28px]">{dict.faq.title}</h2>
-    <div class="mt-8 divide-y divide-line rounded-card border border-line bg-white px-6 shadow-card">
+    <div class="mt-8 divide-y divide-line rounded-card border border-line bg-card px-6 shadow-card">
       {dict.faq.items.map((item) => (
         <details class="group py-4">
           <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-[15px] font-semibold text-ink [&::-webkit-details-marker]:hidden">
@@ -190,7 +190,7 @@ const filters = [
             var active = p === pill;
             p.setAttribute('aria-selected', active ? 'true' : 'false');
             p.className = 'rounded-full px-5 py-2 text-sm font-semibold transition-colors ' +
-              (active ? 'bg-brand text-white' : 'border border-line bg-white text-ink hover:border-brand hover:text-brand');
+              (active ? 'bg-brand text-white' : 'border border-line bg-card text-ink hover:border-brand hover:text-brand');
           });
           cards.forEach(function (card) {
             var show = f === 'all' || card.getAttribute('data-category') === f;

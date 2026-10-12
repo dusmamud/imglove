@@ -16,6 +16,10 @@ const dict: Dict = {
     signup: 'Đăng ký',
     menu: 'Menu',
     close: 'Đóng',
+    theme: 'Giao diện',
+    themeLight: 'Sáng',
+    themeDark: 'Tối',
+    themeSystem: 'Hệ thống',
   },
   account: {
     title: 'Không cần tài khoản',

@@ -24,6 +24,16 @@ const canonical = `${SITE_ORIGIN}${l(path, locale)}`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script is:inline>
+      // Apply saved theme before first paint (prevents flash of wrong theme)
+      (function () {
+        try {
+          var t = localStorage.getItem('imglove-theme') || 'system';
+          var dark = t === 'dark' || (t === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -40,7 +50,7 @@ const canonical = `${SITE_ORIGIN}${l(path, locale)}`;
     <meta name="twitter:card" content="summary" />
     <link rel="icon" type="image/svg+xml" href={asset('/favicon.svg')} />
   </head>
-  <body class="min-h-screen bg-white font-sans text-ink">
+  <body class="min-h-screen bg-card font-sans text-ink">
     <Header locale={locale} dict={dict} />
     <main>
       <slot />

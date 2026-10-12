@@ -85,14 +85,14 @@ export default function OcrApp({ t, common }: Props) {
   return (
     <div className="mx-auto w-full max-w-4xl">
       {error && (
-        <div className="mb-4 rounded-card border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>
+        <div className="mb-4 rounded-card border border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-950/40 px-4 py-3 text-sm text-red-700 dark:text-red-400">{error}</div>
       )}
 
       {!file && <Dropzone t={common} onFiles={addFile} />}
 
       {file && (
         <div className="space-y-4">
-          <section className="rounded-card border border-line bg-white p-4 sm:p-6">
+          <section className="rounded-card border border-line bg-card p-4 sm:p-6">
             <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
               <h2 className="text-base font-semibold text-ink">
                 {file.name}
@@ -127,14 +127,14 @@ export default function OcrApp({ t, common }: Props) {
             )}
           </section>
 
-          <section className="rounded-card border border-line bg-white p-4 sm:p-6">
+          <section className="rounded-card border border-line bg-card p-4 sm:p-6">
             <h2 className="mb-1 text-base font-semibold text-ink">{common.settings}</h2>
             <p className="mb-4 rounded-lg bg-brand-soft/50 px-3 py-2 text-xs text-muted">{t.info}</p>
             <label className="mb-2 block text-sm font-semibold text-ink">{t.language}</label>
             <select
               value={lang}
               onChange={(e) => setLang(e.target.value)}
-              className="w-full max-w-xs rounded-lg border border-line bg-white px-3 py-2.5 text-sm text-ink focus:border-brand focus:outline-none"
+              className="w-full max-w-xs rounded-lg border border-line bg-card px-3 py-2.5 text-sm text-ink focus:border-brand focus:outline-none"
             >
               {LANGS.map((l) => (
                 <option key={l.code} value={l.code}>
@@ -161,7 +161,7 @@ export default function OcrApp({ t, common }: Props) {
           </div>
 
           {text !== null && (
-            <section className="rounded-card border border-line bg-white p-4 sm:p-6">
+            <section className="rounded-card border border-line bg-card p-4 sm:p-6">
               <div className="mb-3 flex items-center justify-between">
                 <h2 className="text-base font-semibold text-ink">{t.extractBtn}</h2>
                 <button
@@ -172,7 +172,7 @@ export default function OcrApp({ t, common }: Props) {
                   {copied ? '✓' : t.copyText}
                 </button>
               </div>
-              <div className="whitespace-pre-wrap rounded-lg bg-gray-50 p-4 font-mono text-sm text-ink">
+              <div className="whitespace-pre-wrap rounded-lg bg-code p-4 font-mono text-sm text-ink">
                 {text}
               </div>
             </section>

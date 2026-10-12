@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon/components';
 import { l, localeNames, locales } from '../i18n/index';
 import type { Dict } from '../i18n/dicts';
+import ThemeToggle from './ThemeToggle.astro';
 
 interface Props {
   locale: string;
@@ -10,21 +11,22 @@ interface Props {
 const { locale, dict } = Astro.props;
 ---
 
-<header class="fixed inset-x-0 top-0 z-40 h-[60px] border-b border-[#d6d6df] bg-white">
+<header class="fixed inset-x-0 top-0 z-40 h-[60px] border-b border-line bg-card">
   <div class="mx-auto flex h-full max-w-[1370px] items-center justify-between px-6">
     <a href={l('/', locale)} class="flex items-center" aria-label={dict.meta.siteName}>
-      <span class="text-[22px] font-bold tracking-tight text-[#161616]">Img</span>
+      <span class="text-[22px] font-bold tracking-tight text-ink">Img</span>
       <Icon name="ph:heart-fill" class="mx-0.5 h-6 w-6 text-brand" />
-      <span class="text-[22px] font-bold tracking-tight text-[#161616]">Love</span>
+      <span class="text-[22px] font-bold tracking-tight text-ink">Love</span>
     </a>
 
     <nav class="hidden items-center gap-8 min-[860px]:flex" aria-label="primary">
-      <a href={l('/', locale) + '#tools'} class="text-sm font-medium uppercase text-[#161616] hover:text-brand">{dict.nav.tools}</a>
-      <a href={l('/', locale) + '#features'} class="text-sm font-medium uppercase text-[#161616] hover:text-brand">{dict.nav.features}</a>
-      <a href={l('/', locale) + '#faq'} class="text-sm font-medium uppercase text-[#161616] hover:text-brand">{dict.nav.faq}</a>
+      <a href={l('/', locale) + '#tools'} class="text-sm font-medium uppercase text-ink hover:text-brand">{dict.nav.tools}</a>
+      <a href={l('/', locale) + '#features'} class="text-sm font-medium uppercase text-ink hover:text-brand">{dict.nav.features}</a>
+      <a href={l('/', locale) + '#faq'} class="text-sm font-medium uppercase text-ink hover:text-brand">{dict.nav.faq}</a>
     </nav>
 
     <div class="flex items-center gap-2">
+      <ThemeToggle dict={dict} />
       <div class="relative" id="lang-wrap">
         <button
           type="button"
@@ -39,7 +41,7 @@ const { locale, dict } = Astro.props;
         </button>
         <div
           id="lang-menu"
-          class="absolute end-0 top-full z-50 mt-2 hidden max-h-80 w-44 overflow-y-auto rounded-card border border-line bg-white py-1 shadow-pop"
+          class="absolute end-0 top-full z-50 mt-2 hidden max-h-80 w-44 overflow-y-auto rounded-card border border-line bg-card py-1 shadow-pop"
           role="listbox"
         >
           {locales.map((lc) => (
@@ -54,7 +56,7 @@ const { locale, dict } = Astro.props;
           ))}
         </div>
       </div>
-      <button type="button" data-account class="hidden px-3 py-2 text-sm font-semibold text-[#161616] hover:text-brand min-[860px]:block">
+      <button type="button" data-account class="hidden px-3 py-2 text-sm font-semibold text-ink hover:text-brand min-[860px]:block">
         {dict.nav.login}
       </button>
       <button type="button" data-account class="hidden rounded-lg bg-brand px-3 py-2 text-sm font-semibold text-white hover:bg-brand-dark min-[860px]:block">
@@ -63,19 +65,19 @@ const { locale, dict } = Astro.props;
       <button
         type="button"
         id="nav-toggle"
-        class="flex h-10 w-10 items-center justify-center text-[#161616] min-[860px]:hidden"
+        class="flex h-10 w-10 items-center justify-center text-ink min-[860px]:hidden"
         aria-label={dict.nav.menu}
       >
         <Icon name="ph:list" class="h-6 w-6" />
       </button>
     </div>
   </div>
-  <nav id="mobile-nav" class="hidden border-b border-[#d6d6df] bg-white px-4 py-3 min-[860px]:hidden" aria-label="mobile">
-    <a href={l('/', locale) + '#tools'} class="block rounded-lg px-3 py-2.5 text-sm font-medium uppercase text-[#161616] hover:bg-soft">{dict.nav.tools}</a>
-    <a href={l('/', locale) + '#features'} class="block rounded-lg px-3 py-2.5 text-sm font-medium uppercase text-[#161616] hover:bg-soft">{dict.nav.features}</a>
-    <a href={l('/', locale) + '#faq'} class="block rounded-lg px-3 py-2.5 text-sm font-medium uppercase text-[#161616] hover:bg-soft">{dict.nav.faq}</a>
+  <nav id="mobile-nav" class="hidden border-b border-line bg-card px-4 py-3 min-[860px]:hidden" aria-label="mobile">
+    <a href={l('/', locale) + '#tools'} class="block rounded-lg px-3 py-2.5 text-sm font-medium uppercase text-ink hover:bg-soft">{dict.nav.tools}</a>
+    <a href={l('/', locale) + '#features'} class="block rounded-lg px-3 py-2.5 text-sm font-medium uppercase text-ink hover:bg-soft">{dict.nav.features}</a>
+    <a href={l('/', locale) + '#faq'} class="block rounded-lg px-3 py-2.5 text-sm font-medium uppercase text-ink hover:bg-soft">{dict.nav.faq}</a>
     <div class="mt-2 flex gap-2 px-3 pb-1">
-      <button type="button" data-account class="flex-1 rounded-lg border border-line px-3 py-2.5 text-sm font-semibold text-[#161616]">{dict.nav.login}</button>
+      <button type="button" data-account class="flex-1 rounded-lg border border-line px-3 py-2.5 text-sm font-semibold text-ink">{dict.nav.login}</button>
       <button type="button" data-account class="flex-1 rounded-lg bg-brand px-3 py-2.5 text-sm font-semibold text-white">{dict.nav.signup}</button>
     </div>
   </nav>
@@ -84,7 +86,7 @@ const { locale, dict } = Astro.props;
 
 <!-- No-account modal -->
 <div id="account-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 p-4">
-  <div class="w-full max-w-sm rounded-card bg-white p-6 text-center shadow-pop">
+  <div class="w-full max-w-sm rounded-card bg-card p-6 text-center shadow-pop">
     <span class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-brand">
       <Icon name="ph:lock-key" class="h-6 w-6" />
     </span>

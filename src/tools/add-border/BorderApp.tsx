@@ -62,7 +62,7 @@ export default function BorderApp({ t, common }: Props) {
                 type="color"
                 value={color}
                 onChange={(e) => setColor(e.target.value)}
-                className="h-11 w-16 cursor-pointer rounded-lg border border-line bg-white p-1"
+                className="h-11 w-16 cursor-pointer rounded-lg border border-line bg-card p-1"
               />
               <span className="text-sm text-muted">{color}</span>
             </div>

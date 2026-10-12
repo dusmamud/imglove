@@ -1,0 +1,90 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { Dict } from '../i18n/dicts';
+
+interface Props {
+  dict: Dict;
+}
+const { dict } = Astro.props;
+---
+<div class="relative" data-theme-root>
+  <button
+    type="button"
+    data-theme-btn
+    aria-label={dict.nav.theme}
+    title={dict.nav.theme}
+    class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-line text-ink transition hover:border-brand hover:text-brand"
+  >
+    <span data-theme-icon-light class="hidden"><Icon name="ph:sun" class="h-5 w-5" /></span>
+    <span data-theme-icon-dark class="hidden"><Icon name="ph:moon" class="h-5 w-5" /></span>
+    <span data-theme-icon-system><Icon name="ph:monitor" class="h-5 w-5" /></span>
+  </button>
+  <div
+    data-theme-list
+    class="absolute end-0 z-50 mt-2 hidden w-44 overflow-hidden rounded-card border border-line bg-card py-1 shadow-pop"
+  >
+    <button type="button" data-theme-set="light" class="flex w-full items-center gap-2.5 px-4 py-2.5 text-sm text-ink hover:bg-soft">
+      <Icon name="ph:sun" class="h-4 w-4" /> {dict.nav.themeLight}
+    </button>
+    <button type="button" data-theme-set="dark" class="flex w-full items-center gap-2.5 px-4 py-2.5 text-sm text-ink hover:bg-soft">
+      <Icon name="ph:moon" class="h-4 w-4" /> {dict.nav.themeDark}
+    </button>
+    <button type="button" data-theme-set="system" class="flex w-full items-center gap-2.5 px-4 py-2.5 text-sm text-ink hover:bg-soft">
+      <Icon name="ph:monitor" class="h-4 w-4" /> {dict.nav.themeSystem}
+    </button>
+  </div>
+</div>
+
+<script>
+  function currentTheme(): string {
+    try {
+      return localStorage.getItem('imglove-theme') || 'system';
+    } catch {
+      return 'system';
+    }
+  }
+  function applyTheme(t: string) {
+    const dark =
+      t === 'dark' || (t === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    document.documentElement.classList.toggle('dark', dark);
+    document.querySelectorAll('[data-theme-root]').forEach((root) => {
+      (root.querySelector('[data-theme-icon-light]') as HTMLElement).classList.toggle('hidden', t !== 'light');
+      (root.querySelector('[data-theme-icon-dark]') as HTMLElement).classList.toggle('hidden', t !== 'dark');
+      (root.querySelector('[data-theme-icon-system]') as HTMLElement).classList.toggle('hidden', t !== 'system');
+    });
+  }
+  function initTheme() {
+    applyTheme(currentTheme());
+    if (!(document.documentElement as HTMLElement).dataset.themeDocInit) {
+      (document.documentElement as HTMLElement).dataset.themeDocInit = '1';
+      document.addEventListener('click', () => {
+        document.querySelectorAll('[data-theme-list]').forEach((l) => l.classList.add('hidden'));
+      });
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if (currentTheme() === 'system') applyTheme('system');
+      });
+    }
+    document.querySelectorAll('[data-theme-root]').forEach((root) => {
+      if ((root as HTMLElement).dataset.themeInit) return;
+      (root as HTMLElement).dataset.themeInit = '1';
+      const btn = root.querySelector('[data-theme-btn]');
+      const list = root.querySelector('[data-theme-list]');
+      btn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        list?.classList.toggle('hidden');
+      });
+      root.querySelectorAll('[data-theme-set]').forEach((opt) => {
+        opt.addEventListener('click', () => {
+          const t = (opt as HTMLElement).dataset.themeSet || 'system';
+          try {
+            localStorage.setItem('imglove-theme', t);
+          } catch {}
+          applyTheme(t);
+          list?.classList.add('hidden');
+        });
+      });
+    });
+  }
+  document.addEventListener('astro:page-load', initTheme);
+  initTheme();
+</script>

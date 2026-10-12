@@ -13,10 +13,29 @@
   --line: #ebebf4;
   --line-strong: #d6d6df;
   --soft-bg: #f5f5fa;
+  --card-bg: #ffffff;
+  --code-bg: #f5f5fa;
   --radius-btn: 8px;
   --radius-card: 12px;
   --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06);
   --shadow-pop: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- Professional dark theme (no neon, no glow) ---------- */
+html.dark {
+  --brand: #5e9dff;
+  --brand-dark: #4d90fe;
+  --brand-soft: rgba(94, 157, 255, 0.13);
+  --ink: #eceef1;
+  --body-text: #c3c8d1;
+  --muted: #8e95a1;
+  --line: #252b35;
+  --line-strong: #353d4b;
+  --soft-bg: #0e1116;
+  --card-bg: #161b23;
+  --code-bg: #1d232d;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.45);
+  --shadow-pop: 0 8px 28px rgba(0, 0, 0, 0.55);
 }
 
 /* ---------- Self-hosted Inter (closest free match to the site's grotesque) ---------- */

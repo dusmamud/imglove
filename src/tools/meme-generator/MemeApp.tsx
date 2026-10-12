@@ -121,7 +121,7 @@ export default function MemeApp({ t, common }: Props) {
           type="color"
           value={value}
           onChange={(e) => set(e.target.value)}
-          className="h-8 w-12 cursor-pointer rounded border border-line bg-white p-0.5"
+          className="h-8 w-12 cursor-pointer rounded border border-line bg-card p-0.5"
         />
         <span className="text-sm font-medium text-ink">{value.toUpperCase()}</span>
       </label>

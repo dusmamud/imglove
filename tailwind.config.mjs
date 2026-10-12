@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
@@ -13,6 +14,8 @@ export default {
         muted: 'var(--muted)',
         line: 'var(--line)',
         soft: 'var(--soft-bg)',
+        card: 'var(--card-bg)',
+        code: 'var(--code-bg)',
       },
       fontFamily: {
         sans: [

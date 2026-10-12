@@ -71,11 +71,11 @@ const pageTitle = `${names[tool].name} — ${dict.meta.siteName}`;
   </section>
 
   <section class="mx-auto max-w-6xl px-4 pb-6">
-    <div id="tool-loading" class="mx-auto max-w-4xl rounded-card border border-line bg-white px-6 py-16 text-center">
+    <div id="tool-loading" class="mx-auto max-w-4xl rounded-card border border-line bg-card px-6 py-16 text-center">
       <div class="mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-[3px] border-line border-t-brand"></div>
       <p class="text-sm text-muted">{dict.common.toolLoading}</p>
     </div>
-    <div id="tool-load-error" class="mx-auto hidden max-w-4xl rounded-card border border-line bg-white px-6 py-16 text-center">
+    <div id="tool-load-error" class="mx-auto hidden max-w-4xl rounded-card border border-line bg-card px-6 py-16 text-center">
       <p class="mb-4 text-sm text-ink">{dict.common.toolLoadFailed}</p>
       <button
         type="button"
@@ -142,7 +142,7 @@ const pageTitle = `${names[tool].name} — ${dict.meta.siteName}`;
     <h2 class="text-center text-xl font-bold text-ink sm:text-2xl">{dict.toolPage.howItWorks}</h2>
     <ol class="mt-6 grid gap-4 sm:grid-cols-3">
       {dict.toolPage.steps.map((s, i) => (
-        <li class="rounded-card border border-line bg-white p-5 text-center shadow-card">
+        <li class="rounded-card border border-line bg-card p-5 text-center shadow-card">
           <span class="mx-auto mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">
             {i + 1}
           </span>

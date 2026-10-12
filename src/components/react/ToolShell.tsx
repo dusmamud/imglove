@@ -94,18 +94,18 @@ export default function ToolShell({ t, settings, settingsInfo, actionLabel, proc
   return (
     <div className="mx-auto w-full max-w-4xl">
       {error && (
-        <div className="mb-4 rounded-card border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>
+        <div className="mb-4 rounded-card border border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-950/40 px-4 py-3 text-sm text-red-700 dark:text-red-400">{error}</div>
       )}
 
       {phase === 'idle' && !busyNote && <Dropzone t={t} onFiles={addFiles} />}
       {busyNote && phase === 'idle' && (
-        <div className="rounded-card border border-line bg-white px-6 py-16 text-center text-muted">{busyNote}</div>
+        <div className="rounded-card border border-line bg-card px-6 py-16 text-center text-muted">{busyNote}</div>
       )}
 
       {(phase === 'ready' || phase === 'working') && (
         <div className="space-y-4">
           {/* Files card — filename, dimensions and real size per file */}
-          <section className="rounded-card border border-line bg-white p-4 sm:p-6">
+          <section className="rounded-card border border-line bg-card p-4 sm:p-6">
             <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
               <h2 className="text-base font-semibold text-ink">
                 {files.length} {files.length === 1 ? t.image : t.images}
@@ -147,7 +147,7 @@ export default function ToolShell({ t, settings, settingsInfo, actionLabel, proc
                       setFiles(next);
                       if (!next.length) setPhase('idle');
                     }}
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:bg-white hover:text-red-600"
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:bg-card hover:text-red-600 dark:hover:text-red-400"
                   >
                     ✕
                   </button>
@@ -169,7 +169,7 @@ export default function ToolShell({ t, settings, settingsInfo, actionLabel, proc
           </section>
 
           {/* Settings card */}
-          <section className="rounded-card border border-line bg-white p-4 sm:p-6">
+          <section className="rounded-card border border-line bg-card p-4 sm:p-6">
             <h2 className="mb-4 text-base font-semibold text-ink">{t.settings}</h2>
             {settingsInfo && (
               <p className="mb-5 rounded-lg bg-brand-soft px-4 py-3 text-sm leading-relaxed text-ink">
@@ -199,7 +199,7 @@ export default function ToolShell({ t, settings, settingsInfo, actionLabel, proc
       )}
 
       {phase === 'done' && (
-        <div className="rounded-card border border-line bg-white p-4 sm:p-6">
+        <div className="rounded-card border border-line bg-card p-4 sm:p-6">
           <div className="mb-4 flex items-center gap-2 text-lg font-semibold text-ink">
             <CheckCircle size={24} className="text-green-600" weight="fill" />
             {results.length} {results.length === 1 ? t.image : t.images}

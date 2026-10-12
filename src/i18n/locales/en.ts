@@ -14,6 +14,10 @@ const en = {
     signup: 'Sign up',
     menu: 'Menu',
     close: 'Close',
+    theme: 'Theme',
+    themeLight: 'Light',
+    themeDark: 'Dark',
+    themeSystem: 'System',
   },
   account: {
     title: 'No account needed',
