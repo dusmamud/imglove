@@ -2,8 +2,8 @@ import type { Dict } from './en';
 
 const dict: Dict = {
   meta: {
-    siteName: 'ImgLove',
-    homeTitle: 'ImgLove — Công cụ xử lý ảnh trực tuyến miễn phí',
+    siteName: 'Image Quill',
+    homeTitle: 'Image Quill — Công cụ xử lý ảnh trực tuyến miễn phí',
     homeDesc:
       'Nén, đổi kích thước, cắt, chuyển đổi và chỉnh sửa ảnh trực tuyến miễn phí. Nhanh chóng, riêng tư và dễ dàng — tệp của bạn không bao giờ rời khỏi thiết bị.',
   },
@@ -20,10 +20,11 @@ const dict: Dict = {
     themeLight: 'Sáng',
     themeDark: 'Tối',
     themeSystem: 'Hệ thống',
+    byDusrel: 'bởi Dusrel',
   },
   account: {
     title: 'Không cần tài khoản',
-    desc: 'Mọi công cụ trên ImgLove đều miễn phí và chạy ngay trong trình duyệt của bạn — không đăng ký, không đăng nhập, bao giờ cũng vậy.',
+    desc: 'Mọi công cụ trên Image Quill đều miễn phí và chạy ngay trong trình duyệt của bạn — không đăng ký, không đăng nhập, bao giờ cũng vậy.',
     ok: 'Đã hiểu',
   },
   hero: {
@@ -122,7 +123,7 @@ const dict: Dict = {
     },
   },
   features: {
-    title: 'Vì sao mọi người yêu thích ImgLove',
+    title: 'Vì sao mọi người yêu thích Image Quill',
     items: [
       {
         title: '100% miễn phí',
@@ -143,7 +144,7 @@ const dict: Dict = {
     items: [
       {
         q: 'Các công cụ xử lý ảnh này có thực sự miễn phí không?',
-        a: 'Có. Tất cả công cụ trên ImgLove đều hoàn toàn miễn phí, không giới hạn ẩn và không chèn watermark lên ảnh của bạn.',
+        a: 'Có. Tất cả công cụ trên Image Quill đều hoàn toàn miễn phí, không giới hạn ẩn và không chèn watermark lên ảnh của bạn.',
       },
       {
         q: 'Ảnh của tôi có bị tải lên máy chủ không?',
@@ -169,7 +170,7 @@ const dict: Dict = {
       },
       {
         title: 'Hoạt động trên mọi thiết bị',
-        desc: 'Không cần cài đặt, không cần thiết lập. Mở ImgLove trên điện thoại, máy tính bảng hoặc máy tính.',
+        desc: 'Không cần cài đặt, không cần thiết lập. Mở Image Quill trên điện thoại, máy tính bảng hoặc máy tính.',
         link: '',
       },
       {
@@ -181,7 +182,7 @@ const dict: Dict = {
   },
   trust: {
     title: 'Trình chỉnh sửa ảnh trực tuyến đáng tin cậy của bạn',
-    desc: 'ImgLove là giải pháp đơn giản để chỉnh sửa ảnh trực tuyến. Truy cập mọi công cụ ngay từ web — với quyền riêng tư được đảm bảo, vì các tệp không bao giờ rời khỏi thiết bị của bạn.',
+    desc: 'Image Quill là giải pháp đơn giản để chỉnh sửa ảnh trực tuyến. Truy cập mọi công cụ ngay từ web — với quyền riêng tư được đảm bảo, vì các tệp không bao giờ rời khỏi thiết bị của bạn.',
     info: 'Bộ lọc được áp dụng ngay lập tức và không bao giờ chạm vào tệp gốc của bạn.',
     badge1: '100% TRÊN TRÌNH DUYỆT',
     badge2: 'KHÔNG TẢI LÊN · KHÔNG ĐĂNG KÝ',
@@ -199,6 +200,7 @@ const dict: Dict = {
     terms: 'Điều khoản dịch vụ',
     language: 'Ngôn ngữ',
     rights: 'Bảo lưu mọi quyền.',
+    byDusrel: 'Sản phẩm của Dusrel',
   },
   common: {
     selectImages: 'Chọn ảnh',
@@ -453,23 +455,25 @@ const dict: Dict = {
   about: {
     title: 'Về chúng tôi',
     body1:
-      'ImgLove là bộ sưu tập miễn phí các công cụ xử lý ảnh trực tuyến. Sứ mệnh của chúng tôi rất đơn giản: giúp các tác vụ ảnh hằng ngày — nén, đổi kích thước, cắt, chuyển đổi và chỉnh sửa nhẹ — trở nên nhanh chóng và dễ tiếp cận với mọi người.',
+      'Image Quill là bộ sưu tập miễn phí các công cụ xử lý ảnh trực tuyến. Sứ mệnh của chúng tôi rất đơn giản: giúp các tác vụ ảnh hằng ngày — nén, đổi kích thước, cắt, chuyển đổi và chỉnh sửa nhẹ — trở nên nhanh chóng và dễ tiếp cận với mọi người.',
     body2:
-      'Không giống hầu hết các công cụ trực tuyến, mọi thứ trên ImgLove đều chạy trực tiếp trong trình duyệt của bạn. Ảnh của bạn không bao giờ được tải lên máy chủ của chúng tôi, nghĩa là tệp của bạn luôn riêng tư và công cụ hoạt động nhanh hơn.',
+      'Không giống hầu hết các công cụ trực tuyến, mọi thứ trên Image Quill đều chạy trực tiếp trong trình duyệt của bạn. Ảnh của bạn không bao giờ được tải lên máy chủ của chúng tôi, nghĩa là tệp của bạn luôn riêng tư và công cụ hoạt động nhanh hơn.',
+    body3:
+      'Image Quill là một phần của Dusrel — gia đình ứng dụng miễn phí ngày càng lớn, đặt quyền riêng tư lên hàng đầu và chạy hoàn toàn trong trình duyệt của bạn. Không tài khoản, không tải lên, không theo dõi.',
   },
   privacy: {
     title: 'Chính sách bảo mật',
     body1:
-      'ImgLove xử lý ảnh của bạn hoàn toàn trong trình duyệt web. Chúng tôi không tải lên, lưu trữ hay truyền tệp ảnh của bạn đến bất kỳ máy chủ nào.',
+      'Image Quill xử lý ảnh của bạn hoàn toàn trong trình duyệt web. Chúng tôi không tải lên, lưu trữ hay truyền tệp ảnh của bạn đến bất kỳ máy chủ nào.',
     body2:
       'Chúng tôi có thể thu thập số liệu thống kê sử dụng ẩn danh, tổng hợp để cải thiện trang web. Chúng tôi không bán dữ liệu cá nhân. Nếu bạn liên hệ với chúng tôi qua email, chúng tôi chỉ dùng địa chỉ của bạn để trả lời.',
   },
   terms: {
     title: 'Điều khoản dịch vụ',
     body1:
-      'ImgLove cung cấp các công cụ xử lý ảnh trực tuyến miễn phí "nguyên trạng", không kèm bất kỳ bảo đảm nào. Bạn chịu trách nhiệm về những ảnh mình xử lý và phải đảm bảo mình có quyền sử dụng chúng.',
+      'Image Quill cung cấp các công cụ xử lý ảnh trực tuyến miễn phí "nguyên trạng", không kèm bất kỳ bảo đảm nào. Bạn chịu trách nhiệm về những ảnh mình xử lý và phải đảm bảo mình có quyền sử dụng chúng.',
     body2:
-      'Không sử dụng ImgLove cho bất kỳ mục đích bất hợp pháp nào. Chúng tôi có thể cập nhật các điều khoản này bất cứ lúc nào; việc tiếp tục sử dụng trang web đồng nghĩa với việc bạn chấp nhận phiên bản hiện tại.',
+      'Không sử dụng Image Quill cho bất kỳ mục đích bất hợp pháp nào. Chúng tôi có thể cập nhật các điều khoản này bất cứ lúc nào; việc tiếp tục sử dụng trang web đồng nghĩa với việc bạn chấp nhận phiên bản hiện tại.',
   },
   notFound: {
     title: 'Không tìm thấy trang',

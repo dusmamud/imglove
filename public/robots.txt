@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://imagequill.dusrel.com/sitemap-index.xml

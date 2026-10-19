@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <title>meme-generator.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M152 146 L360 146 C379.882 146 396 162.118 396 182 L396 360 C396 379.882 379.882 396 360 396 L152 396 C132.118 396 116 379.882 116 360 L116 182 C116 162.118 132.118 146 152 146 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M198 245 C198 235.059 206.059 227 216 227 C225.941 227 234 235.059 234 245 C234 254.941 225.941 263 216 263 C206.059 263 198 254.941 198 245 Z" fill="#ffffff"/>
+    <path d="M278 245 C278 235.059 286.059 227 296 227 C305.941 227 314 235.059 314 245 C314 254.941 305.941 263 296 263 C286.059 263 278 254.941 278 245 Z" fill="#ffffff"/>
+    <path d="M182 296 C231.333 346.667 280.667 346.667 330 296" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

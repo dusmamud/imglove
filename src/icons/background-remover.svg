@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <title>background-remover.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M152 146 L360 146 C379.882 146 396 162.118 396 182 L396 360 C396 379.882 379.882 396 360 396 L152 396 C132.118 396 116 379.882 116 360 L116 182 C116 162.118 132.118 146 152 146 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M174 175 L338 175 C351.255 175 362 185.745 362 199 L362 341 C362 354.255 351.255 365 338 365 L174 365 C160.745 365 150 354.255 150 341 L150 199 C150 185.745 160.745 175 174 175 Z" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="22 16"/>
+    <path d="M226 225 C226 208.431 239.431 195 256 195 C272.569 195 286 208.431 286 225 C286 241.569 272.569 255 256 255 C239.431 255 226 241.569 226 225 Z" fill="#ffffff"/>
+    <path d="M196 340 C200 298 228 273 256 273 C284 273 312 298 316 340" fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

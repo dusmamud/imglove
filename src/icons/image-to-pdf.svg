@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <title>image-to-pdf.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M102 76 L288 76 C305.673 76 320 90.327 320 108 L320 284 C320 301.673 305.673 316 288 316 L102 316 C84.327 316 70 301.673 70 284 L70 108 C70 90.327 84.327 76 102 76 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M100 276 L168 196 L220 266 L252 232 L292 276" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M226 152 C226 138.745 236.745 128 250 128 C263.255 128 274 138.745 274 152 C274 165.255 263.255 176 250 176 C236.745 176 226 165.255 226 152 Z" fill="#ffffff"/>
+    <path d="M288 220 L420 220 C431.046 220 440 228.954 440 240 L440 380 C440 391.046 431.046 400 420 400 L288 400 C276.954 400 268 391.046 268 380 L268 240 C268 228.954 276.954 220 288 220 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M396 220 L440 220 L440 264 Z" fill="#ffffff"/>
+    <path d="M298 310 L410 310" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M298 345 L372 345" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M120 438 L392 438" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M352 408 L392 438 L352 468" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

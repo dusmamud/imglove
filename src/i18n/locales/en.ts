@@ -1,7 +1,7 @@
 const en = {
   meta: {
-    siteName: 'ImgLove',
-    homeTitle: 'ImgLove — Free Online Image Tools',
+    siteName: 'Image Quill',
+    homeTitle: 'Image Quill — Free Online Image Tools',
     homeDesc:
       'Compress, resize, crop, convert and edit images online for free. Fast, private and easy — your files never leave your device.',
   },
@@ -18,10 +18,11 @@ const en = {
     themeLight: 'Light',
     themeDark: 'Dark',
     themeSystem: 'System',
+    byDusrel: 'by Dusrel',
   },
   account: {
     title: 'No account needed',
-    desc: 'Every tool on ImgLove is free and works right in your browser — no sign-up, no login, ever.',
+    desc: 'Every tool on Image Quill is free and works right in your browser — no sign-up, no login, ever.',
     ok: 'Got it',
   },
   hero: {
@@ -120,7 +121,7 @@ const en = {
     },
   },
   features: {
-    title: 'Why people love ImgLove',
+    title: 'Why people love Image Quill',
     items: [
       {
         title: '100% free',
@@ -140,7 +141,7 @@ const en = {
     title: 'Frequently asked questions',    items: [
       {
         q: 'Are these image tools really free?',
-        a: 'Yes. All tools on ImgLove are completely free with no hidden limits and no watermarks on your images.',
+        a: 'Yes. All tools on Image Quill are completely free with no hidden limits and no watermarks on your images.',
       },
       {
         q: 'Are my images uploaded to a server?',
@@ -166,7 +167,7 @@ const en = {
       },
       {
         title: 'Works on any device',
-        desc: 'No installs, no setup. Open ImgLove on your phone, tablet or computer.',
+        desc: 'No installs, no setup. Open Image Quill on your phone, tablet or computer.',
         link: '',
       },
       {
@@ -178,7 +179,7 @@ const en = {
   },
   trust: {
     title: 'Your trusted online image editor',
-    desc: 'ImgLove is the simple solution for editing images online. Access every tool straight from the web — with your privacy guaranteed, because files never leave your device.',
+    desc: 'Image Quill is the simple solution for editing images online. Access every tool straight from the web — with your privacy guaranteed, because files never leave your device.',
     info: 'Filters are applied instantly and never touch your original file.',
     badge1: '100% CLIENT-SIDE',
     badge2: 'NO UPLOAD · NO SIGN-UP',
@@ -195,6 +196,7 @@ const en = {
     terms: 'Terms of Service',
     language: 'Language',
     rights: 'All rights reserved.',
+    byDusrel: 'A Dusrel product',
   },
   common: {
     selectImages: 'Select images',
@@ -448,23 +450,25 @@ const en = {
   about: {
     title: 'About us',
     body1:
-      'ImgLove is a free collection of online image tools. Our mission is simple: make everyday image tasks — compressing, resizing, cropping, converting and light editing — fast and accessible to everyone.',
+      'Image Quill is a free collection of online image tools. Our mission is simple: make everyday image tasks — compressing, resizing, cropping, converting and light editing — fast and accessible to everyone.',
     body2:
-      'Unlike most online tools, everything on ImgLove runs directly in your browser. Your images are never uploaded to our servers, which means your files stay private and the tools work even faster.',
+      'Unlike most online tools, everything on Image Quill runs directly in your browser. Your images are never uploaded to our servers, which means your files stay private and the tools work even faster.',
+    body3:
+      'Image Quill is part of Dusrel — a growing family of free, privacy-first apps that run entirely in your browser. No accounts, no uploads, no tracking.',
   },
   privacy: {
     title: 'Privacy Policy',
     body1:
-      'ImgLove processes your images entirely in your web browser. We do not upload, store or transmit your image files to any server.',
+      'Image Quill processes your images entirely in your web browser. We do not upload, store or transmit your image files to any server.',
     body2:
       'We may collect anonymous, aggregate usage statistics to improve the website. We do not sell personal data. If you contact us by email, we will only use your address to reply.',
   },
   terms: {
     title: 'Terms of Service',
     body1:
-      'ImgLove provides free online image tools "as is", without warranties of any kind. You are responsible for the images you process and for making sure you have the rights to use them.',
+      'Image Quill provides free online image tools "as is", without warranties of any kind. You are responsible for the images you process and for making sure you have the rights to use them.',
     body2:
-      'Do not use ImgLove for any unlawful purpose. We may update these terms at any time; continued use of the site means you accept the current version.',
+      'Do not use Image Quill for any unlawful purpose. We may update these terms at any time; continued use of the site means you accept the current version.',
   },
   notFound: {
     title: 'Page not found',

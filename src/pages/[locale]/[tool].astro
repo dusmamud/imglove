@@ -4,6 +4,7 @@ import { Icon } from 'astro-icon/components';
 import { getDict, type Dict } from '../../i18n/dicts';
 import { locales } from '../../i18n/index';
 import { tools, toolBySlug } from '../../tools';
+import { toolJsonLd } from '../../lib/seo';
 import CompressApp from '../../tools/compress-image/CompressApp';
 import ResizeApp from '../../tools/resize-image/ResizeApp';
 import CropApp from '../../tools/crop-image/CropApp';
@@ -61,10 +62,17 @@ const names = dict.tools as Record<string, { name: string; desc: string }>;
 const pageTitle = `${names[tool].name} — ${dict.meta.siteName}`;
 ---
 
-<Base locale={locale} title={pageTitle} description={names[tool].desc} path={'/' + tool}>
+<Base
+  locale={locale}
+  title={pageTitle}
+  description={names[tool].desc}
+  path={'/' + tool}
+  ogTool={tool}
+  jsonLd={toolJsonLd(locale, tool, names[tool].name, names[tool].desc)}
+>
   <section class="mx-auto max-w-4xl px-4 pb-8 pt-10 text-center sm:pt-14">
     <span class="mb-5 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-soft text-brand">
-      <Icon name={'ph:' + def.icon} class="h-8 w-8" />
+      <Icon name={tool} class="h-8 w-8" />
     </span>
     <h1 class="text-[38px] font-semibold leading-[1.15] tracking-tight text-ink sm:text-[60px] sm:leading-[70px]">{toolDict.title}</h1>
     <p class="mx-auto mt-4 max-w-xl text-base text-muted sm:text-lg">{toolDict.desc}</p>

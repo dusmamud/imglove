@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <title>rotate-image.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M152 146 L360 146 C379.882 146 396 162.118 396 182 L396 360 C396 379.882 379.882 396 360 396 L152 396 C132.118 396 116 379.882 116 360 L116 182 C116 162.118 132.118 146 152 146 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M150 350 L235 240 L295 315 L335 265 L378 350" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M292 215 C292 199.536 304.536 187 320 187 C335.464 187 348 199.536 348 215 C348 230.464 335.464 243 320 243 C304.536 243 292 230.464 292 215 Z" fill="#ffffff"/>
+    <path d="M384.6 116.8 L400.5 131.7 L414.7 148.2 L427 166.2 L437.3 185.5 L445.4 205.7 L451.3 226.7 L454.8 248.2 L456 270 L454.8 291.8 L451.3 313.3 L445.4 334.3 L437.3 354.5 L427 373.8 L414.7 391.8 L400.5 408.3 L384.6 423.2 L367.1 436.3 L348.3 447.4 L328.5 456.4 L307.8 463.2 L286.4 467.7 L264.7 469.8 L242.9 469.6 L221.3 467 L200 462 L179.5 454.8 L159.8 445.3 L141.3 433.8 L124.1 420.4 L108.5 405.1 L94.7 388.3 L82.8 370 L72.9 350.5 L65.3 330.1 L59.8 309 L56.8 287.4 L56 265.6 L57.7 243.9 L61.7 222.5 L68.1 201.6 L76.6 181.5 L87.3 162.5 L100 144.8 L114.6 128.6 L130.8 114 L148.5 101.3 L167.5 90.6 L187.6 82.1" fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M161 114 L188 82 L146 75" fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

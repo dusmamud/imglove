@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <title>favicon-generator.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M104 110 L408 110 C423.464 110 436 122.536 436 138 L436 372 C436 387.464 423.464 400 408 400 L104 400 C88.536 400 76 387.464 76 372 L76 138 C76 122.536 88.536 110 104 110 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M76 190 L436 190" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M106 150 C106 142.268 112.268 136 120 136 C127.732 136 134 142.268 134 150 C134 157.732 127.732 164 120 164 C112.268 164 106 157.732 106 150 Z" fill="#ffffff"/>
+    <path d="M146 150 C146 142.268 152.268 136 160 136 C167.732 136 174 142.268 174 150 C174 157.732 167.732 164 160 164 C152.268 164 146 157.732 146 150 Z" fill="#ffffff"/>
+    <path d="M186 150 C186 142.268 192.268 136 200 136 C207.732 136 214 142.268 214 150 C214 157.732 207.732 164 200 164 C192.268 164 186 157.732 186 150 Z" fill="#ffffff"/>
+    <path d="M197 250 L315 250 C323.837 250 331 257.163 331 266 L331 344 C331 352.837 323.837 360 315 360 L197 360 C188.163 360 181 352.837 181 344 L181 266 C181 257.163 188.163 250 197 250 Z" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M201 335 L236 295 L266 330" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M275 280 C275 274.477 279.477 270 285 270 C290.523 270 295 274.477 295 280 C295 285.523 290.523 290 285 290 C279.477 290 275 285.523 275 280 Z" fill="#ffffff"/>
+  </g>
+</svg>

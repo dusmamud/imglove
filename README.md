@@ -1,5 +1,7 @@
 # ImgLove — Free Online Image Tools
 
+> A **Dusrel** product — part of the [Dusrel](https://dusrel.com) ecosystem.
+
 An iloveimg.com-style image tools website. **100% of image processing runs in the
 browser** (Canvas 2D API + WebAssembly decoders) — no server, no uploads, no accounts.
 

@@ -3,6 +3,7 @@ import { getDict } from '../i18n/dicts';
 import { isRtl, l, asset, locales, SITE_ORIGIN } from '../i18n/index';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SiteBackground from '../components/SiteBackground.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -11,12 +12,16 @@ interface Props {
   description: string;
   path: string; // locale-less path, e.g. "/compress-image" or "/"
   noindex?: boolean;
+  /** e.g. 'compress-image' -> /og/compress-image.png; defaults to og-default.png */
+  ogTool?: string;
+  jsonLd?: Record<string, unknown>[];
 }
 
-const { locale, title, description, path, noindex = false } = Astro.props;
+const { locale, title, description, path, noindex = false, ogTool, jsonLd = [] } = Astro.props;
 const dict = getDict(locale);
 const rtl = isRtl(locale);
 const canonical = `${SITE_ORIGIN}${l(path, locale)}`;
+const ogImage = `${SITE_ORIGIN}${asset(`/og/${ogTool ?? 'og-default'}.png`)}`;
 ---
 
 <!doctype html>
@@ -46,11 +51,26 @@ const canonical = `${SITE_ORIGIN}${l(path, locale)}`;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content={dict.meta.siteName} />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <link rel="icon" type="image/svg+xml" href={asset('/favicon.svg')} />
+    <link rel="icon" type="image/png" sizes="32x32" href={asset('/favicon-32x32.png')} />
+    <link rel="icon" type="image/png" sizes="16x16" href={asset('/favicon-16x16.png')} />
+    <link rel="apple-touch-icon" href={asset('/apple-touch-icon.png')} />
+    <link rel="manifest" href={asset('/site.webmanifest')} />
+    <meta name="theme-color" content="#4d90fe" />
+    {jsonLd.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
   </head>
   <body class="min-h-screen bg-card font-sans text-ink">
+    <SiteBackground />
     <Header locale={locale} dict={dict} />
     <main>
       <slot />

@@ -1,0 +1,46 @@
+---
+// Site-wide fixed geometric background, modeled on iloveimg.com's actual
+// implementation (verified via REA: /img/bg/background.svg).
+// - 6 geometric shapes: circles, one ellipse, two -45° rotated rounded rects
+// - Each shape: light-blue → near-white gradient, very low effective opacity
+// - Fixed full-viewport, z-index -1 (does not scroll with content)
+// - Theme-aware: deep blue tints in dark mode (iloveimg is light-only).
+---
+<div aria-hidden="true" class="site-bg">
+  <svg viewBox="0 0 1389 1479" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sbg-b" x1="-61.873" y1="861.062" x2="0.372" y2="1167.92" gradientUnits="userSpaceOnUse">
+        <stop offset="0" style="stop-color: var(--sbg-1)"></stop>
+        <stop offset="0.993" style="stop-color: var(--sbg-2)"></stop>
+      </linearGradient>
+      <linearGradient id="sbg-c" x1="766.131" y1="250.722" x2="857.242" y2="466.196" gradientUnits="userSpaceOnUse">
+        <stop offset="0" style="stop-color: var(--sbg-1)"></stop>
+        <stop offset="1" style="stop-color: var(--sbg-2)"></stop>
+      </linearGradient>
+      <linearGradient id="sbg-d" x1="117.967" y1="290.503" x2="192.769" y2="660.421" gradientUnits="userSpaceOnUse">
+        <stop offset="0" style="stop-color: var(--sbg-1)"></stop>
+        <stop offset="0.993" style="stop-color: var(--sbg-2)"></stop>
+      </linearGradient>
+      <linearGradient id="sbg-e" x1="616.714" y1="1247.46" x2="920.97" y2="1639.19" gradientUnits="userSpaceOnUse">
+        <stop offset="0.091" style="stop-color: var(--sbg-2)"></stop>
+        <stop offset="0.948" style="stop-color: var(--sbg-1)"></stop>
+      </linearGradient>
+      <linearGradient id="sbg-f" x1="1456.96" y1="604.614" x2="1389.13" y2="750.259" gradientUnits="userSpaceOnUse">
+        <stop offset="0" style="stop-color: var(--sbg-1)"></stop>
+        <stop offset="0.993" style="stop-color: var(--sbg-2)"></stop>
+      </linearGradient>
+      <linearGradient id="sbg-g" x1="1242.3" y1="1427.85" x2="1140.55" y2="1333.41" gradientUnits="userSpaceOnUse">
+        <stop offset="0" style="stop-color: var(--sbg-1)"></stop>
+        <stop offset="1" style="stop-color: var(--sbg-2)"></stop>
+      </linearGradient>
+    </defs>
+    <g opacity="0.3">
+      <ellipse opacity="0.5" cy="1007.5" rx="160" ry="160.5" fill="url(#sbg-b)"></ellipse>
+      <circle opacity="0.5" cx="857.242" cy="375.085" r="91.111" fill="url(#sbg-c)"></circle>
+      <rect opacity="0.5" x="-0.664" y="273.555" width="386.866" height="386.866" rx="24" transform="rotate(-45 -0.664 273.555)" fill="url(#sbg-d)"></rect>
+      <rect opacity="0.5" x="288.662" y="1179.43" width="718.993" height="424.487" rx="32" transform="rotate(-45 288.662 1179.43)" fill="url(#sbg-e)"></rect>
+      <circle opacity="0.5" cx="1389.13" cy="530.129" r="220.13" fill="url(#sbg-f)"></circle>
+      <circle opacity="0.5" cx="1205.72" cy="1387.95" r="91.111" fill="url(#sbg-g)"></circle>
+    </g>
+  </svg>
+</div>

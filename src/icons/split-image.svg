@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <title>split-image.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M228 146 L152 146 C132.118 146 116 162.118 116 182 L116 360 C116 379.882 132.118 396 152 396 L228 396 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M284 146 L360 146 C379.882 146 396 162.118 396 182 L396 360 C396 379.882 379.882 396 360 396 L284 396 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M140 352 L172 300 L204 352" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M316 240 C316 226.745 326.745 216 340 216 C353.255 216 364 226.745 364 240 C364 253.255 353.255 264 340 264 C326.745 264 316 253.255 316 240 Z" fill="#ffffff"/>
+  </g>
+</svg>

@@ -2,8 +2,8 @@ import type { Dict } from './en';
 
 const dict: Dict = {
   meta: {
-    siteName: 'ImgLove',
-    homeTitle: 'ImgLove — Alat Gambar Online Gratis',
+    siteName: 'Image Quill',
+    homeTitle: 'Image Quill — Alat Gambar Online Gratis',
     homeDesc:
       'Kompres, ubah ukuran, potong, konversi, dan edit gambar online secara gratis. Cepat, privat, dan mudah — file Anda tidak pernah meninggalkan perangkat Anda.',
   },
@@ -20,10 +20,11 @@ const dict: Dict = {
     themeLight: 'Terang',
     themeDark: 'Gelap',
     themeSystem: 'Sistem',
+    byDusrel: 'oleh Dusrel',
   },
   account: {
     title: 'Tanpa perlu akun',
-    desc: 'Semua alat di ImgLove gratis dan berjalan langsung di browser Anda — tanpa daftar, tanpa masuk, selamanya.',
+    desc: 'Semua alat di Image Quill gratis dan berjalan langsung di browser Anda — tanpa daftar, tanpa masuk, selamanya.',
     ok: 'Mengerti',
   },
   hero: {
@@ -122,7 +123,7 @@ const dict: Dict = {
     },
   },
   features: {
-    title: 'Mengapa orang menyukai ImgLove',
+    title: 'Mengapa orang menyukai Image Quill',
     items: [
       {
         title: '100% gratis',
@@ -143,7 +144,7 @@ const dict: Dict = {
     items: [
       {
         q: 'Apakah alat gambar ini benar-benar gratis?',
-        a: 'Ya. Semua alat di ImgLove sepenuhnya gratis tanpa batasan tersembunyi dan tanpa watermark pada gambar Anda.',
+        a: 'Ya. Semua alat di Image Quill sepenuhnya gratis tanpa batasan tersembunyi dan tanpa watermark pada gambar Anda.',
       },
       {
         q: 'Apakah gambar saya diunggah ke server?',
@@ -169,7 +170,7 @@ const dict: Dict = {
       },
       {
         title: 'Berfungsi di perangkat apa pun',
-        desc: 'Tanpa instal, tanpa pengaturan. Buka ImgLove di ponsel, tablet, atau komputer.',
+        desc: 'Tanpa instal, tanpa pengaturan. Buka Image Quill di ponsel, tablet, atau komputer.',
         link: '',
       },
       {
@@ -181,7 +182,7 @@ const dict: Dict = {
   },
   trust: {
     title: 'Editor gambar online tepercaya Anda',
-    desc: 'ImgLove adalah solusi sederhana untuk mengedit gambar online. Akses setiap alat langsung dari web — dengan privasi terjamin, karena file tidak pernah meninggalkan perangkat Anda.',
+    desc: 'Image Quill adalah solusi sederhana untuk mengedit gambar online. Akses setiap alat langsung dari web — dengan privasi terjamin, karena file tidak pernah meninggalkan perangkat Anda.',
     info: 'Filter diterapkan seketika dan tidak pernah menyentuh file asli Anda.',
     badge1: '100% DI BROWSER',
     badge2: 'TANPA UNGGAH · TANPA DAFTAR',
@@ -198,6 +199,7 @@ const dict: Dict = {
     terms: 'Syarat Layanan',
     language: 'Bahasa',
     rights: 'Hak cipta dilindungi.',
+    byDusrel: 'Produk Dusrel',
   },
   common: {
     selectImages: 'Pilih gambar',
@@ -452,23 +454,25 @@ const dict: Dict = {
   about: {
     title: 'Tentang kami',
     body1:
-      'ImgLove adalah kumpulan alat gambar online gratis. Misi kami sederhana: membuat tugas gambar sehari-hari — mengompres, mengubah ukuran, memotong, mengonversi, dan mengedit ringan — menjadi cepat dan mudah diakses oleh semua orang.',
+      'Image Quill adalah kumpulan alat gambar online gratis. Misi kami sederhana: membuat tugas gambar sehari-hari — mengompres, mengubah ukuran, memotong, mengonversi, dan mengedit ringan — menjadi cepat dan mudah diakses oleh semua orang.',
     body2:
-      'Berbeda dengan kebanyakan alat online, semua yang ada di ImgLove berjalan langsung di browser Anda. Gambar Anda tidak pernah diunggah ke server kami, yang berarti file Anda tetap privat dan alat bekerja lebih cepat.',
+      'Berbeda dengan kebanyakan alat online, semua yang ada di Image Quill berjalan langsung di browser Anda. Gambar Anda tidak pernah diunggah ke server kami, yang berarti file Anda tetap privat dan alat bekerja lebih cepat.',
+    body3:
+      'Image Quill adalah bagian dari Dusrel — keluarga aplikasi gratis yang mengutamakan privasi dan berjalan sepenuhnya di browser Anda. Tanpa akun, tanpa unggahan, tanpa pelacakan.',
   },
   privacy: {
     title: 'Kebijakan Privasi',
     body1:
-      'ImgLove memproses gambar Anda sepenuhnya di browser web Anda. Kami tidak mengunggah, menyimpan, atau mengirim file gambar Anda ke server mana pun.',
+      'Image Quill memproses gambar Anda sepenuhnya di browser web Anda. Kami tidak mengunggah, menyimpan, atau mengirim file gambar Anda ke server mana pun.',
     body2:
       'Kami dapat mengumpulkan statistik penggunaan anonim dan agregat untuk meningkatkan situs web. Kami tidak menjual data pribadi. Jika Anda menghubungi kami melalui email, kami hanya akan menggunakan alamat Anda untuk membalas.',
   },
   terms: {
     title: 'Syarat Layanan',
     body1:
-      'ImgLove menyediakan alat gambar online gratis "sebagaimana adanya", tanpa jaminan apa pun. Anda bertanggung jawab atas gambar yang Anda proses dan memastikan Anda memiliki hak untuk menggunakannya.',
+      'Image Quill menyediakan alat gambar online gratis "sebagaimana adanya", tanpa jaminan apa pun. Anda bertanggung jawab atas gambar yang Anda proses dan memastikan Anda memiliki hak untuk menggunakannya.',
     body2:
-      'Jangan gunakan ImgLove untuk tujuan yang melanggar hukum. Kami dapat memperbarui syarat ini kapan saja; penggunaan situs yang berkelanjutan berarti Anda menerima versi saat ini.',
+      'Jangan gunakan Image Quill untuk tujuan yang melanggar hukum. Kami dapat memperbarui syarat ini kapan saja; penggunaan situs yang berkelanjutan berarti Anda menerima versi saat ini.',
   },
   notFound: {
     title: 'Halaman tidak ditemukan',

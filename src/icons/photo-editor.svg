@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <title>photo-editor.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M152 146 L360 146 C379.882 146 396 162.118 396 182 L396 360 C396 379.882 379.882 396 360 396 L152 396 C132.118 396 116 379.882 116 360 L116 182 C116 162.118 132.118 146 152 146 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M166 216 L346 216" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M166 271 L346 271" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M166 326 L346 326" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M188 216 C188 200.536 200.536 188 216 188 C231.464 188 244 200.536 244 216 C244 231.464 231.464 244 216 244 C200.536 244 188 231.464 188 216 Z" fill="#ffffff"/>
+    <path d="M278 271 C278 255.536 290.536 243 306 243 C321.464 243 334 255.536 334 271 C334 286.464 321.464 299 306 299 C290.536 299 278 286.464 278 271 Z" fill="#ffffff"/>
+    <path d="M218 326 C218 310.536 230.536 298 246 298 C261.464 298 274 310.536 274 326 C274 341.464 261.464 354 246 354 C230.536 354 218 341.464 218 326 Z" fill="#ffffff"/>
+  </g>
+</svg>

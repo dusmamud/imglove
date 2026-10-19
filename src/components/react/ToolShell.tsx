@@ -88,7 +88,7 @@ export default function ToolShell({ t, settings, settingsInfo, actionLabel, proc
     const zip = new JSZip();
     results.forEach((r, i) => zip.file(r.name || `image-${i + 1}`, r.blob));
     const blob = await zip.generateAsync({ type: 'blob' });
-    downloadBlob(blob, 'imglove-results.zip');
+    downloadBlob(blob, 'imagequill-results.zip');
   };
 
   return (

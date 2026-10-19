@@ -14,8 +14,8 @@ export const rtlLocales = ['ar', 'ur'];
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://dusmamud.github.io/imglove',
-  base: '/imglove',
+  site: 'https://imagequill.dusrel.com',
+  base: '/',
   integrations: [
     react(),
     tailwind({ applyBaseStyles: false }),

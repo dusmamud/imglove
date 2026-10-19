@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <title>watermark-image.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M152 146 L360 146 C379.882 146 396 162.118 396 182 L396 360 C396 379.882 379.882 396 360 396 L152 396 C132.118 396 116 379.882 116 360 L116 182 C116 162.118 132.118 146 152 146 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M256 188 C238 222 202 270 202 302 C202 331.823 226.177 356 256 356 C285.823 356 310 331.823 310 302 C310 270 274 222 256 188 Z" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M230 316 C225 292 233 272 249 261" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

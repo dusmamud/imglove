@@ -57,4 +57,4 @@ export function asset(path: string): string {
 }
 
 /** Canonical origin for SEO tags (l() already includes the base path) */
-export const SITE_ORIGIN = 'https://dusmamud.github.io';
+export const SITE_ORIGIN = 'https://imagequill.dusrel.com';

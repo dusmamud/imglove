@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <title>blur-image.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M152 146 L360 146 C379.882 146 396 162.118 396 182 L396 360 C396 379.882 379.882 396 360 396 L152 396 C132.118 396 116 379.882 116 360 L116 182 C116 162.118 132.118 146 152 146 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M170 260 C170 226.863 196.863 200 230 200 C263.137 200 290 226.863 290 260 C290 293.137 263.137 320 230 320 C196.863 320 170 293.137 170 260 Z" fill="#ffffff" fill-opacity="0.95"/>
+    <path d="M260 250 C260 211.34 291.34 180 330 180 C368.66 180 400 211.34 400 250 C400 288.66 368.66 320 330 320 C291.34 320 260 288.66 260 250 Z" fill="#ffffff" fill-opacity="0.75"/>
+    <path d="M210 345 C210 309.101 239.101 280 275 280 C310.899 280 340 309.101 340 345 C340 380.899 310.899 410 275 410 C239.101 410 210 380.899 210 345 Z" fill="#ffffff" fill-opacity="0.55"/>
+    <path d="M300 340 C300 312.386 322.386 290 350 290 C377.614 290 400 312.386 400 340 C400 367.614 377.614 390 350 390 C322.386 390 300 367.614 300 340 Z" fill="#ffffff" fill-opacity="0.35"/>
+  </g>
+</svg>

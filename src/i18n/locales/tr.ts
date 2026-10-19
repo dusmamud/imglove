@@ -2,8 +2,8 @@ import type { Dict } from './en';
 
 const dict: Dict = {
   meta: {
-    siteName: 'ImgLove',
-    homeTitle: 'ImgLove — Ücretsiz Çevrimiçi Görsel Araçları',
+    siteName: 'Image Quill',
+    homeTitle: 'Image Quill — Ücretsiz Çevrimiçi Görsel Araçları',
     homeDesc:
       'Görsellerinizi çevrimiçi olarak ücretsiz sıkıştırın, yeniden boyutlandırın, kırpın, dönüştürün ve düzenleyin. Hızlı, gizli ve kolay — dosyalarınız cihazınızdan asla ayrılmaz.',
   },
@@ -20,10 +20,11 @@ const dict: Dict = {
     themeLight: 'Açık',
     themeDark: 'Koyu',
     themeSystem: 'Sistem',
+    byDusrel: 'Dusrel tarafından',
   },
   account: {
     title: 'Hesap gerekmez',
-    desc: 'ImgLove\'daki tüm araçlar ücretsizdir ve doğrudan tarayıcınızda çalışır — kayıt yok, giriş yok, asla.',
+    desc: 'Image Quill\'daki tüm araçlar ücretsizdir ve doğrudan tarayıcınızda çalışır — kayıt yok, giriş yok, asla.',
     ok: 'Anladım',
   },
   hero: {
@@ -122,7 +123,7 @@ const dict: Dict = {
     },
   },
   features: {
-    title: 'İnsanlar ImgLove\u2019u neden seviyor',
+    title: 'İnsanlar Image Quill\u2019u neden seviyor',
     items: [
       {
         title: '%100 ücretsiz',
@@ -143,7 +144,7 @@ const dict: Dict = {
     items: [
       {
         q: 'Bu görsel araçları gerçekten ücretsiz mi?',
-        a: 'Evet. ImgLove\u2019daki tüm araçlar tamamen ücretsizdir; gizli limit yok, görsellerinizde filigran yok.',
+        a: 'Evet. Image Quill\u2019daki tüm araçlar tamamen ücretsizdir; gizli limit yok, görsellerinizde filigran yok.',
       },
       {
         q: 'Görsellerim sunucuya yükleniyor mu?',
@@ -169,7 +170,7 @@ const dict: Dict = {
       },
       {
         title: 'Her cihazda çalışır',
-        desc: 'Kurulum yok, ayar yok. ImgLove\'u telefon, tablet veya bilgisayarda açın.',
+        desc: 'Kurulum yok, ayar yok. Image Quill\'u telefon, tablet veya bilgisayarda açın.',
         link: '',
       },
       {
@@ -181,7 +182,7 @@ const dict: Dict = {
   },
   trust: {
     title: 'Güvenilir çevrimiçi görsel düzenleyiciniz',
-    desc: 'ImgLove, çevrimiçi görsel düzenlemenin basit çözümüdür. Her araca doğrudan web\'den erişin — dosyalar cihazınızdan asla ayrılmadığı için gizliliğiniz garantilidir.',
+    desc: 'Image Quill, çevrimiçi görsel düzenlemenin basit çözümüdür. Her araca doğrudan web\'den erişin — dosyalar cihazınızdan asla ayrılmadığı için gizliliğiniz garantilidir.',
     info: 'Filtreler anında uygulanır ve orijinal dosyanıza asla dokunmaz.',
     badge1: '100% TARAYICIDA',
     badge2: 'YÜKLEME YOK · KAYIT YOK',
@@ -198,6 +199,7 @@ const dict: Dict = {
     terms: 'Kullanım Şartları',
     language: 'Dil',
     rights: 'Tüm hakları saklıdır.',
+    byDusrel: 'Bir Dusrel ürünü',
   },
   common: {
     selectImages: 'Görselleri seç',
@@ -452,23 +454,25 @@ const dict: Dict = {
   about: {
     title: 'Hakkımızda',
     body1:
-      'ImgLove ücretsiz bir çevrimiçi görsel araçları koleksiyonudur. Misyonumuz basit: sıkıştırma, yeniden boyutlandırma, kırpma, dönüştürme ve hafif düzenleme gibi günlük görsel işlerini herkes için hızlı ve erişilebilir kılmak.',
+      'Image Quill ücretsiz bir çevrimiçi görsel araçları koleksiyonudur. Misyonumuz basit: sıkıştırma, yeniden boyutlandırma, kırpma, dönüştürme ve hafif düzenleme gibi günlük görsel işlerini herkes için hızlı ve erişilebilir kılmak.',
     body2:
-      'Çoğu çevrimiçi aracın aksine, ImgLove\u2019daki her şey doğrudan tarayıcınızda çalışır. Görselleriniz sunucularımıza asla yüklenmez; bu da dosyalarınızın gizli kalması ve araçların daha hızlı çalışması demektir.',
+      'Çoğu çevrimiçi aracın aksine, Image Quill\u2019daki her şey doğrudan tarayıcınızda çalışır. Görselleriniz sunucularımıza asla yüklenmez; bu da dosyalarınızın gizli kalması ve araçların daha hızlı çalışması demektir.',
+    body3:
+      'Image Quill, Dusrel\'in bir parçasıdır — gizliliği ön planda tutan ve tamamen tarayıcınızda çalışan, giderek büyüyen ücretsiz uygulamalar ailesi. Hesap yok, yükleme yok, izleme yok.',
   },
   privacy: {
     title: 'Gizlilik Politikası',
     body1:
-      'ImgLove görsellerinizi tamamen web tarayıcınızda işler. Görsel dosyalarınızı hiçbir sunucuya yüklemez, saklamaz veya iletmeyiz.',
+      'Image Quill görsellerinizi tamamen web tarayıcınızda işler. Görsel dosyalarınızı hiçbir sunucuya yüklemez, saklamaz veya iletmeyiz.',
     body2:
       'Siteyi iyileştirmek için anonim, toplu kullanım istatistikleri toplayabiliriz. Kişisel verileri satmıyoruz. Bize e-postayla ulaşırsanız adresinizi yalnızca yanıt vermek için kullanırız.',
   },
   terms: {
     title: 'Kullanım Şartları',
     body1:
-      'ImgLove, ücretsiz çevrimiçi görsel araçlarını "olduğu gibi", hiçbir garanti vermeden sunar. İşlediğiniz görsellerden ve bunları kullanma hakkına sahip olmanızdan siz sorumlusunuz.',
+      'Image Quill, ücretsiz çevrimiçi görsel araçlarını "olduğu gibi", hiçbir garanti vermeden sunar. İşlediğiniz görsellerden ve bunları kullanma hakkına sahip olmanızdan siz sorumlusunuz.',
     body2:
-      'ImgLove\u2019u yasa dışı amaçlarla kullanmayın. Bu şartları dilediğimiz zaman güncelleyebiliriz; siteyi kullanmaya devam etmeniz güncel sürümü kabul ettiğiniz anlamına gelir.',
+      'Image Quill\u2019u yasa dışı amaçlarla kullanmayın. Bu şartları dilediğimiz zaman güncelleyebiliriz; siteyi kullanmaya devam etmeniz güncel sürümü kabul ettiğiniz anlamına gelir.',
   },
   notFound: {
     title: 'Sayfa bulunamadı',

@@ -3,10 +3,10 @@
 import re
 
 ns = {}
-exec(open('/home/hatch/workspace/imglove/i18n_part1.py').read(), ns)
+exec(open('/home/hatch/workspace/dusrel/web-apps/imglove/i18n_part1.py').read(), ns)
 # part2/part3 only contain add() calls; reuse ns (has T and add)
-exec(open('/home/hatch/workspace/imglove/i18n_part2.py').read(), ns)
-exec(open('/home/hatch/workspace/imglove/i18n_part3.py').read(), ns)
+exec(open('/home/hatch/workspace/dusrel/web-apps/imglove/i18n_part2.py').read(), ns)
+exec(open('/home/hatch/workspace/dusrel/web-apps/imglove/i18n_part3.py').read(), ns)
 T = ns['T']
 
 LOCALES = ['hi','bn','as','es','pt','fr','ar','ur','zh','ja','ko','ru','id','de','tr','it','vi','th','ta']
@@ -24,7 +24,7 @@ def tr(vals, loc):
     return vals['asm' if loc == 'as' else loc]
 
 for loc in LOCALES:
-    path = f'/home/hatch/workspace/imglove/src/i18n/locales/{loc}.ts'
+    path = f'/home/hatch/workspace/dusrel/web-apps/imglove/src/i18n/locales/{loc}.ts'
     src = open(path).read()
 
     # 1) tool names/descs: insert after 'photo-editor' block in tools: section

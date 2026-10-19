@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <title>round-corners.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M211 146 L301 146 C353.467 146 396 188.533 396 241 L396 301 C396 353.467 353.467 396 301 396 L211 396 C158.533 396 116 353.467 116 301 L116 241 C116 188.533 158.533 146 211 146 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M301 199 C324.196 199 343 217.804 343 241" fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M289 241 C289 234.373 294.373 229 301 229 C307.627 229 313 234.373 313 241 C313 247.627 307.627 253 301 253 C294.373 253 289 247.627 289 241 Z" fill="#ffffff"/>
+  </g>
+</svg>

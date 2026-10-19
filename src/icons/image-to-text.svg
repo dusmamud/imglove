@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <title>image-to-text.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M88 120 L232 120 C247.464 120 260 132.536 260 148 L260 362 C260 377.464 247.464 390 232 390 L88 390 C72.536 390 60 377.464 60 362 L60 148 C60 132.536 72.536 120 88 120 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M90 340 L140 270 L175 320 L195 295 L225 340" fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M164 195 C164 183.402 173.402 174 185 174 C196.598 174 206 183.402 206 195 C206 206.598 196.598 216 185 216 C173.402 216 164 206.598 164 195 Z" fill="#ffffff"/>
+    <path d="M300 160 L452 160" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M300 220 L452 220" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M300 280 L420 280" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M300 340 L452 340" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

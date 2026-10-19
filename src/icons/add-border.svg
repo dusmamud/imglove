@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <title>add-border.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M112 94 L400 94 C426.51 94 448 115.49 448 142 L448 400 C448 426.51 426.51 448 400 448 L112 448 C85.49 448 64 426.51 64 400 L64 142 C64 115.49 85.49 94 112 94 Z" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M152 146 L360 146 C379.882 146 396 162.118 396 182 L396 360 C396 379.882 379.882 396 360 396 L152 396 C132.118 396 116 379.882 116 360 L116 182 C116 162.118 132.118 146 152 146 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M150 350 L235 240 L295 315 L335 265 L378 350" fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M294 215 C294 200.641 305.641 189 320 189 C334.359 189 346 200.641 346 215 C346 229.359 334.359 241 320 241 C305.641 241 294 229.359 294 215 Z" fill="#ffffff"/>
+  </g>
+</svg>

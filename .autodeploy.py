@@ -13,7 +13,7 @@ never builds or deploys a mix of pushed and unpushed work.
 import base64, json, os, subprocess, sys, time, urllib.request, urllib.error, http.client
 
 OWNER_REPO = 'dusmamud/imglove'
-REPO = '/home/hatch/workspace/imglove'
+REPO = '/home/hatch/workspace/dusrel/web-apps/imglove'
 DIST = os.path.join(REPO, 'dist')
 STATE = os.path.join(REPO, '.autodeploy-state')
 GIT_EMAIL = 'muse@imglove.local'

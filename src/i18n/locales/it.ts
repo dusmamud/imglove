@@ -2,8 +2,8 @@ import type { Dict } from './en';
 
 const dict: Dict = {
   meta: {
-    siteName: 'ImgLove',
-    homeTitle: 'ImgLove — Strumenti gratuiti online per le immagini',
+    siteName: 'Image Quill',
+    homeTitle: 'Image Quill — Strumenti gratuiti online per le immagini',
     homeDesc:
       'Comprimi, ridimensiona, ritaglia, converti e modifica immagini online gratis. Veloce, privato e semplice — i tuoi file non lasciano mai il tuo dispositivo.',
   },
@@ -20,10 +20,11 @@ const dict: Dict = {
     themeLight: 'Chiaro',
     themeDark: 'Scuro',
     themeSystem: 'Sistema',
+    byDusrel: 'di Dusrel',
   },
   account: {
     title: 'Nessun account richiesto',
-    desc: 'Tutti gli strumenti di ImgLove sono gratuiti e funzionano nel tuo browser — senza registrazione, senza accesso, mai.',
+    desc: 'Tutti gli strumenti di Image Quill sono gratuiti e funzionano nel tuo browser — senza registrazione, senza accesso, mai.',
     ok: 'Capito',
   },
   hero: {
@@ -122,7 +123,7 @@ const dict: Dict = {
     },
   },
   features: {
-    title: 'Perché tutti amano ImgLove',
+    title: 'Perché tutti amano Image Quill',
     items: [
       {
         title: '100% gratis',
@@ -143,7 +144,7 @@ const dict: Dict = {
     items: [
       {
         q: 'Questi strumenti per immagini sono davvero gratuiti?',
-        a: 'Sì. Tutti gli strumenti di ImgLove sono completamente gratuiti, senza limiti nascosti e senza filigrane sulle tue immagini.',
+        a: 'Sì. Tutti gli strumenti di Image Quill sono completamente gratuiti, senza limiti nascosti e senza filigrane sulle tue immagini.',
       },
       {
         q: 'Le mie immagini vengono caricate su un server?',
@@ -169,7 +170,7 @@ const dict: Dict = {
       },
       {
         title: 'Funziona su qualsiasi dispositivo',
-        desc: 'Nessuna installazione, nessuna configurazione. Apri ImgLove su telefono, tablet o computer.',
+        desc: 'Nessuna installazione, nessuna configurazione. Apri Image Quill su telefono, tablet o computer.',
         link: '',
       },
       {
@@ -181,7 +182,7 @@ const dict: Dict = {
   },
   trust: {
     title: 'Il tuo editor di immagini online di fiducia',
-    desc: 'ImgLove è la soluzione semplice per modificare le immagini online. Accedi a ogni strumento direttamente dal web — con la privacy garantita, perché i file non lasciano mai il tuo dispositivo.',
+    desc: 'Image Quill è la soluzione semplice per modificare le immagini online. Accedi a ogni strumento direttamente dal web — con la privacy garantita, perché i file non lasciano mai il tuo dispositivo.',
     info: 'I filtri si applicano istantaneamente e non toccano mai il file originale.',
     badge1: '100% NEL BROWSER',
     badge2: 'NESSUN CARICAMENTO · NESSUNA REGISTRAZIONE',
@@ -199,6 +200,7 @@ const dict: Dict = {
     terms: 'Termini di servizio',
     language: 'Lingua',
     rights: 'Tutti i diritti riservati.',
+    byDusrel: 'Un prodotto Dusrel',
   },
   common: {
     selectImages: 'Seleziona immagini',
@@ -453,23 +455,25 @@ const dict: Dict = {
   about: {
     title: 'Chi siamo',
     body1:
-      'ImgLove è una raccolta gratuita di strumenti online per le immagini. La nostra missione è semplice: rendere le attività quotidiane con le immagini — compressione, ridimensionamento, ritaglio, conversione e modifiche leggere — veloci e accessibili a tutti.',
+      'Image Quill è una raccolta gratuita di strumenti online per le immagini. La nostra missione è semplice: rendere le attività quotidiane con le immagini — compressione, ridimensionamento, ritaglio, conversione e modifiche leggere — veloci e accessibili a tutti.',
     body2:
-      'A differenza della maggior parte degli strumenti online, tutto su ImgLove funziona direttamente nel tuo browser. Le tue immagini non vengono mai caricate sui nostri server: i tuoi file restano privati e gli strumenti sono ancora più veloci.',
+      'A differenza della maggior parte degli strumenti online, tutto su Image Quill funziona direttamente nel tuo browser. Le tue immagini non vengono mai caricate sui nostri server: i tuoi file restano privati e gli strumenti sono ancora più veloci.',
+    body3:
+      'Image Quill fa parte di Dusrel — una famiglia in crescita di app gratuite che rispettano la tua privacy e funzionano interamente nel tuo browser. Senza account, senza caricamenti, senza tracciamento.',
   },
   privacy: {
     title: 'Informativa sulla privacy',
     body1:
-      'ImgLove elabora le tue immagini interamente nel tuo browser web. Non carichiamo, archiviamo né trasmettiamo i tuoi file immagine ad alcun server.',
+      'Image Quill elabora le tue immagini interamente nel tuo browser web. Non carichiamo, archiviamo né trasmettiamo i tuoi file immagine ad alcun server.',
     body2:
       'Potremmo raccogliere statistiche d’uso anonime e aggregate per migliorare il sito. Non vendiamo dati personali. Se ci contatti via email, useremo il tuo indirizzo solo per risponderti.',
   },
   terms: {
     title: 'Termini di servizio',
     body1:
-      'ImgLove fornisce strumenti gratuiti online per le immagini “così come sono”, senza garanzie di alcun tipo. Sei responsabile delle immagini che elabori e devi assicurarti di avere i diritti per utilizzarle.',
+      'Image Quill fornisce strumenti gratuiti online per le immagini “così come sono”, senza garanzie di alcun tipo. Sei responsabile delle immagini che elabori e devi assicurarti di avere i diritti per utilizzarle.',
     body2:
-      'Non usare ImgLove per scopi illeciti. Possiamo aggiornare questi termini in qualsiasi momento; continuare a usare il sito significa accettare la versione corrente.',
+      'Non usare Image Quill per scopi illeciti. Possiamo aggiornare questi termini in qualsiasi momento; continuare a usare il sito significa accettare la versione corrente.',
   },
   notFound: {
     title: 'Pagina non trovata',

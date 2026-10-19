@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <title>convert-image.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M152 130 L360 130 C379.882 130 396 146.118 396 166 L396 340 C396 359.882 379.882 376 360 376 L152 376 C132.118 376 116 359.882 116 340 L116 166 C116 146.118 132.118 130 152 130 Z" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M150 330 L235 225 L295 300 L335 250 L378 330" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M292 200 C292 184.536 304.536 172 320 172 C335.464 172 348 184.536 348 200 C348 215.464 335.464 228 320 228 C304.536 228 292 215.464 292 200 Z" fill="#ffffff"/>
+    <path d="M136 432 L336 432 L308 408 L336 432 L308 456" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M376 470 L176 470 L204 446 L176 470 L204 494" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

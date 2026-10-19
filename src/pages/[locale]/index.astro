@@ -4,6 +4,7 @@ import { Icon } from 'astro-icon/components';
 import { getDict } from '../../i18n/dicts';
 import { l, locales } from '../../i18n/index';
 import { tools } from '../../tools';
+import { homeJsonLd } from '../../lib/seo';
 
 export function getStaticPaths() {
   return locales.map((locale) => ({ params: { locale } }));
@@ -48,49 +49,55 @@ const filters = [
 ];
 ---
 
-<Base locale={locale} title={dict.meta.homeTitle} description={dict.meta.homeDesc} path="/">
+<Base
+  locale={locale}
+  title={dict.meta.homeTitle}
+  description={dict.meta.homeDesc}
+  path="/"
+  jsonLd={homeJsonLd(locale)}
+>
   <!-- Hero -->
   <section class="mx-auto max-w-4xl px-4 pb-8 pt-12 text-center sm:pt-16">
-    <h1 class="text-[38px] font-semibold leading-[1.15] tracking-tight text-ink sm:text-[60px] sm:leading-[70px]">
+    <h1 class="text-[24px] font-semibold leading-[34px] tracking-tight text-ink md:text-[42px] md:leading-[52px]">
       {dict.hero.title}
     </h1>
-    <p class="mx-auto mt-4 max-w-2xl text-lg text-muted sm:text-[22px] sm:leading-8">
+    <p class="mx-auto mt-4 max-w-2xl text-[16px] leading-[20px] text-muted md:text-[20px] md:leading-[28px] lg:text-[22px] lg:leading-[32px]">
       {dict.hero.subtitle}
     </p>
   </section>
 
   <!-- Tools grid -->
   <section id="tools" class="mx-auto max-w-[1370px] scroll-mt-24 px-6 pb-4">
-    <div class="flex flex-wrap justify-center gap-2" id="filter-pills" role="tablist" aria-label={dict.toolsSection.title}>
+    <div class="flex flex-wrap justify-center gap-3 sm:gap-4" id="filter-pills" role="tablist" aria-label={dict.toolsSection.title}>
       {filters.map((f, i) => (
         <button
           type="button"
           role="tab"
           aria-selected={i === 0}
           data-filter={f.key}
-          class={`rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
-            i === 0 ? 'bg-brand text-white' : 'border border-line bg-card text-ink hover:border-brand hover:text-brand'
+          class={`rounded-full border px-4 py-1 text-[16px] font-medium leading-[26px] transition-colors ${
+            i === 0 ? 'border-brand bg-brand text-white' : 'border-line bg-card text-muted hover:border-brand hover:text-brand'
           }`}
         >
           {f.label}
         </button>
       ))}
     </div>
-    <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4" id="tool-grid">
+    <div class="mt-8 grid grid-cols-1 gap-4 min-[440px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 min-[1440px]:grid-cols-5" id="tool-grid">
       {tools.map((t) => (
         <a
           href={l('/' + t.slug, locale)}
           data-category={toolStyle[t.slug].cat}
-          class="tool-card group rounded-card border border-line bg-card p-6 shadow-card transition-all hover:-translate-y-0.5 hover:border-brand"
+          class="tool-card group rounded-card border border-line bg-card p-8 shadow-card transition-all hover:-translate-y-0.5 hover:border-brand max-xl:p-6 max-[640px]:flex max-[640px]:flex-wrap max-[640px]:items-center max-[640px]:p-3"
         >
           <span
-            class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl text-white"
+            class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl text-white max-[1440px]:h-[42px] max-[1440px]:w-[42px] max-[640px]:mb-0 max-[640px]:me-3 max-[640px]:h-8 max-[640px]:w-8"
             style={`background-color: ${toolStyle[t.slug].color}`}
           >
-            <Icon name={'ph:' + t.icon} class="h-7 w-7" />
+            <Icon name={t.slug} class="h-6 w-6 max-[640px]:h-5 max-[640px]:w-5" />
           </span>
-          <span class="block text-left text-[20px] font-semibold leading-7 text-ink group-hover:text-brand">{toolNames[t.slug].name}</span>
-          <span class="mt-1 block text-left text-sm leading-relaxed text-muted">{toolNames[t.slug].desc}</span>
+          <span class="block text-left text-[20px] font-semibold leading-7 text-ink group-hover:text-brand max-[1440px]:text-[18px] max-[1440px]:leading-6 max-[992px]:text-[16px] max-[992px]:leading-5 max-[640px]:flex-1">{toolNames[t.slug].name}</span>
+          <span class="mt-2 block text-left text-[13px] leading-[18px] text-muted max-[992px]:text-xs max-[992px]:leading-4 max-[640px]:mt-2 max-[640px]:basis-full">{toolNames[t.slug].desc}</span>
         </a>
       ))}
     </div>
