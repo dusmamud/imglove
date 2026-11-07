@@ -46,3 +46,4 @@ npm run build    # static output in dist/
 ```
 - **Tip:** the watermark tool places text in 6 positions with adjustable opacity, size, and color.
 - **Tip:** the meme generator adds Impact-style top and bottom captions.
+- **Tip:** the photo editor offers 7 filters plus brightness, contrast, saturation, and blur controls.
