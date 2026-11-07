@@ -44,3 +44,4 @@ npm install
 npm run dev      # http://localhost:4321/en/
 npm run build    # static output in dist/
 ```
+- **Tip:** the watermark tool places text in 6 positions with adjustable opacity, size, and color.
